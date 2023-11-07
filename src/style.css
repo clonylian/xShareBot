@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Vectrex";
+  src: url("./assets/VectrexWeb-Bold.woff2");
+}
+@font-face {
+  font-family: "GT Pressura Mono";
+  src: url("./assets/GT-Pressura-Mono-Regular.woff2");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+#dakuanger {
+  display: none !important;
+}
+.ymainhy .apexcharts-legend-text {
+  color: rgb(17, 11, 11) !important;
+}
+.apexcharts-legend-text {
+  color: #fff !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+.anxs {
+  display: none !important;
+}
+.uYscM {
+  z-index: 1000 !important;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jus {
+  justify-content: space-between;
+}
+.flexcol {
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+}
+@media (max-width: 1250px) {
+  #app {
+    width: 100%;
+    overflow: hidden;
+  }
+}
