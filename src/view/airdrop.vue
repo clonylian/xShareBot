@@ -533,7 +533,7 @@
           </p>
         </div>
         <div class="yaritabright">
-          <h3>Comment Calculator</h3>
+          <h3>Post Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
               <svg
@@ -566,261 +566,27 @@
               </div>
             </div>
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ views }} views</p>
+              <p>{{ viewsw }} views</p>
               <div class="yarigundcon flex jus">
                 <div
                   class="yarijdt"
-                  @mousedown="startDrag"
-                  @mousemove="onDragging"
-                  @mouseup="stopDrag"
+                  @mousedown="startDragw"
+                  @mousemove="onDraggingw"
+                  @mouseup="stopDragw"
                 >
                   <div class="yarijdtbox">
                     <div
                       class="progress"
-                      :style="{ width: progress + '%' }"
+                      :style="{ width: progressw + '%' }"
                     ></div>
                     <div
                       class="handle"
-                      :style="{ left: progress + '%' }"
-                      ref="handle"
+                      :style="{ left: progressw + '%' }"
+                      ref="handlew"
                     ></div>
                   </div>
                 </div>
-                <p>{{ views * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 5.70836C12.9139 4.61055 14.2732 3.982 15.7015 3.99665C18.8729 3.99665 21.0038 6.97789 21.0038 9.75405C21.0038 15.5575 13.7787 20.0033 12 20.0033C10.2213 20.0033 2.99625 15.5575 2.99625 9.75405C2.99625 6.97789 5.12714 3.99665 8.29846 3.99665C9.72684 3.982 11.0861 4.61055 12 5.70836Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">likes</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsy }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragy"
-                  @mousemove="onDraggingy"
-                  @mouseup="stopDragy"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressy + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressy + '%' }"
-                      ref="handley"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsy * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M10.5409 3.5H14.0364C17.8823 3.50001 21 6.61773 21 10.4636V10.5359C21 12.3828 20.2663 14.154 18.9604 15.4599C17.6545 16.7659 15.8832 17.4995 14.0364 17.4995H13.0131C13.0059 17.4995 13 17.5054 13 17.5126V19.775C13 20.031 12.8648 20.2679 12.6445 20.3982C12.4242 20.5285 12.1514 20.5327 11.9271 20.4094L6.90686 17.6483C4.49715 16.323 3 13.791 3 11.0409V11.0409C2.99999 9.0409 3.79447 7.12285 5.20866 5.70866C6.62284 4.29448 8.54089 3.5 10.5409 3.5Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M9 9.5H15"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M9 12.5H11.4"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Comments</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewst }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragt"
-                  @mousemove="onDraggingt"
-                  @mouseup="stopDragt"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progresst + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progresst + '%' }"
-                      ref="handlet"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewst * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M13 19H7C5.895 19 5 18.105 5 17V5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M11 5H17C18.105 5 19 5.895 19 7V19"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M7.5 7.5L5 5L2.5 7.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M16 16L19 19L22 16"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Reposts</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsthr }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragthr"
-                  @mousemove="onDraggingthr"
-                  @mouseup="stopDragthr"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressthr + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressthr + '%' }"
-                      ref="handlethr"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsthr * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M14 13.5H19C19.552 13.5 20 13.948 20 14.5V18.5C20 19.052 19.552 19.5 19 19.5H15C14.448 19.5 14 19.052 14 18.5V13.5C14 7.5 15 6.5 18 4.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M4 13.5H9C9.552 13.5 10 13.948 10 14.5V18.5C10 19.052 9.552 19.5 9 19.5H5C4.448 19.5 4 19.052 4 18.5V13.5C4 7.5 5 6.5 8 4.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Quote Reposts</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsf }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragf"
-                  @mousemove="onDraggingf"
-                  @mouseup="stopDragf"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressf + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressf + '%' }"
-                      ref="handlef"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsf * 10 }} points</p>
+                <p>{{ viewsw * 10 }} points</p>
               </div>
             </div>
           </div>
@@ -862,7 +628,7 @@
           </p>
         </div>
         <div class="yaritabright">
-          <h3>Engager Calculator</h3>
+          <h3>Post Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
               <svg
@@ -895,261 +661,27 @@
               </div>
             </div>
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ views }} views</p>
+              <p>{{ viewssix }} views</p>
               <div class="yarigundcon flex jus">
                 <div
                   class="yarijdt"
-                  @mousedown="startDrag"
-                  @mousemove="onDragging"
-                  @mouseup="stopDrag"
+                  @mousedown="startDragsix"
+                  @mousemove="onDraggingsix"
+                  @mouseup="stopDragsix"
                 >
                   <div class="yarijdtbox">
                     <div
                       class="progress"
-                      :style="{ width: progress + '%' }"
+                      :style="{ width: progresssix + '%' }"
                     ></div>
                     <div
                       class="handle"
-                      :style="{ left: progress + '%' }"
-                      ref="handle"
+                      :style="{ left: progresssix + '%' }"
+                      ref="handlesix"
                     ></div>
                   </div>
                 </div>
-                <p>{{ views * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 5.70836C12.9139 4.61055 14.2732 3.982 15.7015 3.99665C18.8729 3.99665 21.0038 6.97789 21.0038 9.75405C21.0038 15.5575 13.7787 20.0033 12 20.0033C10.2213 20.0033 2.99625 15.5575 2.99625 9.75405C2.99625 6.97789 5.12714 3.99665 8.29846 3.99665C9.72684 3.982 11.0861 4.61055 12 5.70836Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">likes</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsy }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragy"
-                  @mousemove="onDraggingy"
-                  @mouseup="stopDragy"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressy + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressy + '%' }"
-                      ref="handley"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsy * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M10.5409 3.5H14.0364C17.8823 3.50001 21 6.61773 21 10.4636V10.5359C21 12.3828 20.2663 14.154 18.9604 15.4599C17.6545 16.7659 15.8832 17.4995 14.0364 17.4995H13.0131C13.0059 17.4995 13 17.5054 13 17.5126V19.775C13 20.031 12.8648 20.2679 12.6445 20.3982C12.4242 20.5285 12.1514 20.5327 11.9271 20.4094L6.90686 17.6483C4.49715 16.323 3 13.791 3 11.0409V11.0409C2.99999 9.0409 3.79447 7.12285 5.20866 5.70866C6.62284 4.29448 8.54089 3.5 10.5409 3.5Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M9 9.5H15"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M9 12.5H11.4"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Comments</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewst }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragt"
-                  @mousemove="onDraggingt"
-                  @mouseup="stopDragt"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progresst + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progresst + '%' }"
-                      ref="handlet"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewst * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M13 19H7C5.895 19 5 18.105 5 17V5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M11 5H17C18.105 5 19 5.895 19 7V19"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M7.5 7.5L5 5L2.5 7.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M16 16L19 19L22 16"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Reposts</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsthr }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragthr"
-                  @mousemove="onDraggingthr"
-                  @mouseup="stopDragthr"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressthr + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressthr + '%' }"
-                      ref="handlethr"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsthr * 10 }} points</p>
-              </div>
-            </div>
-          </div>
-          <div class="yaritabry flex jus">
-            <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M14 13.5H19C19.552 13.5 20 13.948 20 14.5V18.5C20 19.052 19.552 19.5 19 19.5H15C14.448 19.5 14 19.052 14 18.5V13.5C14 7.5 15 6.5 18 4.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M4 13.5H9C9.552 13.5 10 13.948 10 14.5V18.5C10 19.052 9.552 19.5 9 19.5H5C4.448 19.5 4 19.052 4 18.5V13.5C4 7.5 5 6.5 8 4.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <div>
-                <p class="yarirany">Quote Reposts</p>
-                <p class="yarirant">10 point = 1 view</p>
-              </div>
-            </div>
-            <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
-              <p>{{ viewsf }} views</p>
-              <div class="yarigundcon flex jus">
-                <div
-                  class="yarijdt"
-                  @mousedown="startDragf"
-                  @mousemove="onDraggingf"
-                  @mouseup="stopDragf"
-                >
-                  <div class="yarijdtbox">
-                    <div
-                      class="progress"
-                      :style="{ width: progressf + '%' }"
-                    ></div>
-                    <div
-                      class="handle"
-                      :style="{ left: progressf + '%' }"
-                      ref="handlef"
-                    ></div>
-                  </div>
-                </div>
-                <p>{{ viewsf * 10 }} points</p>
+                <p>{{ viewssix * 10 }} points</p>
               </div>
             </div>
           </div>
@@ -1237,13 +769,15 @@ const isDraggingt = ref(false);
 const isDraggingthr = ref(false);
 const isDraggingf = ref(false);
 const isDraggingy = ref(false);
-
+const isDraggingw = ref(false);
+const isDraggingsix = ref(false);
 let handle = ref(null);
 let handley = ref(null);
 let handlet = ref(null);
 let handlethr = ref(null);
 let handlef = ref(null);
-
+let handlew = ref(null);
+let handlesix = ref(null);
 let views = ref(0);
 let points = ref(0);
 let viewsy = ref(0);
@@ -1253,6 +787,9 @@ let pointst = ref(0);
 let viewsthr = ref(0);
 let pointsthr = ref(0);
 let viewsf = ref(0);
+let viewsw = ref(0);
+let viewssix = ref(0);
+
 let pointsf = ref(0);
 let addpoints = ref(0);
 // let airtc = ref(0);
@@ -1266,7 +803,64 @@ onMounted(() => {
   console.log(handlethr.value);
   console.log(handlet.value);
   console.log(handlef.value);
+  console.log(handlew.value);
+  console.log(handlesix.value);
 });
+
+const progresssix = ref(0);
+
+const startDragsix = (event) => {
+  isDraggingsix.value = true;
+};
+
+const onDraggingsix = (event) => {
+  if (isDraggingsix.value) {
+    const progressBar = handlesix.value.parentElement;
+    const rect = progressBar.getBoundingClientRect();
+    let x = event.clientX - rect.left;
+    let width = progressBar.clientWidth;
+    if (x < 0) {
+      x = 0;
+    } else if (x > width) {
+      x = width;
+    }
+    progresssix.value = (x / width) * 100;
+    viewssix.value = Math.round(progresssix.value * 100);
+    addpoints.value =
+      viewssix.value * 10
+  }
+};
+
+const stopDragsix = () => {
+  isDraggingsix.value = false;
+};
+const progressw = ref(0);
+
+const startDragw = (event) => {
+  isDraggingw.value = true;
+};
+
+const onDraggingw = (event) => {
+  if (isDraggingw.value) {
+    const progressBar = handlew.value.parentElement;
+    const rect = progressBar.getBoundingClientRect();
+    let x = event.clientX - rect.left;
+    let width = progressBar.clientWidth;
+    if (x < 0) {
+      x = 0;
+    } else if (x > width) {
+      x = width;
+    }
+    progressw.value = (x / width) * 100;
+    viewsw.value = Math.round(progressw.value * 100);
+    addpoints.value =
+      viewsw.value * 10
+  }
+};
+
+const stopDragw = () => {
+  isDraggingw.value = false;
+};
 const progressf = ref(0);
 
 const startDragf = (event) => {
