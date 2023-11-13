@@ -1497,7 +1497,7 @@ export default {
   }
 
   .carousel-card:nth-child(4) {
-    margin-left: 5.5rem;
+    margin-left: 5.4rem;
   }
 
   .some_two {
