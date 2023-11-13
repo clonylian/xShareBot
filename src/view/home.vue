@@ -26,11 +26,7 @@
       <h2>xShareBot</h2>
       <div class="ytwo flex">
         <div class="ytwoleft">
-          <img
-            class="ytwolimgy"
-            src="../assets/edge-example-23b0b818.jpg"
-            alt=""
-          />
+          <img class="ytwolimgy" src="../assets/edge-example-23b0b818.jpg" alt="" />
         </div>
         <div class="ytworight">
           <h2>Edge Wallet</h2>
@@ -61,16 +57,8 @@
           </p>
         </div>
         <div class="ytwoleft">
-          <img
-            class="ytwolimgy"
-            src="../assets/monerujo-example-8b5fe8a3.png"
-            alt=""
-          />
-          <img
-            class="ytwolimge"
-            src="../assets/monerujo-gunther-8c1ae701.gif"
-            alt=""
-          />
+          <img class="ytwolimgy" src="../assets/monerujo-example-8b5fe8a3.png" alt="" />
+          <img class="ytwolimge" src="../assets/monerujo-gunther-8c1ae701.gif" alt="" />
         </div>
       </div>
     </div>
@@ -88,12 +76,7 @@
         </div>
         <div class="ybiao_right">
           <div id="chart" class="chart-container">
-            <apexchart
-              width="100%"
-              type="polarArea"
-              :options="chartOptions"
-              :series="series"
-            ></apexchart>
+            <apexchart width="100%" type="polarArea" :options="chartOptions" :series="series"></apexchart>
           </div>
         </div>
       </div>
@@ -102,11 +85,7 @@
       <h2>Roadmap</h2>
       <div class="sjubox">
         <div class="app_one">
-          <div
-            id="draggable"
-            :style="{ left: positionX + 'px' }"
-            @mousedown="onMouseDown"
-          >
+          <div id="draggable" :style="{ left: positionX + 'px' }" @mousedown="onMouseDown">
             <div class="app_two">
               <div class="app_five">
                 <p>2023</p>
@@ -391,19 +370,57 @@
                   </li>
                 </ul>
               </div>
-              <div
-                class="app_five"
-                style="
+              <div class="app_five" style="
                   font-size: 30px;
                   padding-left: 38rem;
                   color: rgb(232 90 67);
-                "
-              >
+                ">
                 <span> // </span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="someAi">
+      <div class="some_one">
+        <h2>Some Algorithms by Micro AI</h2>
+        <p>Micro AI is not just one algorithm, but a swarm of intelligently taken market orders that get information from
+          100+ algorithms, which are getting their data from over 100,000,000 constantly refreshing end-points.</p>
+      </div>
+    </div>
+    <div class="some_three">
+      <div class="carousel">
+        <div class="carousel-container" :style="{ transform: 'translateX(' + offset + 'px)' }">
+          <div v-for="(item, index) in items" :key="index"
+            :class="{ 'carousel-card': true, 'highlighted': index === selectedIndex }" @click="selectCard(index)"
+            :style="getCardStyle(index)">
+            <div class="car_top">
+              <img class="car_img"
+                src='https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg'>
+              <div class="car_txt">
+                <p>{{ item.user }}</p>
+                <span>{{ item.usertxt }}</span>
+              </div>
+            </div>
+            <p class="car_txtx">{{ item.txt }}</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="some_two">
+        <button @click="moveLeft">
+          <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"
+              fill="rgba(255,255,255,1)"></path>
+          </svg></button>
+        <button @click="moveRight">
+          <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"
+              fill="rgba(255,255,255,1)"></path>
+          </svg></button>
       </div>
     </div>
   </div>
@@ -413,6 +430,31 @@
 export default {
   data() {
     return {
+      items: [{
+        img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
+        txt: "FuturesFuture is using DYDX <-> Bloomberg Data Aggregation to intelligently take news-trades. FuturesFuture is also used to for other algorithms which hold long-term positions to recalculate data. Everything in lightning-speed. Outpacing Competition and Humans.",
+        user: "Futures Future",
+        usertxt: 'BUILT IN JULIA & PYTHON'
+
+      }, {
+        img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
+        txt: "On-Chain-Money-Flow (OCMF) treats Ethereums capital like waves of hype. It intelligently predicts new waves with the help of Arkham and our Social Feeds (IRA & IRAX). OCMF is in a symbiosis with Screener, both benefit from each other’s perspectives.",
+        user: "On Chain Money Flow",
+        usertxt: 'BUILT IN JULIA'
+      }, {
+        img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
+        txt: "Screener was the beginning of Micro AI. Screener automatically scans newly generated pairs on Uniswap, frontruns sniping bots, and holds token which are labeled as a 'Strong Buy'.",
+        user: "Screener AI",
+        usertxt: 'BUILT IN RUST & PYTHON & JULIA'
+      }, {
+        img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
+        txt: "Layerless is a market maker for wrapped tokens or tokens on several chains, ensuring same price rates even with low liquidity on one chain. AI calculated buying & selling pressure. Layerless Bot is able to be booked by protocols. AIaaS. (ETA: 2024 Q4)",
+        user: "Layerless Bot (In Development)",
+        usertxt: 'BUILDING IN JULIA & PYTHON'
+      },], // 轮播项内容
+      offset: 0, // 轮播图偏移量
+      cardWidth: 450, // 单张卡片宽度
+      selectedIndex: -1, // 选中的卡片索引  
       positionX: 0,
       startX: 0,
       allowDragLeft: 0,
@@ -445,6 +487,37 @@ export default {
     };
   },
   methods: {
+    moveLeft() {
+    if (this.selectedIndex > 0) {
+      this.selectedIndex--;
+      this.updateOffset();
+    }
+  },
+  moveRight() {
+    if (this.selectedIndex < this.items.length - 1) {
+      this.selectedIndex++;
+      this.updateOffset();
+    }
+  },
+  updateOffset() {
+    this.offset = -this.selectedIndex * this.cardWidth;
+  },
+    selectCard(index) {
+      this.selectedIndex = index; // 更新选中的卡片索引
+    },
+    getCardStyle(index) {
+      const offset = (index - this.selectedIndex);
+      const style = {
+        transform: `translateX(${offset}px)`
+      };
+      if (index === this.selectedIndex) {
+        style.opacity = 1;
+        style.transform += " scale(1.1) translateZ(8rem)"; 
+      } else {
+        style.opacity = 0.5; // 添加未选中卡片的透明度样式
+      }
+      return style;
+    },
     onMouseDown(event) {
       this.startX = event.clientX;
       document.addEventListener("mousemove", this.onMouseMove);
@@ -468,7 +541,7 @@ export default {
       document.removeEventListener("mouseup", this.onMouseUp);
     },
   },
-  mounted() {},
+  mounted() { },
 };
 </script>
 
@@ -483,12 +556,140 @@ export default {
   src: url("../assets/GT-Pressura-Mono-Regular.woff2") format("woff");
 }
 
+.carousel {
+  width: 3500px;
+  position: relative;
+  /* display: flex; */
+  /* overflow: hidden; */
+}
+
+.carousel-container {
+  display: flex;
+  margin-left: 30rem;
+  transition: transform 0.5s;
+}
+
+.carousel-card {
+  width: 450px;
+  height: 300px;
+  margin: 0 2rem;
+  border-radius: 15px;
+  border: 1px solid #323338;
+  /* background-color: #f0f0f0; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  cursor: pointer;
+  transition: transform 0.5s;
+  /* 添加过渡效果 */
+
+}
+
+.carousel-card:nth-child(2) {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly
+}
+
+.carousel-card:nth-child(4) {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly
+}
+
+.car_img {
+  width: 50px;
+  margin: 0rem 0 0 1.5rem;
+}
+
+.car_top {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.car_txt {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car_txtx {
+  color: white;
+  margin: 2rem 1.5rem 0 1.5rem;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.car_txt>p {
+  font-size: 16px;
+}
+
+.car_txt>span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+
+}
+
+.highlighted {
+  /* border: 2px solid blue; */
+  transform: translateZ(8rem);
+  /* transform: translateZ(200px) */
+  /* 高光样式 */
+}
+
+.someAi {
+  width: 63.5%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  color: white;
+}
+
+.some_one {
+  width: 100%;
+  text-align: center;
+}
+
+.some_two {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+}
+
+.some_two>button {
+  margin-left: 2rem;
+  background: transparent;
+}
+
+.some_three {
+  width: 100%;
+  overflow: hidden;
+}
+
+.some_one>h2 {
+  font-size: 42px;
+  font-family: "Vectrex";
+}
+
+.some_one>p {
+  width: 65%;
+  font-family: "two";
+  font-size: 18px;
+  line-height: 24px;
+  margin: 1.5rem auto;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .ymainhy .yhomey_two {
   color: #000;
 }
+
 .ymainhy .yhomey_four {
   color: #000;
 }
+
 .yhomey_one {
   width: 100%;
 }
@@ -502,20 +703,25 @@ export default {
   margin-bottom: 1rem;
   font-size: 22px;
 }
+
 .ymainhy .yhomey_three {
   color: #000;
 }
+
 .ymainhy .yhome_six {
   color: #000;
 }
+
 .ymainhy .yhome_five {
   color: #000;
   border-color: #696f7a;
 }
+
 .ymainhy .yhome_five:hover {
   background-color: #000;
   color: white;
 }
+
 .yhomey_three {
   font-size: 60px;
   font-family: one;
@@ -568,12 +774,15 @@ export default {
   overflow: hidden;
   font-family: "Vectrex" !important;
 }
+
 .ymainhy .app_five {
   color: black;
 }
-.ymainhy .app_five > p {
+
+.ymainhy .app_five>p {
   color: rgb(111 198 81);
 }
+
 #draggable {
   width: 160%;
   height: 100%;
@@ -602,7 +811,7 @@ export default {
   text-align: center;
 }
 
-.app_five > p {
+.app_five>p {
   color: aquamarine;
   font-weight: 900;
   font-size: 26px;
@@ -939,6 +1148,7 @@ export default {
   text-decoration: inherit;
   vertical-align: inherit;
 }
+
 .ymainhy .yhome {
   background: rgb(235 235 235);
 }
@@ -968,7 +1178,7 @@ export default {
   right: 0;
 }
 
-.yhomeyright > p {
+.yhomeyright>p {
   font-family: "Vectrex";
   font-size: 2.5rem;
   font-weight: 400;
@@ -979,7 +1189,7 @@ export default {
   text-shadow: rgb(237, 77, 19) 0px 0px 25px, rgb(237, 77, 19) 0px 0px 50px;
 }
 
-.ymainhy .yhomeyright > p {
+.ymainhy .yhomeyright>p {
   color: rgb(17, 11, 11);
 }
 
@@ -1026,7 +1236,8 @@ export default {
 .ytwobox {
   width: 100%;
 }
-.ytwobox > h2 {
+
+.ytwobox>h2 {
   padding-top: 10rem;
   font-family: "Vectrex";
   text-align: center;
@@ -1034,10 +1245,12 @@ export default {
   margin-bottom: 4.5rem;
   color: #fff;
 }
-.ymainhy .ytwobox > h2 {
+
+.ymainhy .ytwobox>h2 {
   color: #000;
 }
-.ybiao > h2 {
+
+.ybiao>h2 {
   padding-top: 12.5rem;
   font-family: "Vectrex";
   text-align: center;
@@ -1045,19 +1258,23 @@ export default {
   margin-bottom: 4.5rem;
   color: #fff;
 }
-.ymainhy .ybiao > h2 {
+
+.ymainhy .ybiao>h2 {
   color: #000;
 }
-.sju > h2 {
+
+.sju>h2 {
   padding-top: 10rem;
   font-family: "Vectrex";
   text-align: center;
   font-size: 4.25rem;
   color: #fff;
 }
-.ymainhy .sju > h2 {
+
+.ymainhy .sju>h2 {
   color: #000;
 }
+
 .ytwo {
   width: 63.5%;
   margin: 0 auto;
@@ -1131,11 +1348,11 @@ export default {
   background-image: linear-gradient(to bottom, rgba(235, 235, 235), #fff);
 }
 
-.ymainhy .ybiao_two > h2 {
+.ymainhy .ybiao_two>h2 {
   color: #000;
 }
 
-.ymainhy .ybiao_two > p {
+.ymainhy .ybiao_two>p {
   color: #000;
 }
 
@@ -1150,7 +1367,7 @@ export default {
   color: white;
 }
 
-.ybiao_two > h2 {
+.ybiao_two>h2 {
   padding: 1rem 0;
   font-family: one;
   font-weight: 900;
@@ -1164,11 +1381,11 @@ export default {
   font-size: 26px;
 }
 
-.ybiao_three > b {
+.ybiao_three>b {
   color: rgba(232, 90, 67, 0.8);
 }
 
-.ybiao_four > b {
+.ybiao_four>b {
   color: rgba(232, 90, 67, 0.8);
 }
 
@@ -1190,10 +1407,12 @@ export default {
   color: black;
   cursor: pointer;
 }
+
 .ymainhy .ybiao_five {
   background: rgb(17, 11, 11);
   color: rgb(235, 235, 235) !important;
 }
+
 .ybiao_right {
   width: 50%;
   display: flex;
@@ -1218,69 +1437,83 @@ export default {
   .yhomey_two {
     font-size: 1.125rem !important;
   }
+
   .yhomey_three {
     font-size: 2.75rem;
   }
+
   .yhomey_four {
     width: 100%;
     font-size: 1.125rem !important;
     /* margin: 1rem 0; */
   }
+
   .yhome_five {
     width: 8rem;
     font-size: 14px;
     padding: 1rem;
   }
+
   .yhome_six {
     font-size: 0.75rem;
   }
+
   .ybiao_one {
     width: 100%;
     margin: 0;
     padding: 0;
     flex-direction: column;
   }
+
   .ybiao_one {
     width: 100%;
     margin: 0;
     padding: 0;
     flex-direction: column;
   }
-  .ytwobox > h2 {
+
+  .ytwobox>h2 {
     font-size: 2.75rem;
     padding-top: 4.5rem;
     margin-bottom: 2.5rem;
   }
-  .ybiao > h2 {
+
+  .ybiao>h2 {
     font-size: 2.75rem;
     padding-top: 4.5rem;
     margin-bottom: 2.5rem;
   }
-  .sju > h2 {
+
+  .sju>h2 {
     font-size: 2.75rem;
     padding-top: 4.5rem;
     margin-bottom: 2.5rem;
   }
+
   .ytwo {
     width: 100%;
     display: block;
     padding: 0 1rem;
   }
+
   .ybiao_two {
     width: 100%;
     display: flex;
     align-items: center;
     margin: 2rem 0;
   }
-  .ybiao_two > p {
+
+  .ybiao_two>p {
     font-size: 1.15rem;
     text-align: center;
     padding: 0.5rem 0;
     margin: 0;
   }
+
   .ybiao_five {
     margin-top: 1rem;
   }
+
   .ybiao_right {
     width: 100%;
     height: auto;
@@ -1298,11 +1531,12 @@ export default {
     column-gap: 2rem;
     width: 58%;
   }
+
   .ytworight {
     width: 50%;
   }
+
   .ybiao_one {
     width: 55%;
   }
-}
-</style>
+}</style>
