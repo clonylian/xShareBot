@@ -405,7 +405,6 @@
             </div>
             <p class="car_txtx">{{ item.txt }}</p>
           </div>
-
         </div>
       </div>
       <div class="some_two">
@@ -555,7 +554,24 @@ export default {
   font-family: "two";
   src: url("../assets/GT-Pressura-Mono-Regular.woff2") format("woff");
 }
-
+.ymainhy .car_txt{
+  color: #000;
+}
+.ymainhy .car_txtx{
+  color: #000;
+}
+.ymainhy .car_txt>span{
+  color: #000;
+}
+.ymainhy .some_one>h2{
+  color: #000;
+}
+.ymainhy .some_one>p{
+  color: #000;
+}
+.ymainhy .some_two>button svg{
+  fill:#000 !important;
+}
 .carousel {
   width: 3500px;
   position: relative;
@@ -1437,6 +1453,38 @@ export default {
 }
 
 @media screen and (max-width: 1200px) {
+
+  .someAi{
+    width: 100%;
+  }
+  .some_one>h2{
+    font-size: 2.75rem;
+  }
+  .some_one>p{
+    width: 100%; 
+  }
+  .carousel-container{
+    margin-left: 0rem;
+  }
+  .carousel-card{
+    width: 350px;
+    height: 350px;
+    /* width: 100%; */
+  }
+  .carousel-card:nth-child(2){
+    margin-left: 3.8rem;
+  }.carousel-card:nth-child(3){
+    margin-left: 3.8rem;
+  }
+  .carousel-card:nth-child(4){
+    margin-left: 3.8rem;
+  }
+  .some_two{
+    margin-top: 8rem;
+  }
+  .car_txtx{
+    text-align: center;
+  }
   .yhomey_two {
     font-size: 1.125rem !important;
   }
