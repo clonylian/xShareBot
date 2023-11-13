@@ -419,7 +419,8 @@
             <path
               d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"
               fill="rgba(255,255,255,1)"></path>
-          </svg></button>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -487,20 +488,20 @@ export default {
   },
   methods: {
     moveLeft() {
-    if (this.selectedIndex > 0) {
-      this.selectedIndex--;
-      this.updateOffset();
-    }
-  },
-  moveRight() {
-    if (this.selectedIndex < this.items.length - 1) {
-      this.selectedIndex++;
-      this.updateOffset();
-    }
-  },
-  updateOffset() {
-    this.offset = -this.selectedIndex * this.cardWidth;
-  },
+      if (this.selectedIndex > 0) {
+        this.selectedIndex--;
+        this.updateOffset();
+      }
+    },
+    moveRight() {
+      if (this.selectedIndex < this.items.length - 1) {
+        this.selectedIndex++;
+        this.updateOffset();
+      }
+    },
+    updateOffset() {
+      this.offset = -this.selectedIndex * this.cardWidth;
+    },
     selectCard(index) {
       this.selectedIndex = index; // 更新选中的卡片索引
     },
@@ -511,7 +512,7 @@ export default {
       };
       if (index === this.selectedIndex) {
         style.opacity = 1;
-        style.transform += " scale(1.1) translateZ(8rem)"; 
+        style.transform += " scale(1.1) translateZ(8rem)";
       } else {
         style.opacity = 0.5; // 添加未选中卡片的透明度样式
       }
@@ -524,7 +525,6 @@ export default {
     },
     onMouseMove(event) {
       const offsetX = event.clientX - this.startX;
-
       this.positionX += offsetX;
       console.log(this.positionX, offsetX);
       this.startX = event.clientX;
@@ -554,31 +554,40 @@ export default {
   font-family: "two";
   src: url("../assets/GT-Pressura-Mono-Regular.woff2") format("woff");
 }
-.ymainhy .car_txt{
+
+.ymainhy .car_txt {
   color: #000;
 }
-.ymainhy .car_txtx{
+
+.ymainhy .car_txtx {
   color: #000;
 }
-.ymainhy .car_txt>span{
+
+.ymainhy .car_txt>span {
   color: #000;
 }
-.ymainhy .some_one>h2{
+
+.ymainhy .some_one>h2 {
   color: #000;
 }
-.ymainhy .some_one>p{
+
+.ymainhy .some_one>p {
   color: #000;
 }
-.ymainhy .some_two>button svg{
-  fill:#000 !important;
+
+.ymainhy .some_two>button svg {
+  fill: #000 !important;
 }
+
 .carousel {
   width: 3500px;
   position: relative;
   /* display: flex; */
   /* overflow: hidden; */
   font-family: one;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
+  padding-top: 3rem;
+  margin: 0 auto;
 }
 
 .carousel-container {
@@ -1454,37 +1463,51 @@ export default {
 
 @media screen and (max-width: 1200px) {
 
-  .someAi{
+  .someAi {
     width: 100%;
   }
-  .some_one>h2{
+
+  .some_one>h2 {
     font-size: 2.75rem;
   }
-  .some_one>p{
-    width: 100%; 
+
+  .some_one>p {
+    width: 100%;
   }
-  .carousel-container{
+
+  .carousel-container {
     margin-left: 0rem;
   }
-  .carousel-card{
-    width: 350px;
+
+  .carousel-card {
+    width: 330px;
     height: 350px;
     /* width: 100%; */
   }
-  .carousel-card:nth-child(2){
-    margin-left: 3.8rem;
-  }.carousel-card:nth-child(3){
-    margin-left: 3.8rem;
+
+  .carousel-card:nth-child(1) {
+    margin-left: 1.4rem;
   }
-  .carousel-card:nth-child(4){
-    margin-left: 3.8rem;
+  .carousel-card:nth-child(2) {
+    margin-left: 5.3rem;
   }
-  .some_two{
+
+  .carousel-card:nth-child(3) {
+    margin-left: 5.5rem;
+  }
+
+  .carousel-card:nth-child(4) {
+    margin-left: 5.5rem;
+  }
+
+  .some_two {
     margin-top: 8rem;
   }
-  .car_txtx{
+
+  .car_txtx {
     text-align: center;
   }
+
   .yhomey_two {
     font-size: 1.125rem !important;
   }
