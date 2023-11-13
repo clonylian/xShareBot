@@ -397,7 +397,8 @@
             :style="getCardStyle(index)">
             <div class="car_top">
               <img class="car_img"
-                src='https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg'>
+              style="margin-right: 1rem;"
+                src='../assets/toplogo.png'>
               <div class="car_txt">
                 <p>{{ item.user }}</p>
                 <span>{{ item.usertxt }}</span>
