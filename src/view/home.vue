@@ -561,6 +561,8 @@ export default {
   position: relative;
   /* display: flex; */
   /* overflow: hidden; */
+  font-family: one;
+  margin-top: 3rem;
 }
 
 .carousel-container {
@@ -618,15 +620,16 @@ export default {
   color: white;
   margin: 2rem 1.5rem 0 1.5rem;
   line-height: 24px;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: two;
 }
 
 .car_txt>p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .car_txt>span {
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
 
 }
