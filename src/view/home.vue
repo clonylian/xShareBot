@@ -452,10 +452,10 @@ export default {
         txt: "Layerless is a market maker for wrapped tokens or tokens on several chains, ensuring same price rates even with low liquidity on one chain. AI calculated buying & selling pressure. Layerless Bot is able to be booked by protocols. AIaaS. (ETA: 2024 Q4)",
         user: "Layerless Bot (In Development)",
         usertxt: 'BUILDING IN JULIA & PYTHON'
-      },], // 轮播项内容
-      offset: 0, // 轮播图偏移量
-      cardWidth: 450, // 单张卡片宽度
-      selectedIndex: -1, // 选中的卡片索引  
+      },], 
+      offset: 0, 
+      cardWidth: 450, 
+      selectedIndex: 0, 
       positionX: 0,
       startX: 0,
       allowDragLeft: 0,
@@ -497,6 +497,7 @@ export default {
     moveRight() {
       if (this.selectedIndex < this.items.length - 1) {
         this.selectedIndex++;
+        console.log(this.selectedIndex)
         this.updateOffset();
       }
     },
@@ -504,7 +505,7 @@ export default {
       this.offset = -this.selectedIndex * this.cardWidth;
     },
     selectCard(index) {
-      this.selectedIndex = index; // 更新选中的卡片索引
+      this.selectedIndex = index; 
     },
     getCardStyle(index) {
       const offset = (index - this.selectedIndex);
@@ -515,7 +516,7 @@ export default {
         style.opacity = 1;
         style.transform += " scale(1.1) translateZ(8rem)";
       } else {
-        style.opacity = 0.5; // 添加未选中卡片的透明度样式
+        style.opacity = 0.5; 
       }
       return style;
     },
