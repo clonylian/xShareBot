@@ -3558,10 +3558,10 @@ let twitterlog = () => {
   loginan.value = 1;
   hello.init(
     {
-      twitter: "L4zU0OCevT9Vm5aaxdwWaElyR",
+      twitter: "6F6Kw3ed2iRveFmojHckvB6ad",
     },
     {
-      redirect_uri: "https://x-share-bot.vercel.app/",
+      redirect_uri: "https://x-share-bot-delta.vercel.app/",
     }
   );
   hello("twitter")
@@ -4741,11 +4741,14 @@ logTlgConnect("");
   .yheade {
     column-gap: 1rem;
   }
+  .yheadbox {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1301px) {
-  .yheade {
-    display: none;
+  .yheadbox {
+    width: 80%;
   }
 }
 </style>
