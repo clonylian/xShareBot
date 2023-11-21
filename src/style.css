@@ -6,6 +6,10 @@
   font-family: "GT Pressura Mono";
   src: url("./assets/GT-Pressura-Mono-Regular.woff2");
 }
+@font-face {
+  font-family: "GT Pressura Bold";
+  src: url("./assets/GT-Pressura-Mono-Bold.woff2");
+}
 * {
   padding: 0;
   margin: 0;

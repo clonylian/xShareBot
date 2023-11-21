@@ -15,6 +15,11 @@ const routes = [
     name: "Airdrop",
     component: () => import("../view/airdrop.vue"),
   },
+  {
+    path: "/Ido",
+    name: "Ido",
+    component: () => import("../view/ido.vue"),
+  },
 ];
 
 const router = VueRouter.createRouter({

@@ -10,6 +10,7 @@
   "dependencies": {
     "apexcharts": "^3.44.0",
     "ethers": "5.7.2",
+    "mitt": "^3.0.0",
     "hellojs": "1.19.5",
     "vue": "^3.2.45",
     "vue-router": "^4.2.5",
