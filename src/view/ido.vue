@@ -1,8 +1,5 @@
 <template>
   <div class="yido">
-    <div class="yidologo">
-      <h2>PRESALE</h2>
-    </div>
     <div class="yidocon flex">
       <div class="yidoconbox flex">
         <div class="yidocbinp">
@@ -93,27 +90,11 @@ let isnumber = (value) => {
 <style scoped>
 .yido {
   width: 100%;
-  height: 95vh;
+  height: 65vh;
   background-color: rgb(17, 11, 11);
 }
 .ymainhy .yido {
   background: rgb(235, 235, 235);
-}
-.yidologo {
-  width: 100%;
-  height: 95vh;
-  position: absolute;
-}
-.yidologo > h2 {
-  font-family: "GT Pressura Bold";
-  font-size: 25.5vw;
-  color: rgb(179 187 202);
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 0.8;
-  text-align: center;
 }
 .ymainhy .yido > h2 {
   color: rgb(17 11 11);
@@ -142,6 +123,7 @@ let isnumber = (value) => {
   background: black;
   box-sizing: border-box;
   row-gap: 0.9375rem;
+  margin-top: 6rem;
 }
 .ymainhy .yidoconbox {
   background: #fff;
@@ -308,6 +290,11 @@ let isnumber = (value) => {
 .ymainhy .claim {
   background: #fff;
 }
+@media (max-width: 1500px) {
+  .yido {
+    height: 95vh;
+  }
+}
 @media (max-width: 1250px) {
   .yidoconbox {
     width: 94%;
@@ -320,9 +307,6 @@ let isnumber = (value) => {
   }
   .yidocbinp {
     padding: 1rem;
-  }
-  .yidologo {
-    height: 95vh;
   }
   .yidoconbox {
     margin: 5rem auto 0;

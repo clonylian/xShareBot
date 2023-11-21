@@ -893,7 +893,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             /></router-link>
           </div>
           <div class="yheade flex">
-            <router-link :to="{ path: '/', hash: '#xShareBot' }"
+            <!-- <router-link :to="{ path: '/', hash: '#xShareBot' }"
               >xShareBot</router-link
             >
             <router-link :to="{ path: '/', hash: '#MevBot' }"
@@ -905,7 +905,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             <router-link :to="{ path: '/', hash: '#Roadmap' }"
               >Roadmap</router-link
             >
-            <a href="#">Docs</a>
+            <a href="#">Docs</a> -->
             <router-link to="/Stake">Stake</router-link>
             <router-link to="/Ido">Ido</router-link>
 
@@ -914,7 +914,8 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
               :class="Twittername == '' ? '' : 'istwdl'"
               >AIRDROP</router-link
             > -->
-            <router-link to="/Airdrop">AIRDROP</router-link>
+            <!-- <router-link to="/Airdrop">AIRDROP</router-link> -->
+            <router-link to="/Leaderboard">Leaderboard</router-link>
           </div>
           <div class="yheads flex">
             <div class="qihuan" @click="hebtqh(1)">
@@ -948,9 +949,9 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                 ></path>
               </svg>
             </div>
-            <button :class="loginan == 0 ? '' : 'anxs'" @click="tcshow()">
+            <!-- <button :class="loginan == 0 ? '' : 'anxs'" @click="tcshow()">
               LOGIN TO CLAIM
-            </button>
+            </button> -->
             <div class="yheaddisc">
               <button :class="loginan == 1 ? '' : 'anxs'">
                 {{ xxhladdress }}
@@ -2031,7 +2032,8 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
       <div class="ydddhl">
         <router-link to="/">HOME</router-link>
         <router-link to="/Stake">STAKE</router-link>
-        <router-link to="/Airdrop">AIRDROP</router-link>
+        <router-link to="/Leaderboard">Leaderboard</router-link>
+        <!-- <router-link to="/Airdrop">AIRDROP</router-link> -->
         <router-link to="/Ido">IDO</router-link>
       </div>
     </div>
@@ -3544,6 +3546,7 @@ let qxdl = async () => {
   xxhladdress.value = "";
   Twittername.value = "";
   localStorage.clear();
+  bus.$emit("qbbalance", "0.00");
 };
 onBeforeUnmount(() => {
   let add = localStorage.getItem("xhladd");
@@ -4553,7 +4556,7 @@ logTlgConnect("");
   .ymainbt .yheads button {
     font-size: 12px;
     height: 2rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .yht {
@@ -4737,7 +4740,7 @@ logTlgConnect("");
   }
 }
 
-@media screen and (max-width: 1601px) {
+@media screen and (max-width: 1650px) {
   .yheade {
     column-gap: 1rem;
   }
@@ -4748,7 +4751,7 @@ logTlgConnect("");
 
 @media screen and (max-width: 1301px) {
   .yheadbox {
-    width: 80%;
+    width: 90%;
   }
 }
 </style>

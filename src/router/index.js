@@ -20,6 +20,11 @@ const routes = [
     name: "Ido",
     component: () => import("../view/ido.vue"),
   },
+  {
+    path: "/Leaderboard",
+    name: "Leaderboard",
+    component: () => import("../view/Leaderboard.vue"),
+  },
 ];
 
 const router = VueRouter.createRouter({
