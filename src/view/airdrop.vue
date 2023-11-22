@@ -14,7 +14,10 @@
           <div class="yairlsy">
             <div class="yairlsyty flex">
               <div class="yairsyle"></div>
-              <div @click="logtcbgshow('1')" class="yairlsytysvg">
+              <div
+                @click="logtcbgshow('1')"
+                :class="isgy == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+              >
                 <svg
                   viewBox="0 0 114 104"
                   fill="none"
@@ -27,6 +30,41 @@
                   ></path>
                 </svg>
                 <span>1</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style="cursor: not-allowed"
+                :class="
+                  isgy == '1'
+                    ? 'yairlsytysvg yairlsytysvghover'
+                    : 'yairlsytysvgnone'
+                "
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>✓</span>
                 <svg
                   class="yairrjt"
                   viewBox="0 0 19 58"
@@ -164,7 +202,10 @@
           <div class="yairlsy">
             <div class="yairlsyts yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <div @click="tcbgshow('1')" class="yairlsytysvg">
+              <div
+                @click="tcbgshow('1')"
+                :class="isgw == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+              >
                 <svg
                   viewBox="0 0 114 104"
                   fill="none"
@@ -177,6 +218,41 @@
                   ></path>
                 </svg>
                 <span>5</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                style="cursor: not-allowed"
+                :class="
+                  isgw == '1'
+                    ? 'yairlsytysvg yairlsytysvghover'
+                    : 'yairlsytysvgnone'
+                "
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>✓</span>
                 <svg
                   class="yairrjt"
                   viewBox="0 0 19 58"
@@ -805,7 +881,34 @@
   <div
     @click="tcbgshow('0')"
     :class="yaritcbg == '1' ? 'yairtcbg flex' : 'yaritcbgnone'"
-  ></div>
+  >
+    <div @click.stop="wtccon()" class="yaritctjmbox">
+      <img @click="tcbgshow('0', '1')" src="../assets/close-line.svg" alt="" />
+      <div class="yaritctjmbcon">
+        <h1>Invitation code</h1>
+        <div class="yaritctinpb flex jus">
+          <input
+            type="text"
+            v-model="invitationcode"
+            placeholder="code"
+            name=""
+            id=""
+          />
+          <div class="yaritctbcopy flex">
+            <button
+              @click="qriscopy('1')"
+              :class="iscopy == '0' ? 'yaricopy flex' : 'yaricopynone'"
+            >
+              COPY
+            </button>
+            <button :class="iscopy == '1' ? 'yaricopyed flex' : 'yaricopynone'">
+              COPYED
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div
     @click="logtcbgshow('0')"
     :class="yarilog == '1' ? 'yairtcbglog flex' : 'yaritcbglognone'"
@@ -1041,14 +1144,18 @@ let pointsthr = ref(0);
 let viewsf = ref(0);
 let viewsw = ref(0);
 let viewssix = ref(0);
-
+let iscopy = ref("0");
 let pointsf = ref(0);
 let addpoints = ref(0);
 const xhladdress = ref("");
 const xxhladdress = ref("");
 const xethbalance = ref("");
-let xloginzt = ref("CONNECT");
-let xhlloginzt = ref("CONNECT");
+let invitationcode = ref("");
+let Twname = ref("");
+let xloginzt = ref("CONNECT  ");
+let xhlloginzt = ref("CONNECT  ");
+let isgy = ref("0");
+let isgw = ref("0");
 
 // let airtc = ref(0);
 // let airtcshow = (str) => {
@@ -1082,7 +1189,8 @@ let twitterlog = () => {
     .login()
     .then(
       function (res) {
-        localStorage.setItem("Twname", res.authResponse.screen_name);
+        Twname.value = res.authResponse.screen_name;
+        localStorage.setItem("Twname", Twname.value);
         alllogin.value = "1";
         xlogin.value = "0";
         xloginzt = "CONNECTED";
@@ -1496,15 +1604,50 @@ let twpltxt = () => {
       textsan.value
   );
 };
-let tcbgshow = (str) => {
+let tcbgshow = (str, success) => {
   yaritcbg.value = str;
+  if (str == "1") {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (let i = 0; i < 6; i++) {
+      invitationcode.value += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+    }
+  }
+  if (invitationcode.value != "" && str == "0" && success == "1") {
+    isgw.value = "1";
+  }
 };
+
 let logtcbgshow = (str) => {
   yarilog.value = str;
+  if (Twname.value != "") {
+    isgy.value = "1";
+  }
+};
+let wtccon = () => {
+  console.log();
+};
+let qriscopy = (str) => {
+  if (invitationcode.value != "" && str == "1") {
+    navigator.clipboard.writeText(invitationcode.value).then(() => {
+      alert("Text successfully copied to clipboard");
+    });
+    iscopy.value = str;
+  } else if (invitationcode.value == "") {
+    alert("Failed to copy text");
+  }
 };
 </script>
 
 <style scoped>
+.yairlsytysvgnone {
+  display: none;
+}
+.yaritcbgnone {
+  display: none;
+}
 .yairbox {
   width: 68.5%;
   margin: 0 auto;
@@ -1613,25 +1756,35 @@ let logtcbgshow = (str) => {
 }
 
 .yairlsytysvg:hover > svg {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 }
-
+.yairlsy .yairlsytysvghover > svg {
+  color: rgba(255, 255, 255, 0.4);
+}
 .yairlsytysvg:hover > span {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 }
-
+.yairlsy .yairlsytysvghover > span {
+  color: rgba(255, 255, 255, 0.4);
+}
 .ymainhy .yairlsytysvg > svg {
   color: rgb(17, 11, 11);
 }
 
 .ymainhy .yairlsytysvg:hover > svg {
-  color: rgba(17, 11, 11, 0.5);
+  color: rgba(17, 11, 11, 0.4);
 }
 
 .ymainhy .yairlsytysvg:hover > span {
-  color: rgba(17, 11, 11, 0.5);
+  color: rgba(17, 11, 11, 0.4);
 }
 
+.ymainhy .yairlsy .yairlsytysvghover > svg {
+  color: rgba(17, 11, 11, 0.4);
+}
+.ymainhy .yairlsy .yairlsytysvghover > span {
+  color: rgba(17, 11, 11, 0.4);
+}
 .yairlsytysvg span {
   position: absolute;
   font-size: 1.875rem;
@@ -1753,6 +1906,101 @@ let logtcbgshow = (str) => {
   box-sizing: border-box;
   background: rgb(30 31 53);
 }
+.yaritctjmbox {
+  width: 25.75rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: rgb(30 31 53);
+  position: relative;
+}
+.yaritctjmbox > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+.yaritctjmbcon {
+  width: 100%;
+}
+.yaritctjmbcon h1 {
+  font-family: "Vectrex";
+  font-size: 1.75rem;
+  line-height: 1.15;
+  color: #fff;
+  text-align: center;
+  margin: 1rem 0;
+}
+.yaritctinpb {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 1rem;
+}
+.yaritctinpb > input {
+  width: 70%;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 160%;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  font-family: "GT Pressura Mono";
+  border: 2px solid rgb(179 187 202);
+  transition: all 0.15s;
+  color: white;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+.yaritctinpb > input:focus {
+  border-color: white;
+}
+.yaritctbcopy {
+  justify-content: center;
+  align-items: center;
+}
+.yaritctbcopy > .yaricopy {
+  width: 4.949375rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(179 187 202);
+  color: white;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+.yaritctbcopy > .yaricopy:hover {
+  border-color: rgb(255 255 255);
+}
+.yaritctbcopy > .yaricopyed {
+  width: 4.949375rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(179 187 202);
+  color: white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.yaritctbcopy > .yaricopyed:hover {
+  border-color: rgb(255 255 255);
+}
+.yaritctbcopy > .yaricopynone {
+  display: none;
+}
 .yariclty {
   width: 100%;
   align-items: center;
@@ -1800,19 +2048,21 @@ let logtcbgshow = (str) => {
   justify-content: center;
 }
 .yarierbyxhlr > .yarierbut {
+  width: 6.3625rem;
   padding: 0.5rem 1rem;
   font-family: "GT Pressura Mono";
   text-align: center;
   background: transparent;
   border: 2px solid rgb(179 187 202);
   color: white;
-  border-radius: 0.735rem;
+  border-radius: 0.375rem;
   cursor: pointer;
 }
 .yarierbyxhlr > .yarierbut:hover {
   border-color: rgb(255 255 255);
 }
 .yarierbyxhlr .yarijzcl {
+  width: 6.3625rem;
   padding: 0.5rem 1rem;
   font-family: "GT Pressura Mono";
   text-align: center;
@@ -1823,6 +2073,7 @@ let logtcbgshow = (str) => {
   cursor: not-allowed;
 }
 .yarienda > .yarierbut {
+  width: 6.3625rem;
   padding: 0.5rem 1rem;
   font-family: "GT Pressura Mono";
   text-align: center;
@@ -2156,6 +2407,14 @@ let logtcbgshow = (str) => {
     width: 92.5%;
     margin: 0 auto;
     padding: 1rem;
+  }
+  .yaritctjmbox > img {
+    top: 1rem;
+    right: 1rem;
+  }
+  .yaritctjmbox {
+    width: 92.5%;
+    margin: 0 auto;
   }
   .yaritclogbox > p {
     font-size: 0.9rem;
