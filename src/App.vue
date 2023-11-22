@@ -891,9 +891,12 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
               </svg>
               <img class="hyshow" src="./assets/white.svg" alt=""
             /></router-link>
+            <router-link to="/Stake">Stake</router-link>
+            <router-link to="/Leaderboard">Leaderboard</router-link>
+            <router-link to="/Ido">Ido</router-link>
           </div>
-          <div class="yheade flex">
-            <!-- <router-link :to="{ path: '/', hash: '#xShareBot' }"
+          <!-- <div class="yheade flex">
+            <router-link :to="{ path: '/', hash: '#xShareBot' }"
               >xShareBot</router-link
             >
             <router-link :to="{ path: '/', hash: '#MevBot' }"
@@ -905,18 +908,18 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             <router-link :to="{ path: '/', hash: '#Roadmap' }"
               >Roadmap</router-link
             >
-            <a href="#">Docs</a> -->
+            <a href="#">Docs</a>
             <router-link to="/Stake">Stake</router-link>
             <router-link to="/Ido">Ido</router-link>
 
-            <!-- <router-link
+            <router-link
               to="/Airdrop"
               :class="Twittername == '' ? '' : 'istwdl'"
               >AIRDROP</router-link
-            > -->
-            <!-- <router-link to="/Airdrop">AIRDROP</router-link> -->
+            >
+            <router-link to="/Airdrop">AIRDROP</router-link>
             <router-link to="/Leaderboard">Leaderboard</router-link>
-          </div>
+          </div> -->
           <div class="yheads flex">
             <div class="qihuan" @click="hebtqh(1)">
               <svg
@@ -4189,8 +4192,10 @@ logTlgConnect("");
   align-items: center;
   column-gap: 0.75rem;
 }
-
-.yheady > a {
+.yheady {
+  align-items: center;
+}
+.yheady > a:nth-child(1) {
   width: 10rem;
   height: 1.9375rem;
 }
@@ -4205,6 +4210,34 @@ logTlgConnect("");
   height: 100%;
 }
 
+.yheady {
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.yheady > a {
+  font-family: "Vectrex";
+  font-size: 1rem;
+  color: #fff;
+}
+/* .yheade > a:nth-child(7) {
+  cursor: not-allowed !important;
+} */
+.ymainbt .yheady > a {
+  color: #fff;
+}
+
+.ymainbt .yheady > a:hover {
+  color: rgb(179 187 202);
+}
+
+.ymainhy .yheady > a {
+  color: rgb(17 11 11);
+}
+
+.ymainhy .yheady > a:hover {
+  color: rgb(56 59 64);
+}
 .ymainhy .yheady img {
   content: url("./assets/black.png") !important;
 }
@@ -4548,7 +4581,15 @@ logTlgConnect("");
   .yheade {
     display: none;
   }
-
+  .yheady > a:nth-child(2) {
+    display: none;
+  }
+  .yheady > a:nth-child(3) {
+    display: none;
+  }
+  .yheady > a:nth-child(4) {
+    display: none;
+  }
   .yhead {
     padding: 1rem 0.5rem;
   }

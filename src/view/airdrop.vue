@@ -1717,7 +1717,7 @@ let logtcbgshow = (str) => {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 101;
   background: rgba(0, 0, 0, 0.36);
   justify-content: center;
   align-items: center;
@@ -1779,22 +1779,36 @@ let logtcbgshow = (str) => {
   font-family: "GT Pressura Mono";
   text-align: center;
   background: transparent;
-  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border: 2px solid rgb(179 187 202);
   color: white;
+  border-radius: 0.735rem;
   cursor: pointer;
 }
 .yarierbyxhlr > .yarierbut:hover {
-  background: white;
-  color: rgb(0, 0, 0);
+  border-color: rgb(255 255 255);
 }
 .yarierbyxhlr .yarijzcl {
   padding: 0.5rem 1rem;
   font-family: "GT Pressura Mono";
   text-align: center;
-  background: rgb(30 31 53);
-  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  background: transparent;
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
   color: hsla(0, 0%, 100%, 0.6);
+  border-radius: 0.375rem;
   cursor: not-allowed;
+}
+.yarienda > .yarierbut {
+  padding: 0.5rem 1rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(179 187 202);
+  border-radius: 0.735rem;
+  color: white;
+  cursor: pointer;
+}
+.yarienda > .yarierbut:hover {
+  border-color: rgb(255 255 255);
 }
 .yaridbut {
   width: 100%;
@@ -1817,9 +1831,10 @@ let logtcbgshow = (str) => {
   padding: 0.5rem 2rem;
   font-family: "GT Pressura Mono";
   text-align: center;
-  background: rgb(30 31 53);
-  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  background: transparent;
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
   color: hsla(0, 0%, 100%, 0.6);
+  border-radius: 0.375rem;
   cursor: not-allowed;
 }
 .yarienda {
@@ -2112,6 +2127,17 @@ let logtcbgshow = (str) => {
   color: rgb(17, 11, 11);
 } */
 @media screen and (max-width: 1250px) {
+  .yaritclogbox {
+    width: 92.5%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .yaritclogbox > p {
+    font-size: 0.9rem;
+  }
+  .yarierlogbox {
+    flex-wrap: wrap !important;
+  }
   .yaribot > h4 {
     font-size: 2.5rem;
   }
