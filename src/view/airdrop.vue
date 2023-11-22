@@ -918,7 +918,15 @@
             <div class="yarierbyxhtxt">CONNECT WALLET</div>
           </div>
           <div class="yarierbyxhlr flex">
-            <button @click="render()" class="yarierbut">CONNECT</button>
+            <button :class="xhllogin == '0' ? 'yarijzcl' : 'yaributsjnone'">
+              {{ xhlloginzt }}
+            </button>
+            <button
+              @click="render()"
+              :class="xhllogin == '1' ? 'yarierbut' : 'yaributsjnone'"
+            >
+              CONNECT
+            </button>
           </div>
         </div>
         <div class="yarierlby flex jus">
@@ -946,7 +954,7 @@
           </div>
           <div class="yarierbyxhlr flex">
             <button :class="xlogin == '0' ? 'yarijzcl' : 'yaributsjnone'">
-              CONNECT
+              {{ xloginzt }}
             </button>
             <button
               @click="twitterlog()"
@@ -1007,7 +1015,7 @@ let yaritcbg = ref("0");
 let yarilog = ref("0");
 let xlogin = ref("0");
 let alllogin = ref("0");
-
+let xhllogin = ref("1");
 const isDragging = ref(false);
 const isDraggingt = ref(false);
 const isDraggingthr = ref(false);
@@ -1039,6 +1047,8 @@ let addpoints = ref(0);
 const xhladdress = ref("");
 const xxhladdress = ref("");
 const xethbalance = ref("");
+let xloginzt = ref("CONNECT");
+let xhlloginzt = ref("CONNECT");
 
 // let airtc = ref(0);
 // let airtcshow = (str) => {
@@ -1074,6 +1084,8 @@ let twitterlog = () => {
       function (res) {
         localStorage.setItem("Twname", res.authResponse.screen_name);
         alllogin.value = "1";
+        xlogin.value = "0";
+        xloginzt = "CONNECTED";
       },
       function (err) {
         console.log("err", err);
@@ -1128,6 +1140,8 @@ const render = async () => {
   const provider = await connect();
   const signer = provider.getSigner(0);
   xlogin.value = "1";
+  xhllogin.value = "0";
+  xhlloginzt.value = "CONNECTED";
   xhladdress.value = await signer.getAddress();
   localStorage.setItem("xhladd", xhladdress.value);
   const rawBalance = await provider.getBalance(xhladdress.value);
