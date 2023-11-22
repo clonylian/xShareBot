@@ -952,7 +952,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             <!-- <button :class="loginan == 0 ? '' : 'anxs'" @click="tcshow()">
               LOGIN TO CLAIM
             </button> -->
-            <div class="yheaddisc">
+            <!-- <div class="yheaddisc">
               <button :class="loginan == 1 ? '' : 'anxs'">
                 {{ xxhladdress }}
               </button>
@@ -960,7 +960,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                 <span></span>
                 <button @click="qxdl()">DISCONNECT</button>
               </div>
-            </div>
+            </div> -->
             <div class="yddhshow" @click="ydonshow(1)">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path

@@ -14,19 +14,34 @@
           <div class="yairlsy">
             <div class="yairlsyty flex">
               <div class="yairsyle"></div>
-              <a class="yairlsytysvg" href="https://twitter.com/settings/profile" target="_blank">
-                <svg viewBox="0 0 114 104" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="hidden h-28 w-28 sm:block">
+              <div @click="logtcbgshow('1')" class="yairlsytysvg">
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
                   <path
                     d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
-                    stroke="currentColor"></path>
+                    stroke="currentColor"
+                  ></path>
                 </svg>
                 <span>1</span>
-                <svg class="yairrjt" viewBox="0 0 19 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17" stroke="currentColor"
-                    stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
-              </a>
+              </div>
               <div class="yairsyri"></div>
             </div>
             <p>Add “❤️ Memecoin” to your X name</p>
@@ -35,16 +50,31 @@
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
               <div class="yairlsytysvg" @click="twpltxt()">
-                <svg viewBox="0 0 114 104" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="hidden h-28 w-28 sm:block">
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
                   <path
                     d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
-                    stroke="currentColor"></path>
+                    stroke="currentColor"
+                  ></path>
                 </svg>
                 <span>2</span>
-                <svg class="yairrjt" viewBox="0 0 19 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17" stroke="currentColor"
-                    stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </div>
 
@@ -55,17 +85,36 @@
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <a class="yairlsytysvg" href="https://twitter.com/intent/user?screen_name=Memeland" target="_blank">
-                <svg viewBox="0 0 114 104" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="hidden h-28 w-28 sm:block">
+              <a
+                class="yairlsytysvg"
+                href="https://twitter.com/intent/user?screen_name=Memeland"
+                target="_blank"
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
                   <path
                     d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
-                    stroke="currentColor"></path>
+                    stroke="currentColor"
+                  ></path>
                 </svg>
                 <span>3</span>
-                <svg class="yairrjt" viewBox="0 0 19 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17" stroke="currentColor"
-                    stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </a>
 
@@ -74,24 +123,78 @@
             <p>Follow @Memeland</p>
           </div>
           <div class="yairlsy">
-            <div class="yairlsyts yairlsytt yairlsyty flex">
+            <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <a class="yairlsytysvg" href="https://twitter.com/intent/user?screen_name=Memeland" target="_blank">
-                <svg viewBox="0 0 114 104" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="hidden h-28 w-28 sm:block">
+              <a
+                class="yairlsytysvg"
+                href="https://twitter.com/intent/user?screen_name=Memeland"
+                target="_blank"
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
                   <path
                     d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
-                    stroke="currentColor"></path>
+                    stroke="currentColor"
+                  ></path>
                 </svg>
                 <span>4</span>
-                <svg class="yairrjt" viewBox="0 0 19 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17" stroke="currentColor"
-                    stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </a>
               <div class="yairsyri"></div>
             </div>
             <p>Follow @Memeland</p>
+          </div>
+          <div class="yairlsy">
+            <div class="yairlsyts yairlsytt yairlsyty flex">
+              <div class="yairsyle"></div>
+              <div @click="tcbgshow('1')" class="yairlsytysvg">
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>5</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+              <div class="yairsyri"></div>
+            </div>
+            <p>Add “❤️” to your X name</p>
           </div>
         </div>
       </div>
@@ -99,13 +202,22 @@
     <div class="yaribot">
       <h4>$RATIO Calculator</h4>
       <div class="yariboter flex">
-        <button @click="changearitab('0')" :class="yaritab == '0' ? 'yaritabactive' : ''">
+        <button
+          @click="changearitab('0')"
+          :class="yaritab == '0' ? 'yaritabactive' : ''"
+        >
           Post Calculator
         </button>
-        <button @click="changearitab('1')" :class="yaritab == '1' ? 'yaritabactive' : ''">
+        <button
+          @click="changearitab('1')"
+          :class="yaritab == '1' ? 'yaritabactive' : ''"
+        >
           Comment Calculator
         </button>
-        <button @click="changearitab('2')" :class="yaritab == '2' ? 'yaritabactive' : ''">
+        <button
+          @click="changearitab('2')"
+          :class="yaritab == '2' ? 'yaritabactive' : ''"
+        >
           Engager Calculator
         </button>
       </div>
@@ -126,13 +238,29 @@
           <h3>Post Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <path
                   d="M14.122 9.87999C15.293 11.051 15.293 12.952 14.122 14.125C12.951 15.296 11.05 15.296 9.877 14.125C8.706 12.954 8.706 11.053 9.877 9.87999C11.05 8.70699 12.95 8.70699 14.122 9.87999"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Views</p>
@@ -142,11 +270,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ views }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDrag" @touchstart="startDrag" @mousemove="onDragging"
-                  @touchmove="onDragging" @mouseup="stopDrag" @touchend="stopDrag">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDrag"
+                  @touchstart="startDrag"
+                  @mousemove="onDragging"
+                  @touchmove="onDragging"
+                  @mouseup="stopDrag"
+                  @touchend="stopDrag"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: progress + '%' }"></div>
-                    <div class="handle" :style="{ left: progress + '%' }" ref="handle"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: progress + '%' }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: progress + '%' }"
+                      ref="handle"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ views * 10 }} points</p>
@@ -155,10 +297,22 @@
           </div>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M12 5.70836C12.9139 4.61055 14.2732 3.982 15.7015 3.99665C18.8729 3.99665 21.0038 6.97789 21.0038 9.75405C21.0038 15.5575 13.7787 20.0033 12 20.0033C10.2213 20.0033 2.99625 15.5575 2.99625 9.75405C2.99625 6.97789 5.12714 3.99665 8.29846 3.99665C9.72684 3.982 11.0861 4.61055 12 5.70836Z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">likes</p>
@@ -168,11 +322,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewsy }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragy" @touchstart="startDragy" @mousemove="onDraggingy"
-                  @touchmove="onDraggingy" @mouseup="stopDragy" @touchend="stopDragy">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragy"
+                  @touchstart="startDragy"
+                  @mousemove="onDraggingy"
+                  @touchmove="onDraggingy"
+                  @mouseup="stopDragy"
+                  @touchend="stopDragy"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: progressy + '%' }"></div>
-                    <div class="handle" :style="{ left: progressy + '%' }" ref="handley"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: progressy + '%' }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: progressy + '%' }"
+                      ref="handley"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewsy * 10 }} points</p>
@@ -181,14 +349,36 @@
           </div>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M10.5409 3.5H14.0364C17.8823 3.50001 21 6.61773 21 10.4636V10.5359C21 12.3828 20.2663 14.154 18.9604 15.4599C17.6545 16.7659 15.8832 17.4995 14.0364 17.4995H13.0131C13.0059 17.4995 13 17.5054 13 17.5126V19.775C13 20.031 12.8648 20.2679 12.6445 20.3982C12.4242 20.5285 12.1514 20.5327 11.9271 20.4094L6.90686 17.6483C4.49715 16.323 3 13.791 3 11.0409V11.0409C2.99999 9.0409 3.79447 7.12285 5.20866 5.70866C6.62284 4.29448 8.54089 3.5 10.5409 3.5Z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9 9.5H15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-                <path d="M9 12.5H11.4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                </path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M9 9.5H15"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M9 12.5H11.4"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Comments</p>
@@ -198,11 +388,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewst }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragt" @touchstart="startDragt" @mousemove="onDraggingt"
-                  @touchmove="onDraggingt" @mouseup="stopDragt" @touchend="stopDragt">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragt"
+                  @touchstart="startDragt"
+                  @mousemove="onDraggingt"
+                  @touchmove="onDraggingt"
+                  @mouseup="stopDragt"
+                  @touchend="stopDragt"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: progresst + '%' }"></div>
-                    <div class="handle" :style="{ left: progresst + '%' }" ref="handlet"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: progresst + '%' }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: progresst + '%' }"
+                      ref="handlet"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewst * 10 }} points</p>
@@ -211,15 +415,41 @@
           </div>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M13 19H7C5.895 19 5 18.105 5 17V5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path d="M11 5H17C18.105 5 19 5.895 19 7V19" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path d="M7.5 7.5L5 5L2.5 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path d="M16 16L19 19L22 16" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 19H7C5.895 19 5 18.105 5 17V5"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M11 5H17C18.105 5 19 5.895 19 7V19"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M7.5 7.5L5 5L2.5 7.5"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M16 16L19 19L22 16"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Reposts</p>
@@ -229,11 +459,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewsthr }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragthr" @touchstart="startDragthr" @mousemove="onDraggingthr"
-                  @touchmove="onDraggingthr" @mouseup="stopDragthr" @touchend="stopDragthr">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragthr"
+                  @touchstart="startDragthr"
+                  @mousemove="onDraggingthr"
+                  @touchmove="onDraggingthr"
+                  @mouseup="stopDragthr"
+                  @touchend="stopDragthr"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: `${progressthr}%` }"></div>
-                    <div class="handle" :style="{ left: `${progressthr}%` }" ref="handlethr"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: `${progressthr}%` }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: `${progressthr}%` }"
+                      ref="handlethr"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewsthr * 10 }} points</p>
@@ -255,13 +499,27 @@
           </div>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <path
                   d="M14 13.5H19C19.552 13.5 20 13.948 20 14.5V18.5C20 19.052 19.552 19.5 19 19.5H15C14.448 19.5 14 19.052 14 18.5V13.5C14 7.5 15 6.5 18 4.5"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
                 <path
                   d="M4 13.5H9C9.552 13.5 10 13.948 10 14.5V18.5C10 19.052 9.552 19.5 9 19.5H5C4.448 19.5 4 19.052 4 18.5V13.5C4 7.5 5 6.5 8 4.5"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Quote Reposts</p>
@@ -271,11 +529,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewsf }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragf" @touchstart="startDragf" @mousemove="onDraggingf"
-                  @touchmove="onDraggingf" @mouseup="stopDragf" @touchend="stopDragf">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragf"
+                  @touchstart="startDragf"
+                  @mousemove="onDraggingf"
+                  @touchmove="onDraggingf"
+                  @mouseup="stopDragf"
+                  @touchend="stopDragf"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: `${progressf}%` }"></div>
-                    <div class="handle" :style="{ left: `${progressf}%` }" ref="handlef"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: `${progressf}%` }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: `${progressf}%` }"
+                      ref="handlef"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewsf * 10 }} points</p>
@@ -298,10 +570,20 @@
           <div class="yarixian"></div>
           <div class="yaritabrend flex jus">
             <div class="yaritabendleft flex">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z">
-                </path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z"
+                ></path>
               </svg>
               <h4>Total Points :</h4>
             </div>
@@ -326,13 +608,29 @@
           <h3>Post Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <path
                   d="M14.122 9.87999C15.293 11.051 15.293 12.952 14.122 14.125C12.951 15.296 11.05 15.296 9.877 14.125C8.706 12.954 8.706 11.053 9.877 9.87999C11.05 8.70699 12.95 8.70699 14.122 9.87999"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Views</p>
@@ -342,11 +640,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewsw }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragw" @touchstart="startDragw" @mousemove="onDraggingw"
-                  @touchmove="onDraggingw" @mouseup="stopDragw" @touchend="stopDragw">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragw"
+                  @touchstart="startDragw"
+                  @mousemove="onDraggingw"
+                  @touchmove="onDraggingw"
+                  @mouseup="stopDragw"
+                  @touchend="stopDragw"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: `${progressw}%` }"></div>
-                    <div class="handle" :style="{ left: `${progressw}%` }" ref="handlew"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: `${progressw}%` }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: `${progressw}%` }"
+                      ref="handlew"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewsw * 10 }} points</p>
@@ -369,10 +681,20 @@
           <div class="yarixian"></div>
           <div class="yaritabrend flex jus">
             <div class="yaritabendleft flex">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z">
-                </path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z"
+                ></path>
               </svg>
               <h4>Total Points :</h4>
             </div>
@@ -397,13 +719,29 @@
           <h3>Post Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <path
                   d="M14.122 9.87999C15.293 11.051 15.293 12.952 14.122 14.125C12.951 15.296 11.05 15.296 9.877 14.125C8.706 12.954 8.706 11.053 9.877 9.87999C11.05 8.70699 12.95 8.70699 14.122 9.87999"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
                   d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z"
-                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <div>
                 <p class="yarirany">Views</p>
@@ -413,11 +751,25 @@
             <div class="yarigund" style="border: 1px solid rgb(68, 67, 70)">
               <p>{{ viewssix }} views</p>
               <div class="yarigundcon flex jus">
-                <div class="yarijdt" @mousedown="startDragsix" @touchstart="startDragsix" @mousemove="onDraggingsix"
-                  @touchmove="onDraggingsix" @mouseup="stopDragsix" @touchend="stopDragsix">
+                <div
+                  class="yarijdt"
+                  @mousedown="startDragsix"
+                  @touchstart="startDragsix"
+                  @mousemove="onDraggingsix"
+                  @touchmove="onDraggingsix"
+                  @mouseup="stopDragsix"
+                  @touchend="stopDragsix"
+                >
                   <div class="yarijdtbox">
-                    <div class="progress" :style="{ width: `${progresssix}%` }"></div>
-                    <div class="handle" :style="{ left: `${progresssix}%` }" ref="handlesix"></div>
+                    <div
+                      class="progress"
+                      :style="{ width: `${progresssix}%` }"
+                    ></div>
+                    <div
+                      class="handle"
+                      :style="{ left: `${progresssix}%` }"
+                      ref="handlesix"
+                    ></div>
                   </div>
                 </div>
                 <p>{{ viewssix * 10 }} points</p>
@@ -427,10 +779,20 @@
           <div class="yarixian"></div>
           <div class="yaritabrend flex jus">
             <div class="yaritabendleft flex">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z">
-                </path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M2.5 9h19M10 3L8 9l4 11.5L16 9l-2-6m-1.386 17.262l8.959-10.75c.152-.182.227-.273.256-.375a.5.5 0 000-.274c-.029-.102-.104-.193-.256-.375l-4.334-5.2c-.088-.106-.132-.159-.186-.197a.5.5 0 00-.158-.074C16.831 3 16.763 3 16.625 3h-9.25c-.138 0-.207 0-.271.017a.5.5 0 00-.158.074 1.08 1.08 0 00-.186.197l-4.334 5.2c-.151.182-.227.273-.256.375a.5.5 0 000 .274c.029.102.105.193.256.375l8.959 10.75c.211.254.316.38.443.427a.5.5 0 00.343 0c.127-.047.232-.173.443-.427z"
+                ></path>
               </svg>
               <h4>Total Points :</h4>
             </div>
@@ -440,51 +802,190 @@
       </div>
     </div>
   </div>
-  <!-- <div :class="airtc == 1 ? 'yairtc flex' : 'yairtc flex yairtcnone'">
-    <div class="yairtcbox">
-      <p class="chakra-text">
-        Hi, my name is
-        <span class="chakra-text">@IHunt100x_Gems</span>, and I’m a
-        <span class="chakra-text">$MEME (</span
-        ><span class="chakra-text">@Memecoin</span>) farmer at
-        <span class="chakra-text">@Memeland.</span><br /><br />On my honor, I
-        promise that I will do my best to do my duty to my own bag, and to farm
-        <span class="chakra-text">$MEMEPOINTS </span>at all times.<br /><br />It
-        ain’t much, but it’s honest work. 🧑‍🌾
-      </p>
-      <button @click="twpltxt()" class="flex">
-        SHARE PUBLICLY ON
-        <svg
-          width="20px"
-          height="20px"
-          viewBox="0 0 24 24"
+  <div
+    @click="tcbgshow('0')"
+    :class="yaritcbg == '1' ? 'yairtcbg flex' : 'yaritcbgnone'"
+  ></div>
+  <div
+    @click="logtcbgshow('0')"
+    :class="yarilog == '1' ? 'yairtcbglog flex' : 'yaritcbglognone'"
+  >
+    <div @click.stop="cgicon()" class="yaritclogbox">
+      <div class="yariclty flex jus">
+        <span>CONNECT TO YOUR ACCOUNT</span
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="76"
+          height="11"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M3.00406 3H8.23955L12.7826 9.61352C12.7829 9.61396 12.7833 9.61432 12.7838 9.61458C12.7842 9.61484 12.7847 9.61499 12.7853 9.61503C12.7858 9.61507 12.7863 9.61498 12.7868 9.61479C12.7873 9.61459 12.7878 9.61428 12.7881 9.61389L18.4765 3H20.0205C20.0206 3.00148 20.0219 3.00238 20.0242 3.0027C20.026 3.00303 20.0263 3.00389 20.0251 3.00529L13.4795 10.6158C13.4782 10.6173 13.4775 10.6192 13.4774 10.6211C13.4772 10.6231 13.4778 10.625 13.4789 10.6266L20.5986 20.9907C20.5991 20.9914 20.5993 20.9922 20.5994 20.993C20.5994 20.9938 20.5992 20.9947 20.5988 20.9954C20.5984 20.9962 20.5979 20.9968 20.5971 20.9972C20.5964 20.9977 20.5956 20.9979 20.5948 20.9979H15.3684C15.3659 20.9979 15.3635 20.9973 15.3613 20.9962C15.3591 20.995 15.3572 20.9934 15.3558 20.9914L10.5632 14.0147C10.5612 14.0116 10.5589 14.0115 10.5566 14.0143L4.55299 20.9947C4.55215 20.9957 4.55109 20.9965 4.5499 20.9971C4.54871 20.9976 4.54742 20.9979 4.54611 20.9979H3.0027C3.00219 20.9979 3.00169 20.9977 3.00126 20.9975C3.00083 20.9972 3.00048 20.9968 3.00026 20.9964C3.00004 20.9959 2.99996 20.9954 3.00002 20.9949C3.00008 20.9944 3.00029 20.994 3.00061 20.9936L9.8662 13.0114C9.86742 13.0099 9.86815 13.0081 9.86826 13.0062C9.86837 13.0044 9.86786 13.0025 9.86681 13.0009C7.57943 9.67119 5.29115 6.34008 3.00196 3.00762C3.0009 3.00607 3.00061 3.00471 3.0011 3.00357C3.00168 3.0025 3.00266 3.00131 3.00406 3ZM18.4687 19.8813C18.4695 19.8813 18.4702 19.8811 18.4709 19.8807C18.4715 19.8803 18.472 19.8797 18.4724 19.879C18.4727 19.8784 18.4729 19.8776 18.4729 19.8769C18.4728 19.8761 18.4726 19.8754 18.4721 19.8748L7.49681 4.17172C7.49643 4.17116 7.49591 4.17069 7.49531 4.17037C7.49471 4.17005 7.49404 4.16988 7.49336 4.16988H5.1182C5.11744 4.16988 5.1167 4.17009 5.11605 4.17048C5.11541 4.17088 5.11488 4.17144 5.11453 4.1721C5.11417 4.17277 5.11401 4.17353 5.11405 4.17428C5.11409 4.17504 5.11433 4.17577 5.11475 4.17639L16.0901 19.8795C16.0905 19.8801 16.091 19.8806 16.0916 19.8809C16.0922 19.8812 16.0929 19.8814 16.0935 19.8814L18.4687 19.8813Z"
-            fill="currentColor"
+            fill="url(#frame_svg__a)"
+            fill-opacity="0.3"
+            d="m70.264 0 5.17 11h-5.575l-5.17-11h5.575ZM55.566 0l5.17 11h5.575l-5.17-11h-5.575Zm-9.123 0 5.17 11h5.575l-5.17-11h-5.575Zm-9.122 0 5.17 11h5.574l-5.17-11h-5.574Zm-9.123 0 5.17 11h5.574l-5.17-11h-5.574Zm-9.123 0 5.17 11h5.575L24.65 0h-5.575ZM9.952 0l5.17 11h5.575l-5.17-11H9.952ZM.829 0 6 11h5.575L6.404 0H.83Z"
           ></path>
-        </svg>
-      </button>
-      <div @click="airtcshow(0)" class="yairlt">
-        <svg
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          width="24px"
-        >
-          <path
-            d="M19.2806 18.2194C19.3503 18.289 19.4056 18.3718 19.4433 18.4628C19.481 18.5539 19.5004 18.6514 19.5004 18.75C19.5004 18.8485 19.481 18.9461 19.4433 19.0372C19.4056 19.1282 19.3503 19.2109 19.2806 19.2806C19.2109 19.3503 19.1282 19.4056 19.0372 19.4433C18.9461 19.481 18.8485 19.5004 18.75 19.5004C18.6514 19.5004 18.5539 19.481 18.4628 19.4433C18.3718 19.4056 18.289 19.3503 18.2194 19.2806L12 13.0603L5.78061 19.2806C5.63988 19.4213 5.44901 19.5004 5.24999 19.5004C5.05097 19.5004 4.8601 19.4213 4.71936 19.2806C4.57863 19.1399 4.49957 18.949 4.49957 18.75C4.49957 18.551 4.57863 18.3601 4.71936 18.2194L10.9397 12L4.71936 5.78061C4.57863 5.63988 4.49957 5.44901 4.49957 5.24999C4.49957 5.05097 4.57863 4.8601 4.71936 4.71936C4.8601 4.57863 5.05097 4.49957 5.24999 4.49957C5.44901 4.49957 5.63988 4.57863 5.78061 4.71936L12 10.9397L18.2194 4.71936C18.3601 4.57863 18.551 4.49957 18.75 4.49957C18.949 4.49957 19.1399 4.57863 19.2806 4.71936C19.4213 4.8601 19.5004 5.05097 19.5004 5.24999C19.5004 5.44901 19.4213 5.63988 19.2806 5.78061L13.0603 12L19.2806 18.2194Z"
-          ></path>
+          <defs>
+            <linearGradient
+              id="frame_svg__a"
+              x1="75.481"
+              x2="0.829"
+              y1="5.5"
+              y2="5.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#fff" stop-opacity="0"></stop>
+              <stop offset="1" stop-color="#fff"></stop>
+            </linearGradient>
+          </defs>
         </svg>
       </div>
+      <p>
+        You will need to complete the follow steps to complete your onboarding.
+      </p>
+      <div class="yarierlogbox flex">
+        <div class="yarierlby flex jus">
+          <div class="yarierbyxhll flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="none"
+              class="h-8 w-10"
+            >
+              <g stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  fill="#E2761B"
+                  stroke="#E2761B"
+                  d="m27.53 3.566-9.993 7.422 1.848-4.379 8.145-3.043Z"
+                ></path>
+                <path
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  d="m4.46 3.566 9.913 7.493-1.758-4.45L4.46 3.566ZM23.935 20.77l-2.662 4.078 5.695 1.567 1.637-5.555-4.67-.09Zm-20.53.09 1.627 5.555 5.695-1.567-2.662-4.078-4.66.09Z"
+                ></path>
+                <path
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  d="M10.405 13.88 8.82 16.282l5.654.251-.2-6.076-3.867 3.425Zm11.18 0-3.918-3.495-.13 6.147 5.644-.25-1.597-2.401ZM10.726 24.85l3.395-1.657-2.933-2.29-.462 3.947Zm7.141-1.657 3.405 1.657-.472-3.948-2.933 2.29Z"
+                ></path>
+                <path
+                  fill="#D7C1B3"
+                  stroke="#D7C1B3"
+                  d="m21.273 24.849-3.405-1.658.271 2.22-.03.934 3.164-1.496Zm-10.546 0 3.164 1.496-.02-.934.25-2.22-3.394 1.658Z"
+                ></path>
+                <path
+                  fill="#233447"
+                  stroke="#233447"
+                  d="m13.941 19.435-2.832-.833 1.998-.915.834 1.748Zm4.108 0 .834-1.747 2.008.914-2.842.833Z"
+                ></path>
+                <path
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  d="m10.727 24.849.482-4.078-3.144.09 2.662 3.988ZM20.79 20.77l.482 4.078 2.662-3.988-3.144-.09Zm2.39-4.49-5.644.251.522 2.903.834-1.748 2.008.914 2.28-2.32Zm-12.072 2.32 2.008-.914.824 1.748.532-2.903-5.654-.25 2.29 2.32Z"
+                ></path>
+                <path
+                  fill="#E4751F"
+                  stroke="#E4751F"
+                  d="m8.819 16.281 2.37 4.62-.08-2.3-2.29-2.32Zm12.082 2.32-.1 2.3 2.38-4.62-2.28 2.32Zm-6.428-2.069-.532 2.903.663 3.425.15-4.51-.28-1.818Zm3.064 0-.271 1.808.12 4.52.673-3.425-.522-2.903Z"
+                ></path>
+                <path
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  d="m18.059 19.435-.673 3.425.482.331 2.933-2.29.1-2.3-2.842.834Zm-6.95-.834.08 2.3 2.933 2.29.482-.331-.663-3.425-2.832-.834Z"
+                ></path>
+                <path
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  d="m18.11 26.345.03-.934-.252-.22h-3.786l-.231.22.02.934-3.164-1.496 1.105.904 2.24 1.556h3.846l2.25-1.556 1.105-.904-3.164 1.496Z"
+                ></path>
+                <path
+                  fill="#161616"
+                  stroke="#161616"
+                  d="m17.868 23.192-.482-.332h-2.782l-.482.332-.251 2.22.23-.222h3.787l.251.221-.27-2.22Z"
+                ></path>
+                <path
+                  fill="#763D16"
+                  stroke="#763D16"
+                  d="m27.952 11.47.854-4.098-1.276-3.806-9.662 7.171 3.716 3.144 5.253 1.537 1.166-1.356-.503-.362.804-.733-.623-.482.804-.613-.533-.402ZM3.194 7.372l.854 4.098-.543.402.804.613-.613.482.804.733-.503.362 1.156 1.356 5.253-1.537 3.716-3.144L4.46 3.566 3.194 7.372Z"
+                ></path>
+                <path
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  d="m26.837 15.417-5.253-1.536 1.597 2.4-2.38 4.62 3.134-.04h4.67l-1.768-5.444Zm-16.431-1.536-5.253 1.536-1.748 5.444h4.66l3.124.04-2.37-4.62 1.586-2.4Zm7.13 2.651.332-5.795 1.527-4.128h-6.78l1.507 4.128.351 5.795.12 1.828.01 4.5h2.783l.02-4.5.13-1.828Z"
+                ></path>
+              </g>
+            </svg>
+            <div class="yarierbyxhtxt">CONNECT WALLET</div>
+          </div>
+          <div class="yarierbyxhlr flex">
+            <button @click="render()" class="yarierbut">CONNECT</button>
+          </div>
+        </div>
+        <div class="yarierlby flex jus">
+          <div class="yarierbyxhll flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="25"
+              fill="none"
+              class="h-6 w-10"
+            >
+              <g clip-path="url(#x_svg__a)">
+                <path
+                  fill="#fff"
+                  d="m.592 0 10.404 13.374L.526 24.243h2.357l9.166-9.518 7.408 9.519h8.016L16.483 10.12 26.23 0h-2.357l-8.441 8.764L8.61 0H.592Zm3.465 1.669h3.684l16.265 20.905h-3.682L4.057 1.67Z"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="x_svg__a">
+                  <path fill="#fff" d="M.526 0h26.947v24.242H.526z"></path>
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="yarierbyxhtxt">TWITTER</div>
+          </div>
+          <div class="yarierbyxhlr flex">
+            <button
+              @click="twitterlog()"
+              :class="xlogin == '1' ? 'yarierbut' : 'yarijzcl'"
+            >
+              CONNECT
+            </button>
+          </div>
+        </div>
+        <div class="yaridbut flex">
+          <span>Audited by</span
+          ><a target="_blank" href="https://quantstamp.com/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1298 245"
+              class="h-8 ml-3"
+            >
+              <path
+                fill="#4bbcfc"
+                d="M221.05 122.6c0-19.1-5.5-37.9-16-53.9l38.7-38.9-29-29.2-38.7 38.9c-32.6-21.4-74.8-21.4-107.4 0L29.85.6.75 29.8l38.7 38.9c-21.3 32.8-21.3 75.1 0 107.9L.75 215.4l29.1 29.2 38.7-38.9c32.6 21.4 74.8 21.4 107.4 0l38.7 38.9 29.1-29.2-38.7-38.9c10.5-16 16.1-34.7 16-53.9zm-156.4 0c0-23.6 14.2-44.9 36-53.7s46.8-3.5 63.1 13.5 20.7 42.3 11 63.8l-38-38.2-29 29.2 38 38.2c-17.8 8-38.5 6.5-54.9-4.2-16.3-10.7-26.2-29-26.2-48.6z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M430.35 123.8c0 23.9-12 45.4-33.5 55.3l11.4 14.9-23.5 11.9-15.7-20.9h-.5c-38.8 0-61.7-28.3-61.7-61.3s22.9-61.3 61.7-61.3 61.8 28.4 61.8 61.4zm-61.7 37.2c21.9 0 33.8-17.1 33.8-37.3s-11.9-37.3-33.8-37.3c-22.1 0-34 17.1-33.8 37.3-.2 20.3 11.7 37.3 33.8 37.3zm104.9 22.9c-19.1 0-29.4-11.9-29.4-32.6v-49.4h25.6v43.7c0 10.9 3.6 16.9 13.2 16.9 10.7 0 15.3-7 15.3-17.7v-42.9h25.1v79.8h-25.1v-11.4c-4.4 8.5-12.6 13.6-24.7 13.6zm102.5 0c-23.8 0-37.5-18.1-37.5-42.1 0-23.9 14.7-42.1 37.8-42.1 11.6 0 20.6 5.5 24.9 13.6v-11.4h25.1v79.8h-25.1v-11.3c-4.2 8-14.1 13.5-25.2 13.5zm7.3-21c12.5 0 19-9.4 19-21 0-11.4-6.4-20.9-19-20.9-11.7 0-19 8.8-19 20.9 0 12 7.3 21 19 21zm64-61h25.3v11.6c4.6-8.9 13.7-13.7 25.7-13.7 19.3 0 29 10.9 29 32.6v49.4h-25.4v-41.1c0-13.4-3.8-19.5-14-19.5-10.1 0-15.3 6.6-15.3 18.9v41.7h-25.3zm141.9 60.1c3.1 0 6.4-.2 8.7-.5v20.2c-3.6.7-9.6 1.3-16.8 1.3-11.9 0-28.2-2.7-28.2-29.3v-31.8h-12.5v-20h12.5V78.2h25.3v23.7h18v20h-18v26.5c0 11.8 4.8 13.6 11 13.6zm55.2 22.2c-23.3 0-37.6-11.4-37.6-26.5h25.1c0 5.5 5.3 9.4 13 9.4 5.4 0 9.2-2.8 9.2-7.5 0-3.1-1.5-5.8-5.8-6.8l-19.5-5c-13.2-3.3-20-11.6-20-23 0-14.9 13-25.3 34-25.3 23.3 0 35.5 9.8 35.5 24.8h-24.9c0-5.6-4.1-8.8-10.9-8.8-5.4 0-9.1 2.7-9.1 6.6 0 3.6 2.5 6 6.8 7.1l18.8 5.1c12.2 3.3 20.1 10.8 20.1 22.2.1 16.6-13 27.7-34.7 27.7zm92.2-22.2c3.1 0 6.4-.2 8.7-.5v20.2c-3.6.7-9.6 1.3-16.8 1.3-11.9 0-28.2-2.7-28.2-29.3v-31.8h-12.5v-20h12.5V78.2h25.3v23.7h18v20h-18v26.5c0 11.8 4.7 13.6 11 13.6zm55 21.9c-23.8 0-37.5-18.1-37.5-42.1 0-23.9 14.7-42.1 37.8-42.1 11.6 0 20.6 5.5 24.9 13.6v-11.4h25.1v79.8h-25.1v-11.3c-4.3 8-14.2 13.5-25.2 13.5zm7.2-21c12.5 0 19-9.4 19-21 0-11.4-6.4-20.9-19-20.9-11.7 0-19 8.8-19 20.9 0 12 7.3 21 19 21zm64.1-61h25.3v11.6c3.5-8 11.7-13.7 22.8-13.7 14.2 0 21.5 6.3 24.9 14.7 4.3-8.6 13.7-14.7 25.4-14.7 22.8 0 28.2 15.7 28.2 32.5v49.5h-25.4v-44.9c0-11.1-4.1-15.7-11.9-15.7-7.9 0-13.4 4.5-13.4 19.5v41.1h-25.4v-45.1c0-11.1-4-15.6-11.7-15.6-8.1 0-13.5 4.5-13.5 19.5v41.1h-25.3zm146.5 0h25.3v11.4c4.1-7.6 14-13.6 25.9-13.6 21.8 0 36.6 16.9 36.6 42.1 0 25-15.3 42.1-37.3 42.1-11.7 0-21.3-6-25.2-13.4v44.4h-25.3zm43.2 61c11.1 0 18.8-8.6 18.8-21 0-12.3-7.8-20.9-18.8-20.9-11.4 0-19.1 8.4-19.1 20.9s7.9 21 19.1 21z"
+              ></path></svg
+          ></a>
+        </div>
+        <div class="yarienda flex">
+          <button :class="alllogin == '1' ? 'yarierbut' : 'yariendbut'">
+            SUBMIT
+          </button>
+        </div>
+      </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import Web3Modal from "web3modal";
+import hello from "hellojs/dist/hello.all";
+import { ethers } from "ethers";
 let textvalue = ref(
   "Hi, my name is @IHunt100x_Gems, and I’m a $MEME (@Memecoin) farmer at @Memeland.%0a%0a"
 );
@@ -493,6 +994,11 @@ let textver = ref(
 );
 let textsan = ref("It ain’t much, but it’s honest work. 🧑‍🌾");
 let yaritab = ref("0");
+let yaritcbg = ref("0");
+let yarilog = ref("0");
+let xlogin = ref("0");
+let alllogin = ref("0");
+
 const isDragging = ref(false);
 const isDraggingt = ref(false);
 const isDraggingthr = ref(false);
@@ -521,6 +1027,10 @@ let viewssix = ref(0);
 
 let pointsf = ref(0);
 let addpoints = ref(0);
+const xhladdress = ref("");
+const xxhladdress = ref("");
+const xethbalance = ref("");
+
 // let airtc = ref(0);
 // let airtcshow = (str) => {
 //   airtc.value = str;
@@ -537,9 +1047,86 @@ onMounted(() => {
 });
 
 const progresssix = ref(0);
+let cgicon = () => {
+  console.log(1);
+};
+let twitterlog = () => {
+  hello.init(
+    {
+      twitter: "6F6Kw3ed2iRveFmojHckvB6ad",
+    },
+    {
+      redirect_uri: "https://x-share-bot-delta.vercel.app/",
+    }
+  );
+  hello("twitter")
+    .login()
+    .then(
+      function (res) {
+        localStorage.setItem("Twname", res.authResponse.screen_name);
+        alllogin.value = "1";
+      },
+      function (err) {
+        console.log("err", err);
+      }
+    );
+  hello.on("auth.login", (result) => {
+    hello(result.network)
+      .api("/me")
+      .then(
+        function (p) {
+          console.log(result, "result");
+        },
+        function (err) {
+          console.log("err", err);
+        }
+      );
+  });
+};
+let web3Modal = {};
+const connect = async () => {
+  const WalletConnect = window.WalletConnectProvider.default;
+  const Fortmatic = window.Fortmatic;
+  const providerOptions = {
+    fortmatic: {
+      package: Fortmatic,
+      options: {
+        // Mikko's TESTNET api key
+        key: "pk_test_391E26A3B43A3350",
+      },
+    },
+    walletconnect: {
+      package: WalletConnect,
+      options: {
+        rpc: {
+          56: "https://bsc-dataseed.binance.org/",
+          97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+        },
+        network: "binance",
+      },
+    },
+  };
 
+  web3Modal = new Web3Modal({
+    network: "mainnet", // optional
+    cacheProvider: true, // optional
+    providerOptions, // required
+  });
+  const externalProvider = await web3Modal.connect();
+  return new ethers.providers.Web3Provider(externalProvider);
+};
+const render = async () => {
+  const provider = await connect();
+  const signer = provider.getSigner(0);
+  xlogin.value = "1";
+  xhladdress.value = await signer.getAddress();
+  localStorage.setItem("xhladd", xhladdress.value);
+  const rawBalance = await provider.getBalance(xhladdress.value);
+  xethbalance.value = ethers.utils.formatEther(rawBalance);
+  localStorage.setItem("xhlbalance", xethbalance.value);
+};
 const startDragsix = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingsix.value = true;
 };
 
@@ -548,9 +1135,9 @@ const onDraggingsix = (event) => {
     const progressBar = handlesix.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -561,8 +1148,7 @@ const onDraggingsix = (event) => {
     }
     progresssix.value = (x / width) * 100;
     viewssix.value = Math.round(progresssix.value * 10);
-    addpoints.value =
-      viewssix.value * 10
+    addpoints.value = viewssix.value * 10;
   }
 };
 
@@ -570,12 +1156,10 @@ const stopDragsix = () => {
   isDraggingsix.value = false;
 };
 
-
-
 const progressw = ref(0);
 
 const startDragw = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingw.value = true;
 };
 
@@ -584,9 +1168,9 @@ const onDraggingw = (event) => {
     const progressBar = handlew.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -597,8 +1181,7 @@ const onDraggingw = (event) => {
     }
     progressw.value = (x / width) * 100;
     viewsw.value = Math.round(progressw.value * 10);
-    addpoints.value =
-      viewsw.value * 10
+    addpoints.value = viewsw.value * 10;
   }
 };
 
@@ -606,13 +1189,9 @@ const stopDragw = () => {
   isDraggingw.value = false;
 };
 
-
-
-
-
 const progressf = ref(0);
 const startDragf = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingf.value = true;
 };
 
@@ -621,9 +1200,9 @@ const onDraggingf = (event) => {
     const progressBar = handlef.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -634,8 +1213,7 @@ const onDraggingf = (event) => {
     }
     progressf.value = (x / width) * 100;
     viewsf.value = Math.round(progressf.value * 10);
-    addpoints.value =
-      viewsf.value * 10
+    addpoints.value = viewsf.value * 10;
   }
 };
 
@@ -643,14 +1221,10 @@ const stopDragf = () => {
   isDraggingf.value = false;
 };
 
-
-
-
 const progressthr = ref(0);
 
-
 const startDragthr = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingthr.value = true;
 };
 
@@ -659,9 +1233,9 @@ const onDraggingthr = (event) => {
     const progressBar = handlethr.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -679,14 +1253,11 @@ const onDraggingthr = (event) => {
       viewsthr.value * 10 +
       viewsf.value * 10;
   }
-}
+};
 
 const stopDragthr = () => {
   isDraggingthr.value = false;
 };
-
-
-
 
 const progresst = ref(0);
 
@@ -720,9 +1291,8 @@ const progresst = ref(0);
 //   isDraggingt.value = false;
 // };
 
-
 const startDragt = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingt.value = true;
 };
 
@@ -731,9 +1301,9 @@ const onDraggingt = (event) => {
     const progressBar = handlet.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -756,9 +1326,6 @@ const onDraggingt = (event) => {
 const stopDragt = () => {
   isDraggingt.value = false;
 };
-
-
-
 
 const progressy = ref(0);
 
@@ -793,7 +1360,7 @@ const progressy = ref(0);
 // };
 
 const startDragy = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDraggingy.value = true;
 };
 
@@ -802,9 +1369,9 @@ const onDraggingy = (event) => {
     const progressBar = handley.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -827,8 +1394,6 @@ const onDraggingy = (event) => {
 const stopDragy = () => {
   isDraggingy.value = false;
 };
-
-
 
 const progress = ref(0);
 
@@ -862,7 +1427,7 @@ const progress = ref(0);
 //   isDragging.value = false;
 // };
 const startDrag = (event) => {
-  if (event.type === 'mousedown' && event.button !== 0) return; // 只处理鼠标左键
+  if (event.type === "mousedown" && event.button !== 0) return;
   isDragging.value = true;
 };
 
@@ -871,9 +1436,9 @@ const onDragging = (event) => {
     const progressBar = handle.value.parentElement;
     const rect = progressBar.getBoundingClientRect();
     let x;
-    if (event.type.startsWith('mouse')) {
+    if (event.type.startsWith("mouse")) {
       x = event.clientX - rect.left;
-    } else if (event.type.startsWith('touch')) {
+    } else if (event.type.startsWith("touch")) {
       x = event.touches[0].clientX - rect.left;
     }
     let width = progressBar.clientWidth;
@@ -897,25 +1462,28 @@ const stopDrag = () => {
   isDragging.value = false;
 };
 
-
-
-
 let changearitab = (str) => {
   yaritab.value = str;
 };
 let twpltxt = () => {
   window.open(
     "https://twitter.com/intent/tweet?&text=\n" +
-    textvalue.value +
-    textver.value +
-    textsan.value
+      textvalue.value +
+      textver.value +
+      textsan.value
   );
+};
+let tcbgshow = (str) => {
+  yaritcbg.value = str;
+};
+let logtcbgshow = (str) => {
+  yarilog.value = str;
 };
 </script>
 
 <style scoped>
 .yairbox {
-  width: 52.5%;
+  width: 68.5%;
   margin: 0 auto;
   padding: 1rem 6rem;
   border: 1px solid rgb(56 59 64);
@@ -949,7 +1517,7 @@ let twpltxt = () => {
 }
 
 .yairlsy {
-  width: 25%;
+  width: 20%;
   font-family: "Vectrex";
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1014,28 +1582,28 @@ let twpltxt = () => {
   cursor: pointer;
 }
 
-.yairlsytysvg>svg {
+.yairlsytysvg > svg {
   color: #fff;
   transition: all 0.3s;
 }
 
-.yairlsytysvg:hover>svg {
+.yairlsytysvg:hover > svg {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.yairlsytysvg:hover>span {
+.yairlsytysvg:hover > span {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.ymainhy .yairlsytysvg>svg {
+.ymainhy .yairlsytysvg > svg {
   color: rgb(17, 11, 11);
 }
 
-.ymainhy .yairlsytysvg:hover>svg {
+.ymainhy .yairlsytysvg:hover > svg {
   color: rgba(17, 11, 11, 0.5);
 }
 
-.ymainhy .yairlsytysvg:hover>span {
+.ymainhy .yairlsytysvg:hover > span {
   color: rgba(17, 11, 11, 0.5);
 }
 
@@ -1061,22 +1629,22 @@ let twpltxt = () => {
   margin: 0 auto;
 }
 
-.aroro>h1 {
+.aroro > h1 {
   font-size: 66px;
   font-family: "Vectrex";
   text-align: center;
   color: white;
 }
 
-.ymainhy .aroro>h1 {
+.ymainhy .aroro > h1 {
   color: black;
 }
 
-.ymainhy .aroro>p {
+.ymainhy .aroro > p {
   color: black;
 }
 
-.aroro>p {
+.aroro > p {
   font-size: 24px;
   color: #fff;
   text-align: center;
@@ -1102,7 +1670,7 @@ let twpltxt = () => {
   font-family: "Vectrex";
 }
 
-.chakra-text>span {
+.chakra-text > span {
   font-family: "Vectrex";
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -1132,7 +1700,139 @@ let twpltxt = () => {
   justify-content: center;
   align-items: center;
 }
-
+.yairtcbg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.36);
+  justify-content: center;
+  align-items: center;
+}
+.yairtcbglog {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.36);
+  justify-content: center;
+  align-items: center;
+}
+.yaritclogbox {
+  width: 25.75rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: rgb(30 31 53);
+}
+.yariclty {
+  width: 100%;
+  align-items: center;
+}
+.yaritclogbox > p {
+  width: 100%;
+  font-family: "GT Pressura Mono";
+  color: #b3bbca;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+}
+.yarierlby {
+  width: 100%;
+}
+.yarierlogbox {
+  width: 100%;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 2rem;
+}
+.yarierbyxhll {
+  column-gap: 0.25rem;
+  align-items: center;
+}
+.yarierbyxhll > svg {
+  margin-right: 0.5rem;
+}
+.yariclty > span {
+  width: 75%;
+  text-align: left;
+  font-family: "Vectrex";
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: white;
+}
+.yarierbyxhtxt {
+  font-family: "Vectrex";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: white;
+}
+.yarierbyxhlr {
+  align-items: center;
+  justify-content: center;
+}
+.yarierbyxhlr > .yarierbut {
+  padding: 0.5rem 1rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: white;
+  cursor: pointer;
+}
+.yarierbyxhlr > .yarierbut:hover {
+  background: white;
+  color: rgb(0, 0, 0);
+}
+.yarierbyxhlr .yarijzcl {
+  padding: 0.5rem 1rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: rgb(30 31 53);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: hsla(0, 0%, 100%, 0.6);
+  cursor: not-allowed;
+}
+.yaridbut {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.yaridbut > span {
+  font-family: "Vectrex";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: white;
+}
+.h-8 {
+  height: 2rem;
+}
+.ml-3 {
+  margin-left: 0.75rem;
+}
+.yarienda .yariendbut {
+  padding: 0.5rem 2rem;
+  font-family: "GT Pressura Mono";
+  text-align: center;
+  background: rgb(30 31 53);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  color: hsla(0, 0%, 100%, 0.6);
+  cursor: not-allowed;
+}
+.yarienda {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.yairtcbgnone {
+  display: none;
+}
+.yaritcbglognone {
+  display: none;
+}
 .yairtcbox {
   width: 30rem;
   padding: 3.5rem 2rem 2rem;
@@ -1191,7 +1891,7 @@ let twpltxt = () => {
   text-align: center;
 }
 
-.yaribot>h4 {
+.yaribot > h4 {
   font-size: 3.5rem;
   line-height: 3rem;
   font-family: "Vectrex";
@@ -1199,7 +1899,7 @@ let twpltxt = () => {
   color: white;
 }
 
-.ymainhy .yaribot>h4 {
+.ymainhy .yaribot > h4 {
   color: black;
 }
 
@@ -1248,7 +1948,7 @@ let twpltxt = () => {
   width: 45.7%;
 }
 
-.yaritableft>h3 {
+.yaritableft > h3 {
   font-family: "Vectrex";
   text-align: left;
   line-height: 2.5rem;
@@ -1257,11 +1957,11 @@ let twpltxt = () => {
   color: white;
 }
 
-.ymainhy .yaritableft>h3 {
+.ymainhy .yaritableft > h3 {
   color: #000;
 }
 
-.yaritableft>p {
+.yaritableft > p {
   font-family: "GT Pressura Mono";
   opacity: 0.4;
   text-align: left;
@@ -1271,7 +1971,7 @@ let twpltxt = () => {
   color: #b3bbca;
 }
 
-.ymainhy .yaritableft>p {
+.ymainhy .yaritableft > p {
   color: #000;
   opacity: 1;
 }
@@ -1325,7 +2025,7 @@ let twpltxt = () => {
   box-sizing: border-box;
 }
 
-.yarigund>p {
+.yarigund > p {
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1338,7 +2038,7 @@ let twpltxt = () => {
   align-items: center;
 }
 
-.yarigundcon>p {
+.yarigundcon > p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -1401,7 +2101,7 @@ let twpltxt = () => {
   color: white;
 }
 
-.yaritabrend>h4 {
+.yaritabrend > h4 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -1412,15 +2112,15 @@ let twpltxt = () => {
   color: rgb(17, 11, 11);
 } */
 @media screen and (max-width: 1250px) {
-  .yaribot>h4 {
+  .yaribot > h4 {
     font-size: 2.5rem;
   }
 
-  .yaritabry>div:nth-child(1) {
+  .yaritabry > div:nth-child(1) {
     margin-bottom: 1rem;
   }
 
-  .yaritabrend>h4 {
+  .yaritabrend > h4 {
     font-size: 1.25rem;
   }
 
@@ -1453,11 +2153,11 @@ let twpltxt = () => {
     width: 100%;
   }
 
-  .yaritableft>h3 {
+  .yaritableft > h3 {
     text-align: center;
   }
 
-  .yaritableft>p {
+  .yaritableft > p {
     text-align: center;
   }
 
@@ -1494,11 +2194,11 @@ let twpltxt = () => {
     width: 95%;
     padding: 2.5rem 1rem 1rem;
   } */
-  .aroro>h1 {
+  .aroro > h1 {
     font-size: 2.75rem;
   }
 
-  .aroro>p {
+  .aroro > p {
     font-size: 1.125rem;
     margin: 1rem 0 2rem;
   }
@@ -1541,7 +2241,7 @@ let twpltxt = () => {
     display: block;
   }
 
-  .yairls>div {
+  .yairls > div {
     width: 90%;
     margin: 1rem auto;
   }
@@ -1550,7 +2250,7 @@ let twpltxt = () => {
     width: 100%;
   }
 
-  .yairlsytysvg>svg {
+  .yairlsytysvg > svg {
     transform: rotate(90deg);
     width: 5.5rem;
   }

@@ -497,12 +497,242 @@ let joinlistt = ref([
     },
   },
 ]);
+let thrlist = ref([
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+  {
+    displayName: "@Allen71328859",
+    referrerDisplayName: "NINO",
+    registeredOn: "2023-11-22T01:41:44.792Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1722889433970802688/UGLo9ext_normal.jpg",
+    },
+  },
+]);
+let fourlist = ref([
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+  {
+    displayName: "@ilmeaalim",
+    referrerDisplayName: "@mooncat2878",
+    registeredOn: "2023-11-22T01:41:37.079Z",
+    twitter: {
+      profileImageUrl:
+        "https://pbs.twimg.com/profile_images/1589495465808199683/HI99uMpx_normal.jpg",
+    },
+  },
+]);
+let valqh = ref(0);
 onMounted(() => {
+  let i = 0;
   setInterval(() => {
-    if (joinlist.value == huanlist.value) {
-      joinlist.value = joinlistt.value;
-    } else {
+    if (i > 3) {
+      i = 0;
+    }
+    i++;
+    if (i == 1) {
       joinlist.value = huanlist.value;
+    } else if (i == 2) {
+      joinlist.value = joinlistt.value;
+    } else if (i == 3) {
+      joinlist.value = thrlist.value;
+    } else if (i == 4) {
+      joinlist.value = fourlist.value;
     }
   }, 3000);
 });
