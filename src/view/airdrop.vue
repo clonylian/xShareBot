@@ -972,7 +972,7 @@
           ></a>
         </div>
         <div class="yarienda flex">
-          <button :class="alllogin == '1' ? 'yarierbut' : 'yariendbut'">
+          <button @click="logtcbgshow('0')" :class="alllogin == '1' ? 'yarierbut' : 'yariendbut'">
             SUBMIT
           </button>
         </div>
