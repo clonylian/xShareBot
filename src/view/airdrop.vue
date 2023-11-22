@@ -945,9 +945,12 @@
             <div class="yarierbyxhtxt">TWITTER</div>
           </div>
           <div class="yarierbyxhlr flex">
+            <button :class="xlogin == '0' ? 'yarijzcl' : 'yaributsjnone'">
+              CONNECT
+            </button>
             <button
               @click="twitterlog()"
-              :class="xlogin == '1' ? 'yarierbut' : 'yarijzcl'"
+              :class="xlogin == '1' ? 'yarierbut' : 'yaributsjnone'"
             >
               CONNECT
             </button>
@@ -972,7 +975,13 @@
           ></a>
         </div>
         <div class="yarienda flex">
-          <button @click="logtcbgshow('0')" :class="alllogin == '1' ? 'yarierbut' : 'yariendbut'">
+          <button :class="alllogin == '0' ? 'yariendbut' : 'yaributsjnone'">
+            SUBMIT
+          </button>
+          <button
+            @click="logtcbgshow('0')"
+            :class="alllogin == '1' ? 'yarierbut' : 'yaributsjnone'"
+          >
             SUBMIT
           </button>
         </div>
@@ -1492,7 +1501,9 @@ let logtcbgshow = (str) => {
     0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   box-sizing: border-box;
 }
-
+.yaributsjnone {
+  display: none;
+}
 .ymainhy .yairbox {
   background: rgb(247 247 247);
   border-color: rgb(179 187 202);
