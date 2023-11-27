@@ -1201,6 +1201,11 @@
         <button :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'">
           submit
         </button>
+        <img src="../assets/usdc-color.svg" alt="" />
+        <img src="../assets/tether-color.svg" alt="" />
+        <img src="../assets/steth-color.svg" alt="" />
+        <img src="../assets/dai-color.svg" alt="" />
+        <img src="../assets/weth-color.svg" alt="" />
       </div>
     </div>
   </div>
@@ -1228,10 +1233,10 @@ let xhllogin = ref("1");
 let showb = ref("ETH");
 let dqyue = ref("0.00"); //dangqianyue
 let inpval = ref("");
-let showbimg = ref("/src/assets/eth-color.svg");
+let showbimg = ref("/assets/eth-color-aeb4db64.svg");
 let showbslist = ref([
   {
-    img: "/src/assets/eth-color.svg",
+    img: "/assets/eth-color-aeb4db64.svg",
     daibname: "ETH",
     price: "0.0",
   },
