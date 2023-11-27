@@ -1201,11 +1201,6 @@
         <button :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'">
           submit
         </button>
-        <img src="../assets/usdc-color.svg" alt="" />
-        <img src="../assets/tether-color.svg" alt="" />
-        <img src="../assets/steth-color.svg" alt="" />
-        <img src="../assets/dai-color.svg" alt="" />
-        <img src="../assets/weth-color.svg" alt="" />
       </div>
     </div>
   </div>
@@ -1241,27 +1236,27 @@ let showbslist = ref([
     price: "0.0",
   },
   {
-    img: "/src/assets/usdc-color.svg",
+    img: "/assets/usdc-color-8dfb7e12.svg",
     daibname: "USDC",
     price: "0.0",
   },
   {
-    img: "/src/assets/tether-color.svg",
+    img: "/assets/tether-color-3ce7327b.svg",
     daibname: "teTHER",
     price: "0.0",
   },
   {
-    img: "/src/assets/steth-color.svg",
+    img: "/assets/steth-color-a0269026.svg",
     daibname: "steth",
     price: "0.0",
   },
   {
-    img: "/src/assets/weth-color.svg",
+    img: "/assets/weth-color-9aba1817.svg",
     daibname: "weth",
     price: "0.0",
   },
   {
-    img: "/src/assets/dai-color.svg",
+    img: "/assets/dai-color-b9a6d1b0.svg",
     daibname: "Dai",
     price: "0.0",
   },
