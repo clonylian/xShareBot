@@ -2144,6 +2144,9 @@ let isnum = () => {
   width: 100%;
   margin-top: 1rem;
 }
+.yarijhbend > img {
+  display: none;
+}
 .yarijhbend .yarijhbendbut {
   display: block;
   width: 100%;
@@ -2318,6 +2321,7 @@ let isnum = () => {
   display: block;
   position: absolute;
   top: 5.5rem;
+  left: -2rem;
   width: 150%;
   height: 15rem;
   border-radius: 0.375rem;
