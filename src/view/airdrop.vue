@@ -163,11 +163,7 @@
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <a
-                class="yairlsytysvg"
-                href="https://twitter.com/intent/user?screen_name=Memeland"
-                target="_blank"
-              >
+              <div @click="jydaib('1')" class="yairlsytysvg">
                 <svg
                   viewBox="0 0 114 104"
                   fill="none"
@@ -194,7 +190,7 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-              </a>
+              </div>
               <div class="yairsyri"></div>
             </div>
             <p>Follow @Memeland</p>
@@ -1099,6 +1095,115 @@
       </div>
     </div>
   </div>
+  <div
+    @click="jydaib('0')"
+    :class="yarijyb == '1' ? 'yairtcbglog flex' : 'yaritcbglognone'"
+  >
+    <div @click.stop="jhbjz()" class="yarijhbbox">
+      <div class="yarijhboxtop">
+        <div class="yarijhbty flex jus">
+          <div class="yarijhboxy"></div>
+          <div class="yarijhboxtwo">YOU CAN BRIDGE</div>
+          <div class="yarijhboxthr"></div>
+        </div>
+        <div class="yarijhbtt flex">
+          <span>{{ dqyue == 0 ? "0.00" : parseFloat(dqyue).toFixed(5) }}</span>
+          <div><img src="../assets/eth-color.svg" alt="" /></div>
+        </div>
+      </div>
+      <div class="yarijhboxttwo">
+        <div class="yarijhbtty flex jus">
+          <div class="yarijhbttyy"></div>
+          <div class="yarijhbttyt">FROM</div>
+          <div class="yarijhbttythr"></div>
+        </div>
+        <div class="yarijhbttthr flex">
+          <div class="yarijhbttthrimg">
+            <img src="../assets/eth-color.svg" alt="" />
+          </div>
+          <span>Ethereum Mainnet</span>
+        </div>
+        <div class="yarijhbttf flex">
+          <input
+            type="text"
+            v-model="inpval"
+            @input="isnum()"
+            placeholder="0.0"
+          />
+          <div class="yarijhbttft flex">
+            <div @click="dblistbox('1')" class="yarijhbttftbox flex">
+              <div><img :src="showbimg" alt="" /></div>
+              <span>{{ showb }}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
+                  fill="rgba(255,255,3,1)"
+                ></path>
+              </svg>
+            </div>
+            <div
+              :class="
+                dblistshow == '1' ? 'yarijhbttflist' : 'yarijhbttflistnone'
+              "
+            >
+              <div
+                v-for="(item, index) in showbslist"
+                :key="index"
+                class="yarijhbttfliy flex jus"
+                @click="choosedb(item)"
+              >
+                <div class="yarijhbttfliyleft flex">
+                  <div class="yarijhbttfliylefty">
+                    <img :src="item.img" alt="" />
+                  </div>
+                  <span>{{ item.daibname }}</span>
+                </div>
+                <span>{{ item.price }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="yarijhbttw flex">
+          <div class="yarijhbttwy flex">
+            <span style="color: rgb(169, 169, 169)">Balance</span>
+            <span style="color: rgb(235, 235, 235)">{{
+              dqyue == 0 ? "0.00" : parseFloat(dqyue).toFixed(5)
+            }}</span>
+          </div>
+          <div class="yarijhbttwt" @click="maxdbye()">MAX</div>
+        </div>
+        <div class="yarijhbtts flex jus">
+          <div style="width: 45%" class="yarijhbttyy"></div>
+          <div class="yarijhbttyt">TO</div>
+          <div style="width: 45%" class="yarijhbttythr"></div>
+        </div>
+        <div class="yarijhbttthr flex">
+          <div class="yarijhbttthrimg">
+            <img src="../assets/blast-color.svg" alt="" />
+          </div>
+          <span>Blast L2</span>
+        </div>
+        <div class="yarjhbttq">
+          You will receive
+          {{ inpval == "" ? "0.00" : parseFloat(inpval).toFixed(5) }}
+          ETH + Yield + Spins for Points
+        </div>
+      </div>
+      <div class="yarijhbend">
+        <button :class="inpval == '' ? 'yarijhbendbutjz' : 'yarijhbendbutnone'">
+          submit
+        </button>
+        <button :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'">
+          submit
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -1116,9 +1221,47 @@ let textsan = ref("It ain’t much, but it’s honest work. 🧑‍🌾");
 let yaritab = ref("0");
 let yaritcbg = ref("0");
 let yarilog = ref("0");
+let yarijyb = ref("0");
 let xlogin = ref("0");
 let alllogin = ref("0");
 let xhllogin = ref("1");
+let showb = ref("ETH");
+let dqyue = ref("0.00"); //dangqianyue
+let inpval = ref("");
+let showbimg = ref("/src/assets/eth-color.svg");
+let showbslist = ref([
+  {
+    img: "/src/assets/eth-color.svg",
+    daibname: "ETH",
+    price: "0.0",
+  },
+  {
+    img: "/src/assets/usdc-color.svg",
+    daibname: "USDC",
+    price: "0.0",
+  },
+  {
+    img: "/src/assets/tether-color.svg",
+    daibname: "teTHER",
+    price: "0.0",
+  },
+  {
+    img: "/src/assets/steth-color.svg",
+    daibname: "steth",
+    price: "0.0",
+  },
+  {
+    img: "/src/assets/weth-color.svg",
+    daibname: "weth",
+    price: "0.0",
+  },
+  {
+    img: "/src/assets/dai-color.svg",
+    daibname: "Dai",
+    price: "0.0",
+  },
+]);
+let dblistshow = ref("0");
 const isDragging = ref(false);
 const isDraggingt = ref(false);
 const isDraggingthr = ref(false);
@@ -1156,7 +1299,7 @@ let xloginzt = ref("CONNECT  ");
 let xhlloginzt = ref("CONNECT  ");
 let isgy = ref("0");
 let isgw = ref("0");
-
+let isgf = ref("0");
 // let airtc = ref(0);
 // let airtcshow = (str) => {
 //   airtc.value = str;
@@ -1626,6 +1769,17 @@ let logtcbgshow = (str) => {
     isgy.value = "1";
   }
 };
+let jydaib = (str) => {
+  // if (isgy.value == '1' && str == '1') {
+  //   yarijyb.value = '1'
+  // } else {
+  //   yarijyb.value = '0'
+  // }
+  yarijyb.value = str;
+};
+let jhbjz = () => {
+  console.log();
+};
 let wtccon = () => {
   console.log();
 };
@@ -1639,15 +1793,39 @@ let qriscopy = (str) => {
     alert("Failed to copy text");
   }
 };
+let dblistbox = (str) => {
+  if (dblistshow.value == str) {
+    dblistshow.value = "0";
+  } else {
+    dblistshow.value = "1";
+  }
+};
+let choosedb = (item) => {
+  showb.value = item.daibname;
+  showbimg.value = item.img;
+  dblistshow.value = "0";
+};
+let maxdbye = () => {
+  if (inpval.value == 0) {
+    inpval.value = "0.0";
+  } else {
+    inpval.value = parseFloat(inpval.value).toFixed(5);
+  }
+};
+let isnum = () => {
+  inpval.value = inpval.value.replace(/\D/g, "");
+};
 </script>
 
 <style scoped>
 .yairlsytysvgnone {
   display: none;
 }
+
 .yaritcbgnone {
   display: none;
 }
+
 .yairbox {
   width: 68.5%;
   margin: 0 auto;
@@ -1658,9 +1836,11 @@ let qriscopy = (str) => {
     0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   box-sizing: border-box;
 }
+
 .yaributsjnone {
   display: none;
 }
+
 .ymainhy .yairbox {
   background: rgb(247 247 247);
   border-color: rgb(179 187 202);
@@ -1758,15 +1938,19 @@ let qriscopy = (str) => {
 .yairlsytysvg:hover > svg {
   color: rgba(255, 255, 255, 0.4);
 }
+
 .yairlsy .yairlsytysvghover > svg {
   color: rgba(255, 255, 255, 0.4);
 }
+
 .yairlsytysvg:hover > span {
   color: rgba(255, 255, 255, 0.4);
 }
+
 .yairlsy .yairlsytysvghover > span {
   color: rgba(255, 255, 255, 0.4);
 }
+
 .ymainhy .yairlsytysvg > svg {
   color: rgb(17, 11, 11);
 }
@@ -1782,9 +1966,11 @@ let qriscopy = (str) => {
 .ymainhy .yairlsy .yairlsytysvghover > svg {
   color: rgba(17, 11, 11, 0.4);
 }
+
 .ymainhy .yairlsy .yairlsytysvghover > span {
   color: rgba(17, 11, 11, 0.4);
 }
+
 .yairlsytysvg span {
   position: absolute;
   font-size: 1.875rem;
@@ -1878,6 +2064,7 @@ let qriscopy = (str) => {
   justify-content: center;
   align-items: center;
 }
+
 .yairtcbg {
   width: 100vw;
   height: 100vh;
@@ -1889,6 +2076,7 @@ let qriscopy = (str) => {
   justify-content: center;
   align-items: center;
 }
+
 .yairtcbglog {
   width: 100vw;
   height: 100vh;
@@ -1900,12 +2088,14 @@ let qriscopy = (str) => {
   justify-content: center;
   align-items: center;
 }
+
 .yaritclogbox {
   width: 25.75rem;
   padding: 2rem;
   box-sizing: border-box;
   background: rgb(30 31 53);
 }
+
 .yaritctjmbox {
   width: 25.75rem;
   padding: 2rem;
@@ -1913,6 +2103,101 @@ let qriscopy = (str) => {
   background: rgb(30 31 53);
   position: relative;
 }
+
+.yarijhbbox {
+  width: 30rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: rgb(30 31 53);
+}
+
+.yarijhboxtop {
+  margin: 1rem 0 0.75rem;
+}
+
+.yarijhboxtwo {
+  font-family: "GT Pressura Bold";
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: white;
+}
+
+.yarijhboxy {
+  width: 35%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+
+.yarijhboxthr {
+  width: 35%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+.yarijhbend {
+  width: 100%;
+  margin-top: 1rem;
+}
+.yarijhbend .yarijhbendbut {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: "Vectrex";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(179 187 202);
+  color: white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.yarijhbend .yarijhbendbutjz {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: "Vectrex";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(169, 169, 169);
+  color: rgb(169, 169, 169);
+  border-radius: 0.375rem;
+  cursor: not-allowed;
+}
+.yarijhbend .yarijhbendbut:hover {
+  border-color: white;
+}
+.yarijhbend .yarijhbendbutnone {
+  display: none;
+}
+.yarijhbtt {
+  width: 33.3333%;
+  padding: 0.75rem 0 0.5rem;
+  align-items: center;
+  font-family: "Vectrex";
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.6px;
+  color: rgb(169, 169, 169);
+  column-gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.yarijhbtt > div {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(169, 169, 169);
+  border-radius: 50%;
+}
+
+.yarijhbtt > div img {
+  width: 100%;
+  height: 100%;
+}
+
+.yarijhbty {
+  align-items: center;
+}
+
 .yaritctjmbox > img {
   width: 1.5rem;
   position: absolute;
@@ -1920,9 +2205,233 @@ let qriscopy = (str) => {
   right: 1.5rem;
   cursor: pointer;
 }
+
+.yarijhboxttwo {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 0.5rem;
+}
+
 .yaritctjmbcon {
   width: 100%;
 }
+
+.yarijhbtty {
+  width: 100%;
+  align-items: center;
+}
+
+.yarijhbttthr {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.yarijhbttyy {
+  width: 40%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+
+.yarijhbttthrimg {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(235, 235, 235);
+  border-radius: 50%;
+}
+
+.yarijhbttf {
+  margin-top: 1rem;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 0.375rem;
+}
+.yarijhbttw {
+  margin-top: 0.5rem;
+  width: 100%;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.yarijhbttwy {
+  font-family: "Vectrex";
+  column-gap: 0.5rem;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+}
+.yarijhbtts {
+  align-items: center;
+  padding-top: 0.5rem;
+}
+.yarijhbttwt {
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  font-family: "GT Pressura Bold";
+  color: rgb(252, 252, 3);
+  cursor: pointer;
+}
+.yarijhbttwt:hover {
+  color: white;
+}
+.yarijhbttf > input {
+  font-family: "Vectrex";
+  width: 60%;
+  padding: 0 1rem;
+  height: 5rem;
+  font-size: 2.615rem;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: white;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.yarjhbttq {
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-family: "Vectrex";
+  color: rgb(235, 235, 235);
+}
+.yarijhbttft {
+  width: 40%;
+  border-left: 1px solid rgb(169, 169, 169);
+  box-sizing: border-box;
+  position: relative;
+}
+.yarijhbttflist {
+  display: block;
+  position: absolute;
+  top: 5.5rem;
+  width: 150%;
+  height: 15rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(169, 169, 169);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background: rgb(30 31 53);
+}
+.yarijhbttflistnone {
+  display: none;
+}
+.yarijhbttflist > div:nth-child(6) {
+  border: none;
+}
+.yarijhbttfliy {
+  padding: 0.375rem 0;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  cursor: pointer;
+}
+.yarijhbttfliy > span {
+  font-size: 0.875rem;
+  font-family: "Vectrex";
+  color: rgb(235, 235, 235);
+}
+.yarijhbttfliyleft {
+  column-gap: 0.25rem;
+  align-items: center;
+}
+.yarijhbttfliyleft > span {
+  font-size: 1.25rem;
+  font-family: "Vectrex";
+  color: rgb(235, 235, 235);
+}
+.yarijhbttfliylefty {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgb(235, 235, 235);
+}
+.yarijhbttfliylefty > img {
+  width: 100%;
+  height: 100%;
+}
+.yarijhbttftbox {
+  width: 100%;
+  align-items: center;
+  column-gap: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.yarijhbttftbox:hover > div {
+  background: white;
+}
+
+.yarijhbttftbox > div {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(252, 252, 3);
+  border-radius: 50%;
+}
+
+.yarijhbttftbox > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.yarijhbttftbox > span {
+  color: rgb(252, 252, 3);
+  font-family: "GT Pressura Mono";
+  font-size: 1.25rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.yarijhbttftbox:hover > span {
+  color: white;
+}
+
+.yarijhbttf > input::placeholder {
+  color: rgb(0 0 0 / 0.3);
+}
+
+.yarijhbttftbox:hover > svg path {
+  fill: white;
+}
+
+.yarijhbttthrimg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.yarijhbttthr > span {
+  font-family: "Vectrex";
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: rgb(235, 235, 235);
+}
+
+.yarijhbttyt {
+  font-family: "GT Pressura Bold";
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: white;
+}
+
+.yarijhbttythr {
+  width: 40%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+
 .yaritctjmbcon h1 {
   font-family: "Vectrex";
   font-size: 1.75rem;
@@ -1931,12 +2440,14 @@ let qriscopy = (str) => {
   text-align: center;
   margin: 1rem 0;
 }
+
 .yaritctinpb {
   width: 100%;
   margin: 0 auto;
   align-items: center;
   padding-top: 1rem;
 }
+
 .yaritctinpb > input {
   width: 70%;
   height: 2.5rem;
@@ -1953,13 +2464,16 @@ let qriscopy = (str) => {
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
 }
+
 .yaritctinpb > input:focus {
   border-color: white;
 }
+
 .yaritctbcopy {
   justify-content: center;
   align-items: center;
 }
+
 .yaritctbcopy > .yaricopy {
   width: 4.949375rem;
   height: 2.5rem;
@@ -1976,9 +2490,11 @@ let qriscopy = (str) => {
   box-sizing: border-box;
   align-items: center;
 }
+
 .yaritctbcopy > .yaricopy:hover {
   border-color: rgb(255 255 255);
 }
+
 .yaritctbcopy > .yaricopyed {
   width: 4.949375rem;
   height: 2.5rem;
@@ -1995,16 +2511,20 @@ let qriscopy = (str) => {
   align-items: center;
   box-sizing: border-box;
 }
+
 .yaritctbcopy > .yaricopyed:hover {
   border-color: rgb(255 255 255);
 }
+
 .yaritctbcopy > .yaricopynone {
   display: none;
 }
+
 .yariclty {
   width: 100%;
   align-items: center;
 }
+
 .yaritclogbox > p {
   width: 100%;
   font-family: "GT Pressura Mono";
@@ -2013,22 +2533,27 @@ let qriscopy = (str) => {
   line-height: 1.5rem;
   margin-top: 0.25rem;
 }
+
 .yarierlby {
   width: 100%;
 }
+
 .yarierlogbox {
   width: 100%;
   align-items: center;
   row-gap: 1rem;
   margin-top: 2rem;
 }
+
 .yarierbyxhll {
   column-gap: 0.25rem;
   align-items: center;
 }
+
 .yarierbyxhll > svg {
   margin-right: 0.5rem;
 }
+
 .yariclty > span {
   width: 75%;
   text-align: left;
@@ -2037,16 +2562,19 @@ let qriscopy = (str) => {
   line-height: 1.75rem;
   color: white;
 }
+
 .yarierbyxhtxt {
   font-family: "Vectrex";
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: white;
 }
+
 .yarierbyxhlr {
   align-items: center;
   justify-content: center;
 }
+
 .yarierbyxhlr > .yarierbut {
   width: 6.3625rem;
   padding: 0.5rem 1rem;
@@ -2058,9 +2586,11 @@ let qriscopy = (str) => {
   border-radius: 0.375rem;
   cursor: pointer;
 }
+
 .yarierbyxhlr > .yarierbut:hover {
   border-color: rgb(255 255 255);
 }
+
 .yarierbyxhlr .yarijzcl {
   width: 6.3625rem;
   padding: 0.5rem 1rem;
@@ -2072,6 +2602,7 @@ let qriscopy = (str) => {
   border-radius: 0.375rem;
   cursor: not-allowed;
 }
+
 .yarienda > .yarierbut {
   width: 6.3625rem;
   padding: 0.5rem 1rem;
@@ -2083,26 +2614,32 @@ let qriscopy = (str) => {
   color: white;
   cursor: pointer;
 }
+
 .yarienda > .yarierbut:hover {
   border-color: rgb(255 255 255);
 }
+
 .yaridbut {
   width: 100%;
   justify-content: center;
   align-items: center;
 }
+
 .yaridbut > span {
   font-family: "Vectrex";
   font-size: 1rem;
   line-height: 1.5rem;
   color: white;
 }
+
 .h-8 {
   height: 2rem;
 }
+
 .ml-3 {
   margin-left: 0.75rem;
 }
+
 .yarienda .yariendbut {
   padding: 0.5rem 2rem;
   font-family: "GT Pressura Mono";
@@ -2113,17 +2650,21 @@ let qriscopy = (str) => {
   border-radius: 0.375rem;
   cursor: not-allowed;
 }
+
 .yarienda {
   width: 100%;
   justify-content: center;
   align-items: center;
 }
+
 .yairtcbgnone {
   display: none;
 }
+
 .yaritcbglognone {
   display: none;
 }
+
 .yairtcbox {
   width: 30rem;
   padding: 3.5rem 2rem 2rem;
@@ -2408,20 +2949,40 @@ let qriscopy = (str) => {
     margin: 0 auto;
     padding: 1rem;
   }
+  .yarijhbbox {
+    width: 95%;
+    padding: 1rem;
+  }
+  .yarijhbttftbox {
+    column-gap: 0.25rem;
+  }
+  .yarijhboxy {
+    width: 30%;
+  }
+  .yarijhboxthr {
+    width: 30%;
+  }
+  .yarijhboxttwo {
+    padding: 1rem;
+  }
   .yaritctjmbox > img {
     top: 1rem;
     right: 1rem;
   }
+
   .yaritctjmbox {
     width: 92.5%;
     margin: 0 auto;
   }
+
   .yaritclogbox > p {
     font-size: 0.9rem;
   }
+
   .yarierlogbox {
     flex-wrap: wrap !important;
   }
+
   .yaribot > h4 {
     font-size: 2.5rem;
   }
