@@ -2132,7 +2132,7 @@ let fwc = () => {
   top: 0;
   left: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.36);
+  background: rgba(0, 0, 0, 0.86);
   justify-content: center;
   align-items: center;
 }
@@ -2143,8 +2143,8 @@ let fwc = () => {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.66);
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.86);
   justify-content: center;
   align-items: center;
 }
@@ -2157,7 +2157,7 @@ let fwc = () => {
   top: 0;
   left: 0;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.66);
+  background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
 }
