@@ -1252,12 +1252,28 @@
         </div>
       </div>
       <div class="yarijhbend">
-        <button :class="inpval == '' ? 'yarijhbendbutjz' : 'yarijhbendbutnone'">
+        <button
+          @click="render()"
+          :class="xethbalance == '' ? 'yarijhbendbut' : 'yarijhbendbutnone'"
+        >
+          Connecct Wallet
+        </button>
+        <button
+          :class="
+            inpval == '' && xethbalance != ''
+              ? 'yarijhbendbutjz'
+              : 'yarijhbendbutnone'
+          "
+        >
           submit
         </button>
         <button
           @click="fwc()"
-          :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'"
+          :class="
+            inpval != '' && xethbalance != ''
+              ? 'yarijhbendbut'
+              : 'yarijhbendbutnone'
+          "
         >
           submit
         </button>
@@ -1839,11 +1855,8 @@ let jydaib = (str) => {
   // } else {
   //   yarijyb.value = '0'
   // }
-  if (xethbalance.value == "") {
-    render();
-  } else {
-    yarijyb.value = str;
-  }
+
+  yarijyb.value = str;
 };
 let jhbjz = () => {
   console.log();
