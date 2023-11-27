@@ -163,7 +163,10 @@
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <div @click="jydaib('1')" class="yairlsytysvg">
+              <div
+                @click="jydaib('1')"
+                :class="isgf == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+              >
                 <svg
                   viewBox="0 0 114 104"
                   fill="none"
@@ -176,6 +179,40 @@
                   ></path>
                 </svg>
                 <span>4</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                :class="
+                  isgf == '1'
+                    ? 'yairlsytysvg yairlsytysvghover'
+                    : 'yairlsytysvgnone'
+                "
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>✓</span>
                 <svg
                   class="yairrjt"
                   viewBox="0 0 19 58"
@@ -1097,9 +1134,27 @@
   </div>
   <div
     @click="jydaib('0')"
-    :class="yarijyb == '1' ? 'yairtcbglog flex' : 'yaritcbglognone'"
+    style="justify-content: center"
+    :class="yarijyb == '1' ? 'yairtcbglog flex yaritcbgtb' : 'yaritcbglognone'"
   >
+    <div @click.stop="jhbjz()" class="yarijhbms">
+      <h1>Bridge to Earn Yield + <br />BLAST POINTS</h1>
+      <p>
+        You can earn Blast Points by bridging <br />
+        ETH or stablecoins. Points can be <br />
+        redeemed for REDACTED in May
+      </p>
+      <p>
+        You will earn more Points over time <br />
+        based on how much you bridge
+      </p>
+      <span
+        >Withdrawing from the bridge will be available after the <br />
+        Blast Mainnet launches in February!</span
+      >
+    </div>
     <div @click.stop="jhbjz()" class="yarijhbbox">
+      <img @click="jydaib('0')" src="../assets/close-line.svg" alt="" />
       <div class="yarijhboxtop">
         <div class="yarijhbty flex jus">
           <div class="yarijhboxy"></div>
@@ -1190,7 +1245,9 @@
         </div>
         <div class="yarjhbttq">
           You will receive
-          {{ inpval == "" ? "0.00" : parseFloat(inpval).toFixed(5) }}
+          {{
+            inpval == "" || inpval == 0 ? "0.00" : parseFloat(inpval).toFixed(5)
+          }}
           ETH + Yield + Spins for Points
         </div>
       </div>
@@ -1198,7 +1255,10 @@
         <button :class="inpval == '' ? 'yarijhbendbutjz' : 'yarijhbendbutnone'">
           submit
         </button>
-        <button :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'">
+        <button
+          @click="fwc()"
+          :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'"
+        >
           submit
         </button>
         <img src="../assets/usdc-color.svg" alt="" />
@@ -1255,16 +1315,6 @@ let showbslist = ref([
     daibname: "steth",
     price: "0.0",
   },
-  {
-    img: "/assets/weth-color-9aba1817.svg",
-    daibname: "weth",
-    price: "0.0",
-  },
-  {
-    img: "/assets/dai-color-b9a6d1b0.svg",
-    daibname: "Dai",
-    price: "0.0",
-  },
 ]);
 let dblistshow = ref("0");
 const isDragging = ref(false);
@@ -1311,6 +1361,14 @@ let isgf = ref("0");
 // };
 
 onMounted(() => {
+  if (localStorage.getItem("xhlbalance")) {
+    xethbalance.value = localStorage.getItem("xhlbalance");
+    dqyue.value = localStorage.getItem("xhlbalance");
+    xlogin.value = "1";
+    xhllogin.value = "0";
+    xhlloginzt.value = "CONNECTED";
+  }
+
   console.log(handle.value);
   console.log(handley.value);
   console.log(handlethr.value);
@@ -1402,6 +1460,7 @@ const render = async () => {
   localStorage.setItem("xhladd", xhladdress.value);
   const rawBalance = await provider.getBalance(xhladdress.value);
   xethbalance.value = ethers.utils.formatEther(rawBalance);
+  dqyue.value = xethbalance.value;
   localStorage.setItem("xhlbalance", xethbalance.value);
 };
 const startDragsix = (event) => {
@@ -1780,7 +1839,11 @@ let jydaib = (str) => {
   // } else {
   //   yarijyb.value = '0'
   // }
-  yarijyb.value = str;
+  if (xethbalance.value == "") {
+    render();
+  } else {
+    yarijyb.value = str;
+  }
 };
 let jhbjz = () => {
   console.log();
@@ -1811,14 +1874,18 @@ let choosedb = (item) => {
   dblistshow.value = "0";
 };
 let maxdbye = () => {
-  if (inpval.value == 0) {
+  if (dqyue.value == 0) {
     inpval.value = "0.0";
   } else {
-    inpval.value = parseFloat(inpval.value).toFixed(5);
+    inpval.value = parseFloat(dqyue.value).toFixed(5);
   }
 };
 let isnum = () => {
   inpval.value = inpval.value.replace(/\D/g, "");
+};
+let fwc = () => {
+  // isgf.value = "1";
+  yarijyb.value = "0";
 };
 </script>
 
@@ -2077,7 +2144,7 @@ let isnum = () => {
   top: 0;
   left: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.36);
+  background: rgba(0, 0, 0, 0.66);
   justify-content: center;
   align-items: center;
 }
@@ -2086,10 +2153,11 @@ let isnum = () => {
   width: 100vw;
   height: 100vh;
   position: fixed;
+
   top: 0;
   left: 0;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.36);
+  background: rgba(0, 0, 0, 0.66);
   justify-content: center;
   align-items: center;
 }
@@ -2108,14 +2176,46 @@ let isnum = () => {
   background: rgb(30 31 53);
   position: relative;
 }
-
+.yarijhbms {
+  width: 40%;
+}
+.yarijhbms > h1 {
+  font-size: 3.5rem;
+  line-height: 3rem;
+  font-family: "Vectrex";
+  font-weight: 600;
+  color: white;
+  line-height: 1.25;
+}
+.yarijhbms > p {
+  font-size: 24px;
+  color: rgb(235, 235, 235);
+  text-align: left;
+  margin: 2rem 0 0;
+  font-family: "GT Pressura Mono";
+}
+.yarijhbms > span {
+  display: block;
+  font-size: 0.875rem;
+  color: rgb(169, 169, 169);
+  text-align: left;
+  margin: 8rem 0 0;
+  font-family: "GT Pressura Mono";
+}
 .yarijhbbox {
-  width: 30rem;
+  width: 35%;
   padding: 1.5rem;
   box-sizing: border-box;
   background: rgb(30 31 53);
+  position: relative;
 }
-
+.yarijhbbox > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  cursor: pointer;
+}
 .yarijhboxtop {
   margin: 1rem 0 0.75rem;
 }
@@ -2323,7 +2423,7 @@ let isnum = () => {
   top: 5.5rem;
   left: -2rem;
   width: 150%;
-  height: 15rem;
+  height: 10.5rem;
   border-radius: 0.375rem;
   border: 1px solid rgb(169, 169, 169);
   padding: 0.5rem;
@@ -2333,7 +2433,7 @@ let isnum = () => {
 .yarijhbttflistnone {
   display: none;
 }
-.yarijhbttflist > div:nth-child(6) {
+.yarijhbttflist > div:nth-child(4) {
   border: none;
 }
 .yarijhbttfliy {
@@ -2958,9 +3058,37 @@ let isnum = () => {
     margin: 0 auto;
     padding: 1rem;
   }
+  .yarijhboxtop {
+    margin: 0.5rem 0 0.25rem;
+  }
+  .yaritcbgtb {
+    display: block;
+  }
   .yarijhbbox {
     width: 95%;
     padding: 1rem;
+    margin: 0 auto;
+  }
+  .yarijhbms > h1 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .yarijhbms > p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0 0;
+  }
+  .yarijhbms > span {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0.5rem 0 0;
+  }
+  .yarijhbtt {
+    padding: 0 0 0.25rem;
+  }
+  .yarijhbms {
+    width: 100%;
+    padding-top: 1rem;
   }
   .yarijhbttftbox {
     column-gap: 0.25rem;
@@ -2971,12 +3099,19 @@ let isnum = () => {
   .yarijhboxthr {
     width: 30%;
   }
+  .yarijhbttf > input {
+    height: 3rem;
+    font-size: 2rem;
+  }
   .yarijhboxttwo {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
   .yaritctjmbox > img {
     top: 1rem;
     right: 1rem;
+  }
+  .yarjhbttq {
+    padding: 0.5rem 0 0;
   }
 
   .yaritctjmbox {
@@ -3141,6 +3276,9 @@ let isnum = () => {
     bottom: -0.5rem;
     top: 70%;
     right: -0.75rem;
+  }
+  .yarijhbttflist {
+    top: 3.5rem;
   }
 }
 </style>
