@@ -1201,6 +1201,11 @@
         <button :class="inpval != '' ? 'yarijhbendbut' : 'yarijhbendbutnone'">
           submit
         </button>
+        <img src="../assets/usdc-color.svg" alt="" />
+        <img src="../assets/tether-color.svg" alt="" />
+        <img src="../assets/steth-color.svg" alt="" />
+        <img src="../assets/dai-color.svg" alt="" />
+        <img src="../assets/weth-color.svg" alt="" />
       </div>
     </div>
   </div>
