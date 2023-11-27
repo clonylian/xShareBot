@@ -2393,7 +2393,7 @@ let isnum = () => {
 
 .yarijhbttftbox > span {
   color: rgb(252, 252, 3);
-  font-family: "GT Pressura Mono";
+  font-family: "Vectrex";
   font-size: 1.25rem;
   line-height: 160%;
   letter-spacing: 0;
