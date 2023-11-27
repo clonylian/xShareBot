@@ -2203,7 +2203,7 @@ let fwc = () => {
   font-family: "GT Pressura Mono";
 }
 .yarijhbbox {
-  width: 35%;
+  width: 30%;
   padding: 1.5rem;
   box-sizing: border-box;
   background: rgb(30 31 53);
