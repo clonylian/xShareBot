@@ -2166,14 +2166,14 @@ let fwc = () => {
   width: 25.75rem;
   padding: 2rem;
   box-sizing: border-box;
-  background: rgb(30 31 53);
+  background: rgb(36 35 37);
 }
 
 .yaritctjmbox {
   width: 25.75rem;
   padding: 2rem;
   box-sizing: border-box;
-  background: rgb(30 31 53);
+  background: rgb(36 35 37);
   position: relative;
 }
 .yarijhbms {
@@ -2206,7 +2206,7 @@ let fwc = () => {
   width: 30%;
   padding: 1.5rem;
   box-sizing: border-box;
-  background: rgb(30 31 53);
+  background: rgb(36 35 37);
   position: relative;
 }
 .yarijhbbox > img {
