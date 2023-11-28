@@ -2,6 +2,7 @@
   <div class="yair">
     <div class="aroro">
       <h1>SYSTEM PROCESSING</h1>
+      <img src="../assets/toplogo.png" alt="" />
       <p>
         Our system is currently processing for the next epoch, please continue
         to check back.
@@ -1384,7 +1385,7 @@ onMounted(() => {
     xhllogin.value = "0";
     xhlloginzt.value = "CONNECTED";
   }
-
+  console.log(window);
   console.log(handle.value);
   console.log(handley.value);
   console.log(handlethr.value);
@@ -1436,6 +1437,7 @@ let twitterlog = () => {
 };
 let web3Modal = {};
 const connect = async () => {
+  console.log(window.WalletConnectProvider, "大大");
   const WalletConnect = window.WalletConnectProvider.default;
   const Fortmatic = window.Fortmatic;
   const providerOptions = {
@@ -2434,14 +2436,14 @@ let fwc = () => {
   display: block;
   position: absolute;
   top: 5.5rem;
-  left: -2rem;
-  width: 150%;
+  left: 0rem;
+  width: 100%;
   height: 10.5rem;
   border-radius: 0.375rem;
   border: 1px solid rgb(169, 169, 169);
   padding: 0.5rem;
   box-sizing: border-box;
-  background: rgb(30 31 53);
+  background: rgb(36 35 37);
 }
 .yarijhbttflistnone {
   display: none;
@@ -3292,6 +3294,8 @@ let fwc = () => {
   }
   .yarijhbttflist {
     top: 3.5rem;
+    width: 150%;
+    left: -2rem;
   }
 }
 </style>

@@ -3598,21 +3598,7 @@ let twitterlog = () => {
 };
 onMounted(() => {
   //logingoogle
-  window.onload = function () {
-    google.accounts.id.initialize({
-      client_id:
-        "281527463753-vebj64f9ejc2rqi4v4650j9one2ku7bb.apps.googleusercontent.com",
-      callback: handleCredentialResponse,
-    });
-    // google.accounts.id.prompt();
-    google.accounts.id.renderButton(googlesignin.value, {
-      theme: "outline",
-      size: "large",
-      type: "icon",
-      shape: "pill",
-      click_listener: onClickHandler,
-    });
-  };
+
   setTimeout(() => {
     dhisshow.value = 1;
   }, 1000);

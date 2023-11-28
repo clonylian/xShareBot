@@ -89,6 +89,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import api from "../common/api";
 let leadlist = ref([
   {
     rank: 1,
@@ -720,6 +721,9 @@ let fourlist = ref([
 let valqh = ref(0);
 onMounted(() => {
   let i = 0;
+  api.registers().then((res) => {
+    console.log("11111", res);
+  });
   setInterval(() => {
     if (i > 3) {
       i = 0;

@@ -1023,7 +1023,6 @@ export default {
 .app_one {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/50.png");
   background-size: 100%;
   background-repeat: no-repeat;
   overflow: hidden;
