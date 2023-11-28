@@ -75,7 +75,14 @@
           <div class="yleaderjoright">
             <div class="yleaderjrt flex jus">
               <div>{{ item.displayName }}</div>
-              <span>5 minutes age</span>
+              <span
+                >{{
+                  Math.floor(
+                    (new Date().getTime() - Date.parse(regtime)) / 60000
+                  )
+                }}
+                minutes age</span
+              >
             </div>
             <div class="yleaderjtb">
               Invited by {{ item.referrerDisplayName }}
@@ -90,6 +97,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import api from "../common/api";
+let regtime = ref("2023-11-28 11:11:11");
 let leadlist = ref([
   {
     rank: 1,
@@ -719,11 +727,24 @@ let fourlist = ref([
   },
 ]);
 let valqh = ref(0);
+let reglist = ref([]);
 onMounted(() => {
   let i = 0;
-  api.registers().then((res) => {
-    console.log("11111", res);
-  });
+  // api
+  //   .registers({
+  //     appId: "xbot",
+  //   })
+  //   .then((res) => {
+  //     reglist.value=res.data
+  //     console.log("11111", res);
+  //   });
+  // api
+  //   .toppoint({
+  //     appId: "xbot",
+  //   })
+  //   .then((res) => {
+  //     leadlist.value = res.data;
+  //   });
   setInterval(() => {
     if (i > 3) {
       i = 0;

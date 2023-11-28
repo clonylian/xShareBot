@@ -1288,10 +1288,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, renderSlot } from "vue";
 import Web3Modal from "web3modal";
 import hello from "hellojs/dist/hello.all";
 import { ethers } from "ethers";
+import api from "../common/api";
 let textvalue = ref(
   "Hi, my name is @IHunt100x_Gems, and I’m a $MEME (@Memecoin) farmer at @Memeland.%0a%0a"
 );
@@ -1371,6 +1372,7 @@ let xhlloginzt = ref("CONNECT  ");
 let isgy = ref("0");
 let isgw = ref("0");
 let isgf = ref("0");
+let userlog = ref({});
 // let airtc = ref(0);
 // let airtcshow = (str) => {
 //   airtc.value = str;
@@ -1378,12 +1380,28 @@ let isgf = ref("0");
 
 onMounted(() => {
   if (localStorage.getItem("xhlbalance")) {
+    console.log(111);
     xethbalance.value = localStorage.getItem("xhlbalance");
     dqyue.value = localStorage.getItem("xhlbalance");
     xlogin.value = "1";
     xhllogin.value = "0";
     xhlloginzt.value = "CONNECTED";
   }
+  if (localStorage.getItem("Twname")) {
+    alllogin.value = "1";
+    xlogin.value = "0";
+    xloginzt = "CONNECTED";
+  }
+  //zhu userlog.value = localStorage.getItem("user");
+  //zhu api.task({
+  //   userId: userlog.value.userId,
+  //   token: userlog.value.token,
+  //   appId: "xbot",
+  // }).then(res=>{
+  //   res.data.userTaskList(res=>{
+  //     isgf.value='1'
+  //   })
+  // })
   console.log(window);
   console.log(handle.value);
   console.log(handley.value);
@@ -1411,12 +1429,24 @@ let twitterlog = () => {
     .login()
     .then(
       function (res) {
-        console.log(res,'res')
         Twname.value = res.authResponse.screen_name;
         localStorage.setItem("Twname", Twname.value);
         alllogin.value = "1";
         xlogin.value = "0";
         xloginzt = "CONNECTED";
+        //zhu api
+        //   .link({
+        //     userId: userlog.value.userId,
+        //     token: userlog.value.token,
+        //     uid: res.authResponse.user_id,
+        //     userName: res.authResponse.screen_name,
+        //     imgUrl: "tfsa",
+        //     appId: "xbot",
+        //     invitationCode: "",
+        //   })
+        //   .then((res) => {
+        //     console.log(res);
+        //   });
       },
       function (err) {
         console.log("err", err);
@@ -1839,8 +1869,28 @@ let tcbgshow = (str, success) => {
         Math.floor(Math.random() * characters.length)
       );
     }
+    //zhu api
+    //   .createinvitation({
+    //     userId: userlog.value.userId,
+    //     token: userlog.value.token,
+    //     appId: "xbot",
+    //   })
+    //   .then((res) => {
+    //     invitationcode.value = res.data.invitationCode;
+    //   });
   }
   if (invitationcode.value != "" && str == "0" && success == "1") {
+    //zhu api
+    //   .submit({
+    //     userId: userlog.value.userId,
+    //     token: userlog.value.token,
+    //     appId: "xbot",
+    //     taskName: "swap",
+    //     taskValue: "",
+    //   })
+    //   .then((res) => {
+    //     isgw.value = "1";
+    //   });
     isgw.value = "1";
   }
 };
@@ -1848,6 +1898,17 @@ let tcbgshow = (str, success) => {
 let logtcbgshow = (str) => {
   yarilog.value = str;
   if (Twname.value != "") {
+    //zhu api
+    //   .submit({
+    //     userId: userlog.value.userId,
+    //     token: userlog.value.token,
+    //     appId: "xbot",
+    //     taskName: "swap",
+    //     taskValue: "",
+    //   })
+    //   .then((res) => {
+    //     isgy.value = "1";
+    //   });
     isgy.value = "1";
   }
 };
@@ -1899,7 +1960,17 @@ let isnum = () => {
   inpval.value = inpval.value.replace(/\D/g, "");
 };
 let fwc = () => {
-  // isgf.value = "1";
+  //zhu api
+  //   .submit({
+  //     userId: userlog.value.userId,
+  //     token: userlog.value.token,
+  //     appId: "xbot",
+  //     taskName: "swap",
+  //     taskValue: "",
+  //   })
+  //   .then((res) => {
+  //     isgf.value = "1";
+  //   });
   yarijyb.value = "0";
 };
 </script>
