@@ -2,7 +2,6 @@
   <div class="yair">
     <div class="aroro">
       <h1>SYSTEM PROCESSING</h1>
-      <img src="../assets/toplogo.png" alt="" />
       <p>
         Our system is currently processing for the next epoch, please continue
         to check back.
@@ -1310,25 +1309,25 @@ let xhllogin = ref("1");
 let showb = ref("ETH");
 let dqyue = ref("0.00"); //dangqianyue
 let inpval = ref("");
-let showbimg = ref("/assets/eth-color-aeb4db64.svg");
+let showbimg = ref("/img/eth-color.f9154fe1.svg");
 let showbslist = ref([
   {
-    img: "/assets/eth-color-aeb4db64.svg",
+    img: "/img/eth-color.f9154fe1.svg",
     daibname: "ETH",
     price: "0.0",
   },
   {
-    img: "/assets/usdc-color-8dfb7e12.svg",
+    img: "/img/usdc-color.670613f4.svg",
     daibname: "USDC",
     price: "0.0",
   },
   {
-    img: "/assets/tether-color-3ce7327b.svg",
+    img: "/img/tether-color.b97b8145.svg",
     daibname: "teTHER",
     price: "0.0",
   },
   {
-    img: "/assets/steth-color-a0269026.svg",
+    img: "/img/steth-color.d495d0b9.svg",
     daibname: "steth",
     price: "0.0",
   },
@@ -1412,6 +1411,7 @@ let twitterlog = () => {
     .login()
     .then(
       function (res) {
+        console.log(res,'res')
         Twname.value = res.authResponse.screen_name;
         localStorage.setItem("Twname", Twname.value);
         alllogin.value = "1";
