@@ -536,6 +536,7 @@
 </template>
 
 <script>
+import md5 from "blueimp-md5";
 import api from "../common/api";
 export default {
   data() {
@@ -604,6 +605,7 @@ export default {
       yzminpf: "",
       yzminpw: "",
       anntxt: "ENTER INVITE CODE",
+      xhladd: "",
     };
   },
   methods: {
@@ -707,30 +709,31 @@ export default {
         this.yzminpf +
         this.yzminpw;
       let length = values.length;
-      let sign = localStorage.getItem("xhladd") + "88888888";
-      let walletadd = localStorage.getItem("xhladd");
+      let sign = md5(this.xhladd + "88888888");
+      let walletadd = this.xhladd;
       console.log(sign, walletadd);
       if (length == 5 && localStorage.getItem("xhladd")) {
-        //zhu api
-        //   .login({
-        //     appId: "xbot",
-        //     sign: sign,
-        //     walletAddress: walletadd,
-        //   })
-        //   .then((res) => {
-        //     localStorage.setItem("user", res.data);
-        //     api
-        //       .verifyinvitation({
-        //         userId: res.data.userId,
-        //         token: res.data.token,
-        //         invitationCode: "24321451",
-        //         appId: "xbot",
-        //       })
-        //       .then((res) => {
-        //         this.$router.push("/Airdrop");
-        //       });
-        //   });
-        this.$router.push("/Airdrop");
+        api
+          .login({
+            appId: "xbot",
+            sign: sign,
+            walletAddress: walletadd,
+          })
+          .then((res) => {
+            localStorage.setItem("user", JSON.stringify(res.data.data));
+            // api
+            //   .verifyinvitation({
+            //     userId: res.data.data.userId,
+            //     token: res.data.data.token,
+            //     invitationCode: "24321451",
+            //     appId: "xbot",
+            //   })
+            //   .then((res) => {
+            //     console.log(res);
+            //     this.$router.push("/Airdrop");
+            //   });
+          });
+        // this.$router.push("/Airdrop");
       } else if (localStorage.getItem("xhladd") && length != 5) {
         alert("Please enter the correct invitation code!!!");
       } else {
@@ -738,7 +741,11 @@ export default {
       }
     },
   },
-  mounted() {},
+  mounted() {
+    if (localStorage.getItem("xhladd")) {
+      this.xhladd = localStorage.getItem("xhladd");
+    }
+  },
 };
 </script>
 

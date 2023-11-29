@@ -730,6 +730,7 @@ let valqh = ref(0);
 let reglist = ref([]);
 onMounted(() => {
   let i = 0;
+
   // api
   //   .registers({
   //     appId: "xbot",

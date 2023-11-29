@@ -1293,6 +1293,7 @@ import Web3Modal from "web3modal";
 import hello from "hellojs/dist/hello.all";
 import { ethers } from "ethers";
 import api from "../common/api";
+import md5 from "blueimp-md5";
 let textvalue = ref(
   "Hi, my name is @IHunt100x_Gems, and I’m a $MEME (@Memecoin) farmer at @Memeland.%0a%0a"
 );
@@ -1392,7 +1393,8 @@ onMounted(() => {
     xlogin.value = "0";
     xloginzt = "CONNECTED";
   }
-  //zhu userlog.value = localStorage.getItem("user");
+  console.log("MD5", md5(localStorage.getItem("xhladd")));
+  userlog.value = JSON.parse(localStorage.getItem("user"));
   //zhu api.task({
   //   userId: userlog.value.userId,
   //   token: userlog.value.token,
@@ -1869,13 +1871,16 @@ let tcbgshow = (str, success) => {
         Math.floor(Math.random() * characters.length)
       );
     }
-    //zhu api
+    // console.log(userlog.value.userId);
+    // console.log(userlog.value.token);
+    // api
     //   .createinvitation({
     //     userId: userlog.value.userId,
     //     token: userlog.value.token,
     //     appId: "xbot",
     //   })
     //   .then((res) => {
+    //     console.log(res);
     //     invitationcode.value = res.data.invitationCode;
     //   });
   }
