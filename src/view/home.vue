@@ -591,7 +591,7 @@ export default {
       ],
       offset: 0,
       cardWidth: 450,
-      selectedIndex: 0,
+      selectedIndex: 1,
       positionX: 0,
       startX: 0,
       allowDragLeft: 0,
@@ -749,27 +749,27 @@ export default {
       let walletadd = this.xhladd;
       console.log(sign, walletadd);
       if (length == 5 && localStorage.getItem("xhladd")) {
-        api
-          .login({
-            appId: "xbot",
-            sign: sign,
-            walletAddress: walletadd,
-          })
-          .then((res) => {
-            localStorage.setItem("user", JSON.stringify(res.data.data));
-            // api
-            //   .verifyinvitation({
-            //     userId: res.data.data.userId,
-            //     token: res.data.data.token,
-            //     invitationCode: "24321451",
-            //     appId: "xbot",
-            //   })
-            //   .then((res) => {
-            //     console.log(res);
-            //     this.$router.push("/Airdrop");
-            //   });
-          });
-        // this.$router.push("/Airdrop");
+        // api
+        //   .login({
+        //     appId: "xbot",
+        //     sign: sign,
+        //     walletAddress: walletadd,
+        //   })
+        //   .then((res) => {
+        //     localStorage.setItem("user", JSON.stringify(res.data.data));
+        //     api
+        //       .verifyinvitation({
+        //         userId: res.data.data.userId,
+        //         token: res.data.data.token,
+        //         invitationCode: "24321451",
+        //         appId: "xbot",
+        //       })
+        //       .then((res) => {
+        //         console.log(res);
+        //         this.$router.push("/Airdrop");
+        //       });
+        //   });
+        this.$router.push("/Airdrop");
       } else if (localStorage.getItem("xhladd") && length != 5) {
         alert("Please enter the correct invitation code!!!");
       } else {
@@ -779,6 +779,7 @@ export default {
     handleMouseWheel(event) {
       const delta = event.deltaY || event.detail || event.wheelDelta;
       this.scrolljl = this.scrolljl + delta;
+      console.log(this.scrolljl);
       if (this.scrolljl <= 0) {
         this.scrolljl = 0;
       } else if (this.scrolljl >= 4667) {
@@ -791,23 +792,38 @@ export default {
         this.threebjl > this.scrolljl
       ) {
         this.twobox = "1";
+        this.onebox = "1";
       } else if (
         this.scrolljl >= this.threebjl &&
         this.fourbjl > this.scrolljl
       ) {
         this.threebox = "1";
+        this.twobox = "1";
+        this.onebox = "1";
       } else if (
         this.scrolljl >= this.fourbjl &&
         this.fivebjl > this.scrolljl
       ) {
         this.fourbox = "1";
+        this.threebox = "1";
+        this.twobox = "1";
+        this.onebox = "1";
       } else if (
         this.scrolljl >= this.fivebjl &&
         this.sixybjl > this.scrolljl
       ) {
         this.fivebox = "1";
+        this.fourbox = "1";
+        this.threebox = "1";
+        this.twobox = "1";
+        this.onebox = "1";
       } else if (this.scrolljl >= this.sixybjl) {
         this.sixybox = "1";
+        this.fivebox = "1";
+        this.fourbox = "1";
+        this.threebox = "1";
+        this.twobox = "1";
+        this.onebox = "1";
       }
     },
   },
@@ -832,13 +848,34 @@ export default {
     const distanceToTopsy = divHeightsy.top;
     const divHeightst = this.$refs.sixt.getBoundingClientRect();
     const distanceToTopst = divHeightst.top;
-    this.onebjl = distanceToTopy - 150;
-    this.twobjl = distanceToTopt - 150;
-    this.threebjl = distanceToTopthr - 150;
-    this.fourbjl = distanceToTopf - 150;
-    this.fivebjl = distanceToTopw - 150;
-    this.sixybjl = distanceToTopsy - 150;
-    this.sixtbjl = distanceToTopst - 150;
+    console.log(window.innerWidth);
+    if (window.innerWidth <= 1250) {
+      this.onebjl = distanceToTopy - 150;
+      this.twobjl = distanceToTopt - 500;
+      this.threebjl = distanceToTopthr - 220;
+      this.fourbjl = distanceToTopf - 550;
+      this.fivebjl = distanceToTopw - 1000;
+      this.sixybjl = distanceToTopsy - 1200;
+      this.sixtbjl = distanceToTopst - 150;
+    } else {
+      this.onebjl = distanceToTopy - 150;
+      this.twobjl = distanceToTopt - 150;
+      this.threebjl = distanceToTopthr - 150;
+      this.fourbjl = distanceToTopf - 150;
+      this.fivebjl = distanceToTopw - 150;
+      this.sixybjl = distanceToTopsy - 150;
+      this.sixtbjl = distanceToTopst - 150;
+    }
+
+    console.log(
+      distanceToTopy,
+      distanceToTopt,
+      distanceToTopthr,
+      distanceToTopf,
+      distanceToTopw,
+      distanceToTopsy,
+      distanceToTopst
+    );
   },
 };
 </script>
@@ -1027,7 +1064,7 @@ export default {
   margin: 0 auto;
   padding-top: 5rem;
   color: white;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .someAishow {
@@ -1053,7 +1090,7 @@ export default {
 .some_three {
   width: 100%;
   overflow: hidden;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .some_threeshow {
@@ -1557,7 +1594,7 @@ export default {
   margin: 0 auto;
   padding-top: 5rem;
   position: relative;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .yhomeyshow {
@@ -1631,7 +1668,7 @@ export default {
 
 .ytwobox {
   width: 100%;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .ytwoboxshow {
@@ -1731,7 +1768,7 @@ export default {
 
 .ybiao {
   width: 100%;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .ybiaoshow {
@@ -1831,7 +1868,7 @@ export default {
 
 .sju {
   width: 100%;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: opacity 0.8s linear;
 }
 .sjushow {

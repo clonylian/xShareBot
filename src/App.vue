@@ -3126,6 +3126,7 @@ logTlgConnect("");
   .ymainbt .yheads button {
     font-size: 12px;
     height: 2rem;
+    width: 7rem;
     padding: 0 0.25rem;
   }
 
