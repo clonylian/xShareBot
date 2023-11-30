@@ -1,6 +1,9 @@
 <template>
-  <div class="yhome">
-    <div class="yhomey flex">
+  <div class="yhome" ref="scrollcon" @wheel="handleMouseWheel">
+    <div
+      :class="onebox == '1' ? 'yhomey flex yhomeyshow' : 'yhomey flex'"
+      ref="one"
+    >
       <div class="yhomey_one">
         <p class="yhomey_two">Claim your first $50 in $GIVE Coins</p>
         <h1 class="yhomey_three">
@@ -79,7 +82,11 @@
         </p> -->
       </div>
     </div>
-    <div class="ytwobox" id="xShareBot">
+    <div
+      :class="twobox == '1' ? 'ytwobox ytwoboxshow' : 'ytwobox'"
+      id="xShareBot"
+      ref="two"
+    >
       <h2>xShareBot</h2>
       <div class="ytwo flex">
         <div class="ytwoleft">
@@ -102,7 +109,11 @@
         </div>
       </div>
     </div>
-    <div class="ytwobox" id="MevBot">
+    <div
+      :class="threebox == '1' ? 'ytwobox ytwoboxshow' : 'ytwobox'"
+      id="MevBot"
+      ref="three"
+    >
       <h2>MevBot</h2>
       <div class="ytwo flex">
         <div class="ytworight">
@@ -131,7 +142,11 @@
         </div>
       </div>
     </div>
-    <div class="ybiao" id="Tokennomics">
+    <div
+      :class="fourbox == '1' ? 'ybiao ybiaoshow' : 'ybiao'"
+      id="Tokennomics"
+      ref="four"
+    >
       <h2>Tokennomics</h2>
       <div class="ybiao_one">
         <div class="ybiao_two">
@@ -155,7 +170,11 @@
         </div>
       </div>
     </div>
-    <div class="sju" id="Roadmap">
+    <div
+      :class="fivebox == '1' ? 'sju sjushow' : 'sju'"
+      id="Roadmap"
+      ref="five"
+    >
       <h2>Roadmap</h2>
       <div class="sjubox">
         <div class="app_one">
@@ -463,7 +482,7 @@
         </div>
       </div>
     </div>
-    <div class="someAi">
+    <div :class="sixybox == '1' ? 'someAi someAishow' : 'someAi'" ref="sixy">
       <div class="some_one">
         <h2>Some Algorithms by Micro AI</h2>
         <p>
@@ -474,7 +493,10 @@
         </p>
       </div>
     </div>
-    <div class="some_three">
+    <div
+      :class="sixybox == '1' ? 'some_three some_threeshow' : 'some_three'"
+      ref="sixt"
+    >
       <div class="carousel">
         <div
           class="carousel-container"
@@ -606,6 +628,20 @@ export default {
       yzminpw: "",
       anntxt: "ENTER INVITE CODE",
       xhladd: "",
+      scrolljl: 0,
+      onebox: "0",
+      twobox: "0",
+      threebox: "0",
+      fourbox: "0",
+      fivebox: "0",
+      sixybox: "0",
+      onebjl: 0,
+      twobjl: 0,
+      threebjl: 0,
+      fourbjl: 0,
+      fivebjl: 0,
+      sixtbjl: 0,
+      sixybjl: 0,
     };
   },
   methods: {
@@ -720,7 +756,6 @@ export default {
             walletAddress: walletadd,
           })
           .then((res) => {
-            console.log('成功',res)
             localStorage.setItem("user", JSON.stringify(res.data.data));
             // api
             //   .verifyinvitation({
@@ -741,11 +776,69 @@ export default {
         alert("Please link the wallet first!!!");
       }
     },
+    handleMouseWheel(event) {
+      const delta = event.deltaY || event.detail || event.wheelDelta;
+      this.scrolljl = this.scrolljl + delta;
+      if (this.scrolljl <= 0) {
+        this.scrolljl = 0;
+      } else if (this.scrolljl >= 4667) {
+        this.scrolljl = 4667;
+      }
+      if (this.scrolljl >= 0 && this.twobjl > this.scrolljl) {
+        this.onebox = "1";
+      } else if (
+        this.scrolljl >= this.twobjl &&
+        this.threebjl > this.scrolljl
+      ) {
+        this.twobox = "1";
+      } else if (
+        this.scrolljl >= this.threebjl &&
+        this.fourbjl > this.scrolljl
+      ) {
+        this.threebox = "1";
+      } else if (
+        this.scrolljl >= this.fourbjl &&
+        this.fivebjl > this.scrolljl
+      ) {
+        this.fourbox = "1";
+      } else if (
+        this.scrolljl >= this.fivebjl &&
+        this.sixybjl > this.scrolljl
+      ) {
+        this.fivebox = "1";
+      } else if (this.scrolljl >= this.sixybjl) {
+        this.sixybox = "1";
+      }
+    },
   },
   mounted() {
     if (localStorage.getItem("xhladd")) {
       this.xhladd = localStorage.getItem("xhladd");
     }
+    setTimeout(() => {
+      this.onebox = "1";
+    }, 1000);
+    const divHeighty = this.$refs.one.getBoundingClientRect();
+    const distanceToTopy = divHeighty.top;
+    const divHeightt = this.$refs.two.getBoundingClientRect();
+    const distanceToTopt = divHeightt.top;
+    const divHeightthr = this.$refs.three.getBoundingClientRect();
+    const distanceToTopthr = divHeightthr.top;
+    const divHeightf = this.$refs.four.getBoundingClientRect();
+    const distanceToTopf = divHeightf.top;
+    const divHeightw = this.$refs.five.getBoundingClientRect();
+    const distanceToTopw = divHeightw.top;
+    const divHeightsy = this.$refs.sixy.getBoundingClientRect();
+    const distanceToTopsy = divHeightsy.top;
+    const divHeightst = this.$refs.sixt.getBoundingClientRect();
+    const distanceToTopst = divHeightst.top;
+    this.onebjl = distanceToTopy - 150;
+    this.twobjl = distanceToTopt - 150;
+    this.threebjl = distanceToTopthr - 150;
+    this.fourbjl = distanceToTopf - 150;
+    this.fivebjl = distanceToTopw - 150;
+    this.sixybjl = distanceToTopsy - 150;
+    this.sixtbjl = distanceToTopst - 150;
   },
 };
 </script>
@@ -934,8 +1027,12 @@ export default {
   margin: 0 auto;
   padding-top: 5rem;
   color: white;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.someAishow {
+  opacity: 1;
+}
 .some_one {
   width: 100%;
   text-align: center;
@@ -956,8 +1053,12 @@ export default {
 .some_three {
   width: 100%;
   overflow: hidden;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.some_threeshow {
+  opacity: 1;
+}
 .some_one > h2 {
   font-size: 42px;
   font-family: "Vectrex";
@@ -1440,10 +1541,12 @@ export default {
 
 .ymainhy .yhome {
   background: rgb(235 235 235);
+  overflow: auto;
 }
 
 .yhome {
   width: 100%;
+  overflow: auto;
   padding-top: 6rem;
   background: rgb(17, 11, 11);
 }
@@ -1454,8 +1557,12 @@ export default {
   margin: 0 auto;
   padding-top: 5rem;
   position: relative;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.yhomeyshow {
+  opacity: 1;
+}
 .yhomeyleft {
   width: 34.25rem;
   height: 100%;
@@ -1524,8 +1631,12 @@ export default {
 
 .ytwobox {
   width: 100%;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.ytwoboxshow {
+  opacity: 1;
+}
 .ytwobox > h2 {
   padding-top: 10rem;
   font-family: "Vectrex";
@@ -1620,8 +1731,12 @@ export default {
 
 .ybiao {
   width: 100%;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.ybiaoshow {
+  opacity: 1;
+}
 .ybiao_one {
   width: 60.5%;
   display: flex;
@@ -1716,8 +1831,12 @@ export default {
 
 .sju {
   width: 100%;
+  opacity: 0.1;
+  transition: opacity 0.8s linear;
 }
-
+.sjushow {
+  opacity: 1;
+}
 .draggable {
   width: 63.5%;
 }
