@@ -1,11 +1,11 @@
 import Axios from "axios";
-Axios.defaults.baseURL = 'https://moon.xiaoliumang.com.cn/moon-server/'
+// Axios.defaults.baseURL = 'http://moon.xiaoliumang.com.cn/moon-server/'
 export default {
   registers: function (data) {
     return Axios.post("/moon-server/api/common/register-list", data);
   },
   login: function (data) {
-    return Axios.post("/moon-server/api/common/user-login", data);
+    return Axios.post("http://moon.xiaoliumang.com.cn/moon-server/api/common/user-login", data);
   },
   link: function (data) {
     return Axios.post("/moon-server/api/common/user-link", data);

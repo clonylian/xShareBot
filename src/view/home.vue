@@ -720,6 +720,7 @@ export default {
             walletAddress: walletadd,
           })
           .then((res) => {
+            console.log('成功',res)
             localStorage.setItem("user", JSON.stringify(res.data.data));
             // api
             //   .verifyinvitation({
