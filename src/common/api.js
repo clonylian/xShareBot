@@ -5,7 +5,10 @@ export default {
     return Axios.post("/moon-server/api/common/register-list", data);
   },
   login: function (data) {
-    return Axios.post("/moon-server/api/common/user-login", data);
+    return Axios.post(
+      "https://xbotx.site/moon-server/api/common/user-login",
+      data
+    );
   },
   link: function (data) {
     return Axios.post("/moon-server/api/common/user-link", data);

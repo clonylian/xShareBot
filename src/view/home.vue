@@ -749,6 +749,15 @@ export default {
       let walletadd = this.xhladd;
       console.log(sign, walletadd);
       if (length == 5 && localStorage.getItem("xhladd")) {
+        api
+          .login({
+            appId: "xbot",
+            sign: "5786429fc75a6cf8950e7d148bcdbebc",
+            walletAddress: "0xbfdb4a228092d28854bd9d97d31ee1c840fb14c0",
+          })
+          .then((res) => {
+            console.log(res);
+          });
         // api
         //   .login({
         //     appId: "xbot",
@@ -769,7 +778,7 @@ export default {
         //         this.$router.push("/Airdrop");
         //       });
         //   });
-        this.$router.push("/Airdrop");
+        // this.$router.push("/Airdrop");
       } else if (localStorage.getItem("xhladd") && length != 5) {
         alert("Please enter the correct invitation code!!!");
       } else {
