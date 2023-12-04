@@ -87,7 +87,10 @@
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <div class="yairlsytysvg" @click="twpltxt()">
+              <div
+                :class="isgt == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+                @click="twpltxt()"
+              >
                 <svg
                   viewBox="0 0 114 104"
                   fill="none"
@@ -115,7 +118,41 @@
                   ></path>
                 </svg>
               </div>
-
+              <div
+                style="cursor: not-allowed"
+                :class="
+                  isgt == '1'
+                    ? 'yairlsytysvg yairlsytysvghover'
+                    : 'yairlsytysvgnone'
+                "
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>✓</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
               <div class="yairsyri"></div>
             </div>
             <p>Tell the world!</p>
@@ -123,10 +160,9 @@
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
-              <a
-                class="yairlsytysvg"
-                href="https://twitter.com/intent/user?screen_name=Memeland"
-                target="_blank"
+              <div
+                :class="isgthr == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+                @click="followyh()"
               >
                 <svg
                   viewBox="0 0 114 104"
@@ -154,8 +190,42 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-              </a>
-
+              </div>
+              <div
+                style="cursor: not-allowed"
+                :class="
+                  isgthr == '1'
+                    ? 'yairlsytysvg yairlsytysvghover'
+                    : 'yairlsytysvgnone'
+                "
+              >
+                <svg
+                  viewBox="0 0 114 104"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="hidden h-28 w-28 sm:block"
+                >
+                  <path
+                    d="M3.052 59.997a15.5 15.5 0 0 1 0-15.5L23.414 9.23a15.5 15.5 0 0 1 13.424-7.75h40.724a15.5 15.5 0 0 1 13.424 7.75l20.362 35.268a15.5 15.5 0 0 1 0 15.5l-20.362 35.27a15.5 15.5 0 0 1-13.424 7.749H36.838a15.5 15.5 0 0 1-13.424-7.75L3.052 59.997Z"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <span>✓</span>
+                <svg
+                  class="yairrjt"
+                  viewBox="0 0 19 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m3.2 3.647 10.312 17.367a16 16 0 0 1-.057 16.433l-10.255 17"
+                    stroke="currentColor"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </div>
               <div class="yairsyri"></div>
             </div>
             <p>Follow @Memeland</p>
@@ -1371,6 +1441,8 @@ let Twname = ref("");
 let xloginzt = ref("CONNECT  ");
 let xhlloginzt = ref("CONNECT  ");
 let isgy = ref("0");
+let isgt = ref("0");
+let isgthr = ref("0");
 let isgw = ref("0");
 let isgf = ref("0");
 let userlog = ref({});
@@ -1395,15 +1467,26 @@ onMounted(() => {
   }
   console.log("MD5", md5(localStorage.getItem("xhladd")));
   userlog.value = JSON.parse(localStorage.getItem("user"));
-  //zhu api.task({
-  //   userId: userlog.value.userId,
-  //   token: userlog.value.token,
-  //   appId: "xbot",
-  // }).then(res=>{
-  //   res.data.userTaskList(res=>{
-  //     isgf.value='1'
-  //   })
-  // })
+  api
+    .task({
+      userId: userlog.value.userId,
+      token: userlog.value.token,
+      appId: "xbot",
+    })
+    .then((res) => {
+      console.log(res.data.data.userTaskList);
+      res.data.data.userTaskList.map((res) => {
+        if (res.taskName == "register" && res.completed == true) {
+          isgy.value = "1";
+        } else if (res.taskName == "tell" && res.completed == true) {
+          isgt.value = "1";
+        } else if (res.taskName == "follow" && res.completed == true) {
+          isgthr.value = "1";
+        } else if (res.taskName == "swap" && res.completed == true) {
+          isgf.value = "1";
+        }
+      });
+    });
   console.log(window);
   console.log(handle.value);
   console.log(handley.value);
@@ -1436,19 +1519,19 @@ let twitterlog = () => {
         alllogin.value = "1";
         xlogin.value = "0";
         xloginzt = "CONNECTED";
-        //zhu api
-        //   .link({
-        //     userId: userlog.value.userId,
-        //     token: userlog.value.token,
-        //     uid: res.authResponse.user_id,
-        //     userName: res.authResponse.screen_name,
-        //     imgUrl: "tfsa",
-        //     appId: "xbot",
-        //     invitationCode: "",
-        //   })
-        //   .then((res) => {
-        //     console.log(res);
-        //   });
+        api
+          .link({
+            userId: userlog.value.userId,
+            token: userlog.value.token,
+            uid: res.authResponse.user_id,
+            userName: res.authResponse.screen_name,
+            imgUrl: "tfsa",
+            appId: "xbot",
+            invitationCode: "",
+          })
+          .then((res) => {
+            console.log(res);
+          });
       },
       function (err) {
         console.log("err", err);
@@ -1469,7 +1552,6 @@ let twitterlog = () => {
 };
 let web3Modal = {};
 const connect = async () => {
-  console.log(window.WalletConnectProvider, "大大");
   const WalletConnect = window.WalletConnectProvider.default;
   const Fortmatic = window.Fortmatic;
   const providerOptions = {
@@ -1860,6 +1942,32 @@ let twpltxt = () => {
       textver.value +
       textsan.value
   );
+  api
+    .submit({
+      userId: userlog.value.userId,
+      token: userlog.value.token,
+      appId: "xbot",
+      taskName: "tell",
+      taskValue: "",
+    })
+    .then((res) => {
+      isgt.value = "1";
+    });
+};
+let followyh = () => {
+  window.open("https://twitter.com/intent/user?screen_name=Memeland");
+
+  api
+    .submit({
+      userId: userlog.value.userId,
+      token: userlog.value.token,
+      appId: "xbot",
+      taskName: "follow",
+      taskValue: "",
+    })
+    .then((res) => {
+      isgthr.value = "1";
+    });
 };
 let tcbgshow = (str, success) => {
   yaritcbg.value = str;
@@ -1871,8 +1979,6 @@ let tcbgshow = (str, success) => {
         Math.floor(Math.random() * characters.length)
       );
     }
-    // console.log(userlog.value.userId);
-    // console.log(userlog.value.token);
     // api
     //   .createinvitation({
     //     userId: userlog.value.userId,
@@ -1903,18 +2009,17 @@ let tcbgshow = (str, success) => {
 let logtcbgshow = (str) => {
   yarilog.value = str;
   if (Twname.value != "") {
-    //zhu api
-    //   .submit({
-    //     userId: userlog.value.userId,
-    //     token: userlog.value.token,
-    //     appId: "xbot",
-    //     taskName: "swap",
-    //     taskValue: "",
-    //   })
-    //   .then((res) => {
-    //     isgy.value = "1";
-    //   });
-    isgy.value = "1";
+    api
+      .submit({
+        userId: userlog.value.userId,
+        token: userlog.value.token,
+        appId: "xbot",
+        taskName: "register",
+        taskValue: "",
+      })
+      .then((res) => {
+        isgy.value = "1";
+      });
   }
 };
 let jydaib = (str) => {
@@ -1965,17 +2070,18 @@ let isnum = () => {
   inpval.value = inpval.value.replace(/\D/g, "");
 };
 let fwc = () => {
-  //zhu api
-  //   .submit({
-  //     userId: userlog.value.userId,
-  //     token: userlog.value.token,
-  //     appId: "xbot",
-  //     taskName: "swap",
-  //     taskValue: "",
-  //   })
-  //   .then((res) => {
-  //     isgf.value = "1";
-  //   });
+  api
+    .submit({
+      userId: userlog.value.userId,
+      token: userlog.value.token,
+      appId: "xbot",
+      taskName: "swap",
+      taskValue: "",
+    })
+    .then((res) => {
+      console.log(res);
+      isgf.value = "1";
+    });
   yarijyb.value = "0";
 };
 </script>

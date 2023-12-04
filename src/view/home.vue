@@ -752,32 +752,24 @@ export default {
         api
           .login({
             appId: "xbot",
-            sign: "5786429fc75a6cf8950e7d148bcdbebc",
-            walletAddress: "0xbfdb4a228092d28854bd9d97d31ee1c840fb14c0",
+            sign: sign,
+            walletAddress: walletadd,
           })
           .then((res) => {
             console.log(res);
+            localStorage.setItem("user", JSON.stringify(res.data.data));
+            api
+              .verifyinvitation({
+                userId: res.data.data.userId,
+                token: res.data.data.token,
+                invitationCode: "24321451",
+                appId: "xbot",
+              })
+              .then((res) => {
+                console.log(res);
+                this.$router.push("/Airdrop");
+              });
           });
-        // api
-        //   .login({
-        //     appId: "xbot",
-        //     sign: sign,
-        //     walletAddress: walletadd,
-        //   })
-        //   .then((res) => {
-        //     localStorage.setItem("user", JSON.stringify(res.data.data));
-        //     api
-        //       .verifyinvitation({
-        //         userId: res.data.data.userId,
-        //         token: res.data.data.token,
-        //         invitationCode: "24321451",
-        //         appId: "xbot",
-        //       })
-        //       .then((res) => {
-        //         console.log(res);
-        //         this.$router.push("/Airdrop");
-        //       });
-        //   });
         // this.$router.push("/Airdrop");
       } else if (localStorage.getItem("xhladd") && length != 5) {
         alert("Please enter the correct invitation code!!!");

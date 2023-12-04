@@ -736,14 +736,15 @@ onMounted(() => {
   //     appId: "xbot",
   //   })
   //   .then((res) => {
-  //     reglist.value=res.data
-  //     console.log("11111", res);
+  //     reglist.value=res.data.data.userRegisterList
+  //     console.log("11111", res.data.data.userRegisterList);
   //   });
   // api
   //   .toppoint({
   //     appId: "xbot",
   //   })
   //   .then((res) => {
+  //     console.log(res);
   //     leadlist.value = res.data;
   //   });
   setInterval(() => {
