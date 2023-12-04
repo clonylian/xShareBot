@@ -989,14 +989,15 @@
       <img @click="tcbgshow('0', '1')" src="../assets/close-line.svg" alt="" />
       <div class="yaritctjmbcon">
         <h1>Invitation code</h1>
-        <div class="yaritctinpb flex jus">
-          <input
+        <div class="yaritctinpb flex">
+          <h2>{{ invitationcode }}</h2>
+          <!-- <input
             type="text"
             v-model="invitationcode"
             placeholder="code"
             name=""
             id=""
-          />
+          /> -->
           <div class="yaritctbcopy flex">
             <button
               @click="qriscopy('1')"
@@ -1009,6 +1010,10 @@
             </button>
           </div>
         </div>
+        <h1>
+          Please send the code to your friends. You'll get 5 points perfriend
+          and 5% of their weekly points when they complete thetasks.
+        </h1>
       </div>
     </div>
   </div>
@@ -1530,7 +1535,7 @@ let twitterlog = () => {
             invitationCode: "",
           })
           .then((res) => {
-            console.log(res);
+            console.log("link", res);
           });
       },
       function (err) {
@@ -2367,7 +2372,7 @@ let fwc = () => {
 }
 
 .yaritctjmbox {
-  width: 25.75rem;
+  width: 34.75rem;
   padding: 2rem;
   box-sizing: border-box;
   background: rgb(36 35 37);
@@ -2740,35 +2745,28 @@ let fwc = () => {
 
 .yaritctjmbcon h1 {
   font-family: "Vectrex";
-  font-size: 1.75rem;
-  line-height: 1.15;
+  font-size: 1rem;
+  line-height: 1.25;
   color: #fff;
-  text-align: center;
-  margin: 1rem 0;
+  text-align: left;
+  margin: 0.5rem 0;
 }
 
 .yaritctinpb {
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  padding-top: 1rem;
 }
 
-.yaritctinpb > input {
-  width: 70%;
-  height: 2.5rem;
-  font-size: 1.25rem;
+.yaritctinpb > h2 {
+  font-size: 3rem;
   line-height: 160%;
+  margin-right: 0.5rem;
   letter-spacing: 1.2px;
-  font-weight: 400;
-  font-family: "GT Pressura Mono";
-  border: 2px solid rgb(179 187 202);
-  transition: all 0.15s;
+  font-family: "Vectrex";
   color: white;
   box-sizing: border-box;
   background: transparent;
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
 }
 
 .yaritctinpb > input:focus {
