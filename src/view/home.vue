@@ -5,17 +5,15 @@
       ref="one"
     >
       <div class="yhomey_one">
-        <p class="yhomey_two">Claim your first $50 in $GIVE Coins</p>
+        <p class="yhomey_two">{{ $store.state.txt.yhome }}</p>
         <h1 class="yhomey_three">
-          Register your Twitter and Wallet for our Beta
+          {{ $store.state.txt.yhometitle }}
         </h1>
         <p class="yhomey_four">
-          With Give Coin, you can seamlessly earn coins and show appreciation to
-          your beloved content creators, all while staying within the familiar
-          confines of Twitter/X. Earn $Give Coins and Cash Out.
+          {{ $store.state.txt.yhomecont }}
         </p>
-        <h1 class="yhomey_three">EARLY ACCESS AIRDROP</h1>
-        <p class="yhomey_four">Enter your invite code to claim your airdrop</p>
+        <h1 class="yhomey_three">{{ $store.state.txt.yhometitlet }}</h1>
+        <p class="yhomey_four">{{ $store.state.txt.yhomecontt }}</p>
         <div class="yhomey_inpbox flex">
           <div class="yhomeyinpy">
             <input
@@ -69,7 +67,9 @@
           </div>
         </div>
         <div class="yhomey_but flex">
-          <button @click="routz()">{{ anntxt }}</button>
+          <button :class="logari == '1' ? 'shiactive' : ''" @click="routz()">
+            {{ anntxt }}
+          </button>
         </div>
         <!-- <div class="yhome_five">Register Wallet</div>
         <p class="yhome_six">
@@ -87,7 +87,7 @@
       id="xShareBot"
       ref="two"
     >
-      <h2>xShareBot</h2>
+      <h2>{{ $store.state.txt.thometitle }}</h2>
       <div class="ytwo flex">
         <div class="ytwoleft">
           <img
@@ -97,14 +97,12 @@
           />
         </div>
         <div class="ytworight">
-          <h2>Edge Wallet</h2>
+          <h2>{{ $store.state.txt.thomesamletitle }}</h2>
           <p>
-            One of the world’s go-to mobile wallets, Edge is a staple for many
-            humans. Trade your favourite cryptocurrencies inside Edge with
-            SideShift.ai.
+            {{ $store.state.txt.thometxty }}
           </p>
           <p>
-            Learn how to shift inside Edge Wallet in our step-by-step guide.
+            {{ $store.state.txt.thometxtt }}
           </p>
         </div>
       </div>
@@ -114,18 +112,15 @@
       id="MevBot"
       ref="three"
     >
-      <h2>MevBot</h2>
+      <h2>{{ $store.state.txt.thrhometitle }}</h2>
       <div class="ytwo flex">
         <div class="ytworight">
-          <h2>Monerujo</h2>
+          <h2>{{ $store.state.txt.thrhomesamletitle }}</h2>
           <p>
-            An Android wallet for the privacy-focused humans. Monerujo uses
-            remote nodes to synchronize with the Monero blockchain while keeping
-            all of your private data on your device.
+            {{ $store.state.txt.thrhometxty }}
           </p>
           <p>
-            Monerujo users can pay addresses in multiple cryptocurrencies,
-            in-app with SideShift.ai.
+            {{ $store.state.txt.thrhometxtt }}
           </p>
         </div>
         <div class="ytwoleft">
@@ -147,15 +142,21 @@
       id="Tokennomics"
       ref="four"
     >
-      <h2>Tokennomics</h2>
+      <h2>{{ $store.state.txt.fhometitle }}</h2>
       <div class="ybiao_one">
         <div class="ybiao_two">
-          <h2>$Nerd Tokenomics</h2>
-          <p class="ybiao_three">Total supply:<b> 100M</b></p>
-          <p class="ybiao_four">Initial Launch Price: <b>$0,065</b></p>
-          <p class="ybiao_four">Contract Address: <b>$NERD</b></p>
+          <h2>{{ $store.state.txt.fhometxttit }}</h2>
+          <p class="ybiao_three">
+            {{ $store.state.txt.fhometxtsy }}<b> 100M</b>
+          </p>
+          <p class="ybiao_four">
+            {{ $store.state.txt.fhometxtst }}<b>$0,065</b>
+          </p>
+          <p class="ybiao_four">
+            {{ $store.state.txt.fhometxtsthr }}<b>$NERD</b>
+          </p>
           <div class="ybiao_five">
-            <p>save your slot</p>
+            <p>{{ $store.state.txt.fhometxtsbut }}</p>
           </div>
         </div>
         <div class="ybiao_right">
@@ -175,7 +176,7 @@
       id="Roadmap"
       ref="five"
     >
-      <h2>Roadmap</h2>
+      <h2>{{ $store.state.txt.whometitle }}</h2>
       <div class="sjubox">
         <div class="app_one">
           <div
@@ -186,90 +187,114 @@
             <div class="app_two">
               <div class="app_five">
                 <p>2023</p>
-                <span>QUARTER3+4</span>
+                <span> {{ $store.state.txt.whomelistdy }}</span>
               </div>
               <div class="app_four">
                 <ul class="app_six">
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">Beta launch</div>
-                  </li>
-                  <li class="app_11">
-                    <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Weekly pack drops launched</div>
-                  </li>
-                  <li class="app_seve">
-                    <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">WEEKLY RAFFLES LAUNCHED</div>
-                  </li>
-                  <li class="app_11">
-                    <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">IXT Private Sale Completed</div>
-                  </li>
-                  <li class="app_seve">
-                    <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      Organisational growth from 0 to 30 people
-                    </div>
-                  </li>
-                  <li class="app_11">
-                    <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">On-chain Migration</div>
-                  </li>
-                  <li class="app_seve">
-                    <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">
-                      Airdrop IX Token (IXT) completed to 130,000+ web3 wallets
-                    </div>
-                  </li>
-                  <li class="app_11">
-                    <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Planet IX New Look & Feel</div>
-                  </li>
-                  <li class="app_seve">
-                    <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">BETA Marketplace Live</div>
-                  </li>
-                  <li class="app_11">
-                    <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Pack Sales moved On-chain</div>
-                  </li>
-                  <li class="app_seve">
-                    <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">
-                      IXT Liquidity Pools available on QuickSwap & SushiSwap
+                      {{ $store.state.txt.whomelistdyboxy }}
                     </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
                     <div class="app_ten1">
-                      Planted 300 000 trees <br />
-                      with One Tree Planted
+                      {{ $store.state.txt.whomelistdyboxt }}
                     </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      Sold 330 million PIX <br />(approx. 20% of the map)
+                      {{ $store.state.txt.whomelistdyboxthr }}
                     </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Beta launch</div>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxf }}
+                    </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">Beta launch</div>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxw }}
+                    </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Beta launch</div>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxs }}
+                    </div>
+                  </li>
+                  <li class="app_seve">
+                    <span class="roadmap-hexagon"></span>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxq }}
+                    </div>
+                  </li>
+                  <li class="app_11">
+                    <span class="roadmap-hexagon1"></span>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxba }}
+                    </div>
+                  </li>
+                  <li class="app_seve">
+                    <span class="roadmap-hexagon"></span>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxjiu }}
+                    </div>
+                  </li>
+                  <li class="app_11">
+                    <span class="roadmap-hexagon1"></span>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxten }}
+                    </div>
+                  </li>
+                  <li class="app_seve">
+                    <span class="roadmap-hexagon"></span>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxteny }}
+                    </div>
+                  </li>
+                  <li class="app_11">
+                    <span class="roadmap-hexagon1"></span>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxtent }}<br />
+                      {{ $store.state.txt.whomelistdyboxtenthr }}
+                    </div>
+                  </li>
+                  <li class="app_seve">
+                    <span class="roadmap-hexagon"></span>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxtenf }}<br />{{
+                        $store.state.txt.whomelistdyboxtenw
+                      }}
+                    </div>
+                  </li>
+                  <li class="app_11">
+                    <span class="roadmap-hexagon1"></span>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxtens }}
+                    </div>
+                  </li>
+                  <li class="app_seve">
+                    <span class="roadmap-hexagon"></span>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdyboxtens }}
+                    </div>
+                  </li>
+                  <li class="app_11">
+                    <span class="roadmap-hexagon1"></span>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdyboxtens }}
+                    </div>
                   </li>
                 </ul>
               </div>
               <div class="app_five" style="padding-left: 35rem">
                 <p>2023</p>
-                <span>QUARTER1</span>
+                <span>{{ $store.state.txt.whomelistdt }}</span>
               </div>
               <div class="app_four" style="width: 20rem">
                 <ul class="app_six1">
@@ -280,37 +305,53 @@
                         <li class="app_13">
                           <ul class="app_14">
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                           </ul>
                           <div></div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                       </ul>
-                      IXT Private Sale Completed
+                      {{ $store.state.txt.whomelistdtboxthr }}
                     </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Weekly pack drops launched</div>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdtboxf }}
+                    </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">WEEKLY RAFFLES LAUNCHED</div>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdtboxw }}
+                    </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
@@ -319,40 +360,56 @@
                         <li class="app_13">
                           <ul class="app_14">
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                           </ul>
                           <div></div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                       </ul>
-                      IXT Private Sale Completed
+                      {{ $store.state.txt.whomelistdtboxthr }}
                     </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      <div>Cargo Drop</div>
+                      <div>{{ $store.state.txt.whomelistdtboxs }}</div>
                       <ul class="app_19">
                         <li class="app_20">
-                          <div class="app_21">Drones</div>
+                          <div class="app_21">
+                            {{ $store.state.txt.whomelistdtboxq }}
+                          </div>
                         </li>
                         <li class="app_20">
-                          <div class="app_21">Drones</div>
+                          <div class="app_21">
+                            {{ $store.state.txt.whomelistdtboxq }}
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -360,16 +417,16 @@
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      WEEKLY RAFFLES LAUNCHED
+                      {{ $store.state.txt.whomelistdtboxw }}
                       <br />
-                      WEEKLY RAFFLES LAUNCHED
+                      {{ $store.state.txt.whomelistdtboxw }}
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="app_five" style="padding-left: 38rem">
                 <p>2023</p>
-                <span>QUARTER1</span>
+                <span>{{ $store.state.txt.whomelistdt }}</span>
               </div>
               <div class="app_four" style="width: 20rem">
                 <ul class="app_six1">
@@ -380,37 +437,53 @@
                         <li class="app_13">
                           <ul class="app_14">
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                           </ul>
                           <div></div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                       </ul>
-                      IXT Private Sale Completed
+                      {{ $store.state.txt.whomelistdtboxthr }}
                     </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
-                    <div class="app_ten1">Weekly pack drops launched</div>
+                    <div class="app_ten1">
+                      {{ $store.state.txt.whomelistdtboxf }}
+                    </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
-                    <div class="app_ten">WEEKLY RAFFLES LAUNCHED</div>
+                    <div class="app_ten">
+                      {{ $store.state.txt.whomelistdtboxw }}
+                    </div>
                   </li>
                   <li class="app_11">
                     <span class="roadmap-hexagon1"></span>
@@ -419,40 +492,56 @@
                         <li class="app_13">
                           <ul class="app_14">
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                             <li class="app_15">
-                              <div class="app_16">PIX Inspector</div>
+                              <div class="app_16">
+                                {{ $store.state.txt.whomelistdtboxy }}
+                              </div>
                             </li>
                           </ul>
                           <div></div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                         <li class="app_17">
-                          <div class="app_18">New UI/UX</div>
+                          <div class="app_18">
+                            {{ $store.state.txt.whomelistdtboxt }}
+                          </div>
                         </li>
                       </ul>
-                      IXT Private Sale Completed
+                      {{ $store.state.txt.whomelistdtboxthr }}
                     </div>
                   </li>
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      <div>Cargo Drop</div>
+                      <div>{{ $store.state.txt.whomelistdtboxs }}</div>
                       <ul class="app_19">
                         <li class="app_20">
-                          <div class="app_21">Drones</div>
+                          <div class="app_21">
+                            {{ $store.state.txt.whomelistdtboxq }}
+                          </div>
                         </li>
                         <li class="app_20">
-                          <div class="app_21">Drones</div>
+                          <div class="app_21">
+                            {{ $store.state.txt.whomelistdtboxq }}
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -460,9 +549,9 @@
                   <li class="app_seve">
                     <span class="roadmap-hexagon"></span>
                     <div class="app_ten">
-                      WEEKLY RAFFLES LAUNCHED
+                      {{ $store.state.txt.whomelistdtboxw }}
                       <br />
-                      WEEKLY RAFFLES LAUNCHED
+                      {{ $store.state.txt.whomelistdtboxw }}
                     </div>
                   </li>
                 </ul>
@@ -484,12 +573,9 @@
     </div>
     <div :class="sixybox == '1' ? 'someAi someAishow' : 'someAi'" ref="sixy">
       <div class="some_one">
-        <h2>Some Algorithms by Micro AI</h2>
+        <h2>{{ $store.state.txt.sixhometitle }}</h2>
         <p>
-          Micro AI is not just one algorithm, but a swarm of intelligently taken
-          market orders that get information from 100+ algorithms, which are
-          getting their data from over 100,000,000 constantly refreshing
-          end-points.
+          {{ $store.state.txt.sixhometxt }}
         </p>
       </div>
     </div>
@@ -503,7 +589,7 @@
           :style="{ transform: 'translateX(' + offset + 'px)' }"
         >
           <div
-            v-for="(item, index) in items"
+            v-for="(item, index) in $store.state.txt.sixhomelist"
             :key="index"
             :class="{
               'carousel-card': true,
@@ -563,33 +649,7 @@ import api from "../common/api";
 export default {
   data() {
     return {
-      items: [
-        {
-          img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
-          txt: "FuturesFuture is using DYDX <-> Bloomberg Data Aggregation to intelligently take news-trades. FuturesFuture is also used to for other algorithms which hold long-term positions to recalculate data. Everything in lightning-speed. Outpacing Competition and Humans.",
-          user: "Futures Future",
-          usertxt: "BUILT IN JULIA & PYTHON",
-        },
-        {
-          img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
-          txt: "On-Chain-Money-Flow (OCMF) treats Ethereums capital like waves of hype. It intelligently predicts new waves with the help of Arkham and our Social Feeds (IRA & IRAX). OCMF is in a symbiosis with Screener, both benefit from each other’s perspectives.",
-          user: "On Chain Money Flow",
-          usertxt: "BUILT IN JULIA",
-        },
-        {
-          img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
-          txt: "Screener was the beginning of Micro AI. Screener automatically scans newly generated pairs on Uniswap, frontruns sniping bots, and holds token which are labeled as a 'Strong Buy'.",
-          user: "Screener AI",
-          usertxt: "BUILT IN RUST & PYTHON & JULIA",
-        },
-        {
-          img: "https://assets-global.website-files.com/6518638dadf2a346d345ad76/6541b9bd33d477fdfb4ebb53_Untitled%20design-10.svg",
-          txt: "Layerless is a market maker for wrapped tokens or tokens on several chains, ensuring same price rates even with low liquidity on one chain. AI calculated buying & selling pressure. Layerless Bot is able to be booked by protocols. AIaaS. (ETA: 2024 Q4)",
-          user: "Layerless Bot (In Development)",
-          usertxt: "BUILDING IN JULIA & PYTHON",
-        },
-      ],
-      offset: 0,
+      offset: -450,
       cardWidth: 450,
       selectedIndex: 1,
       positionX: 0,
@@ -642,6 +702,7 @@ export default {
       fivebjl: 0,
       sixtbjl: 0,
       sixybjl: 0,
+      logari: "0",
     };
   },
   methods: {
@@ -652,7 +713,7 @@ export default {
       }
     },
     moveRight() {
-      if (this.selectedIndex < this.items.length - 1) {
+      if (this.selectedIndex < this.$store.state.txt.sixhomelist.length - 1) {
         this.selectedIndex++;
         console.log(this.selectedIndex);
         this.updateOffset();
@@ -744,10 +805,10 @@ export default {
         this.yzminpthr +
         this.yzminpf +
         this.yzminpw;
+      this.logari = "1";
       let length = values.length;
       let sign = md5(this.xhladd + "88888888");
       let walletadd = this.xhladd;
-      console.log(sign, walletadd);
       if (length == 5 && localStorage.getItem("xhladd")) {
         api
           .login({
@@ -760,14 +821,16 @@ export default {
             localStorage.setItem("user", JSON.stringify(res.data.data));
             api
               .verifyinvitation({
+                invitationCode: "ZVKMN",
+                appId: "xbot",
                 userId: res.data.data.userId,
                 token: res.data.data.token,
-                invitationCode: "24321451",
-                appId: "xbot",
               })
               .then((res) => {
-                console.log(res);
-                this.$router.push("/Airdrop");
+                console.log("verifyinvitation", res.data.status);
+                if (res.data.status == "success") {
+                  this.$router.push("/Airdrop");
+                }
               });
           });
         // this.$router.push("/Airdrop");
@@ -907,6 +970,9 @@ export default {
 }
 .ymainhy .yhomey_but button:hover {
   border-color: rgb(17 11 11);
+}
+.yhomey_but .shiactive {
+  cursor: not-allowed;
 }
 .ymainbt .yhomey_but button {
   border-color: rgb(179 187 202);

@@ -2,14 +2,12 @@
   <div class="staking">
     <div class="box">
       <div class="head">
-        <h1>Staking</h1>
+        <h1>{{ $store.state.txt.ystaketitle }}</h1>
       </div>
       <div class="txt_one">
-        <p class="txt_three">MAKE YOUR SPIRIT TOKEN WORK FOR YOU</p>
+        <p class="txt_three">{{ $store.state.txt.ystakesamletitle }}</p>
         <p class="txt_two">
-          Invest in staking periods of 14, 30, or 60 days and let your Spirit
-          Tokens grow. The longer the staking period, the greater therewards
-          you'll reap. TVL 0 Spirit and 0 Spirit-ETH LP
+          {{ $store.state.txt.ystaketxt }}
         </p>
       </div>
       <div class="tiao">
@@ -17,19 +15,23 @@
           <div class="tiao_x">
             <div class="tiao_two">
               <p><b> 10%</b></p>
-              <div>PROPORTION OF DIVIDEND POOL</div>
+              <div>{{ $store.state.txt.ystakelisty }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>SPIRIT</b></p>
-              <div>STAKING TOKEN</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistw }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistt }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>14</b><span>DAYS</span></p>
-              <div>STAKING LOCK-UP TIME</div>
+              <p>
+                <b>14</b><span>{{ $store.state.txt.ystakelisttenqi }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistthr }}</div>
             </div>
             <div class="tiao_three">
               <p><b>0.683 %</b></p>
-              <div>APY</div>
+              <div>{{ $store.state.txt.ystakelistf }}</div>
             </div>
             <div
               class="tiao_five"
@@ -44,38 +46,53 @@
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX1">
             <div class="tiao_two">
-              <p><b>54911.6584</b><span>DAYS</span></p>
-              <div>CUMULATIVE DIVIDENDS AVAILABLE</div>
+              <p>
+                <b>54911.6584</b
+                ><span>{{ $store.state.txt.ystakelisttenqi }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistqi }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>Everyday</b></p>
-              <div>DIVIDEND TIME</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistsix }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistba }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>TOTAL STAKED POOL</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistjiu }}</div>
             </div>
             <div class="tiao_three">
               <p><b>0 </b><span>%</span></p>
-              <div>YOUR CURRENT PROPORTION</div>
+              <div>{{ $store.state.txt.ystakelistten }}</div>
             </div>
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX1">
             <div class="tiao_two">
-              <p><b>0</b><span>SPIRIT</span></p>
-              <div>YOUR TOTAL DIVIDEND</div>
+              <p>
+                <b>0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistteny }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0</b><span>SPIRIT</span></p>
-              <div>NOT BEEN CLAIMED</div>
+              <p>
+                <b>0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttent }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>YOU HAVE STAKED</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenthr }}</div>
             </div>
             <div class="tiao_three">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>REDEEMABLE UPIN MATURITY</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenf }}</div>
             </div>
           </div>
           <div
@@ -85,13 +102,19 @@
           >
             <div class="tiao_two"></div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_red">STAKE</div>
+              <div class="tiao_red">
+                {{ $store.state.txt.ystakelisttensix }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
           </div>
         </div>
@@ -99,19 +122,23 @@
           <div class="tiao_x">
             <div class="tiao_two">
               <p><b> 20%</b></p>
-              <div>PROPORTION OF DIVIDEND POOL</div>
+              <div>{{ $store.state.txt.ystakelisty }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>SPIRIT</b></p>
-              <div>STAKING TOKEN</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistw }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistt }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>30</b><span>DAYS</span></p>
-              <div>STAKING LOCK-UP TIME</div>
+              <p>
+                <b>30</b><span>{{ $store.state.txt.ystakelisttenqi }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistthr }}</div>
             </div>
             <div class="tiao_three">
               <p><b>1.3491 %</b></p>
-              <div>APY</div>
+              <div>{{ $store.state.txt.ystakelistf }}</div>
             </div>
             <div
               class="tiao_five"
@@ -126,38 +153,53 @@
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX2">
             <div class="tiao_two">
-              <p><b>109823.3168</b><span>SPIRIT</span></p>
-              <div>CUMULATIVE DIVIDENDS AVAILABLE</div>
+              <p>
+                <b>109823.3168</b
+                ><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistqi }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>Everyday</b></p>
-              <div>DIVIDEND TIME</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistsix }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistba }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>TOTAL STAKED POOL</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistjiu }}</div>
             </div>
             <div class="tiao_three">
               <p><b>0 %</b></p>
-              <div>YOUR CURRENT PROPORTION</div>
+              <div>{{ $store.state.txt.ystakelistten }}</div>
             </div>
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX2">
             <div class="tiao_two">
-              <p><b> 0</b><span>SPIRIT</span></p>
-              <div>PROPORTION OF DIVIDEND POOL</div>
+              <p>
+                <b> 0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistteny }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0</b><span>SPIRIT</span></p>
-              <div>NOT BEEN CLAIMED</div>
+              <p>
+                <b>0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttent }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>YOU HAVE STAKED</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenthr }}</div>
             </div>
             <div class="tiao_three">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>REDEEMABLE UPIN MATURITY</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenf }}</div>
             </div>
           </div>
           <div
@@ -167,13 +209,19 @@
           >
             <div class="tiao_two"></div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_red">STAKE</div>
+              <div class="tiao_red">
+                {{ $store.state.txt.ystakelisttensix }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
           </div>
         </div>
@@ -181,19 +229,23 @@
           <div class="tiao_x">
             <div class="tiao_two">
               <p><b> 30%</b></p>
-              <div>PROPORTION OF DIVIDEND POOL</div>
+              <div>{{ $store.state.txt.ystakelisty }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>SPIRIT</b></p>
-              <div>STAKING TOKEN</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistw }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistt }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>60</b><span>DAYS</span></p>
-              <div>STAKING LOCK-UP TIME</div>
+              <p>
+                <b>60</b><span>{{ $store.state.txt.ystakelisttenqi }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistthr }}</div>
             </div>
             <div class="tiao_three">
               <p><b>2.5339 %</b></p>
-              <div>APY</div>
+              <div>{{ $store.state.txt.ystakelistf }}</div>
             </div>
             <div
               class="tiao_five"
@@ -208,38 +260,53 @@
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX3">
             <div class="tiao_two">
-              <p><b>164734.9752</b><span>SPIRIT</span></p>
-              <div>CUMULATIVE DIVIDENDS AVAILABLE</div>
+              <p>
+                <b>164734.9752</b
+                ><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistqi }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>Everyday</b></p>
-              <div>DIVIDEND TIME</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistsix }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistba }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>TOTAL STAKED POOL</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistjiu }}</div>
             </div>
             <div class="tiao_three">
               <p><b>0 %</b></p>
-              <div>YOUR CURRENT PROPORTION</div>
+              <div>{{ $store.state.txt.ystakelistten }}</div>
             </div>
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX3">
             <div class="tiao_two">
-              <p><b> 0</b><span>SPIRIT</span></p>
-              <div>YOUR TOTAL DIVIDEND</div>
+              <p>
+                <b> 0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistteny }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0</b><span>SPIRIT</span></p>
-              <div>NOT BEEN CLAIMED</div>
+              <p>
+                <b>0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttent }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>YOU HAVE STAKED</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenthr }}</div>
             </div>
             <div class="tiao_three">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>REDEEMABLE UPIN MATURITY</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenf }}</div>
             </div>
           </div>
           <div
@@ -249,13 +316,19 @@
           >
             <div class="tiao_two"></div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_red">STAKE</div>
+              <div class="tiao_red">
+                {{ $store.state.txt.ystakelisttensix }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
           </div>
         </div>
@@ -263,19 +336,23 @@
           <div class="tiao_x">
             <div class="tiao_two">
               <p><b> 40%</b></p>
-              <div>PROPORTION OF DIVIDEND POOL</div>
+              <div>{{ $store.state.txt.ystakelisty }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>LP STAKING</b></p>
-              <div>STAKING TOKEN</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistw }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistt }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>30</b><span>DAYS</span></p>
-              <div>STAKING LOCK-UP TIME</div>
+              <p>
+                <b>30</b><span>{{ $store.state.txt.ystakelisttenqi }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistthr }}</div>
             </div>
             <div class="tiao_three">
               <p><b>8879.3101 %</b></p>
-              <div>APY</div>
+              <div>{{ $store.state.txt.ystakelistf }}</div>
             </div>
             <div
               class="tiao_five"
@@ -290,38 +367,53 @@
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX4">
             <div class="tiao_two">
-              <p><b>219646.6336</b><span>SPIRIT</span></p>
-              <div>CUMULATIVE DIVIDENDS AVAILABLE</div>
+              <p>
+                <b>219646.6336</b
+                ><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistqi }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>Everyday</b></p>
-              <div>DIVIDEND TIME</div>
+              <p>
+                <b>{{ $store.state.txt.ystakelistsix }}</b>
+              </p>
+              <div>{{ $store.state.txt.ystakelistba }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT</span></p>
-              <div>TOTAL STAKED POOL</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelisttenba }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistjiu }}</div>
             </div>
             <div class="tiao_three">
               <p><b>0 %</b></p>
-              <div>YOUR CURRENT PROPORTION</div>
+              <div>{{ $store.state.txt.ystakelistten }}</div>
             </div>
           </div>
           <div class="tiao_x1" style="padding-top: 1rem" v-show="showX4">
             <div class="tiao_two">
-              <p><b> 0</b><span>SPIRIT</span></p>
-              <div>YOUR TOTAL DIVIDEND</div>
+              <p>
+                <b> 0</b><span>{{ $store.state.txt.ystakelistw }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelistteny }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0</b><span>SPIRIT</span></p>
-              <div>NOT BEEN CLAIMED</div>
+              <p>
+                <b>0</b><span>{{ $store.state.txt.ystakelisttenba }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttent }}</div>
             </div>
             <div class="tiao_two">
-              <p><b>0 </b><span>SPIRIT-ETH LP</span></p>
-              <div>YOU HAVE STAKED</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelisttenba }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenthr }}</div>
             </div>
             <div class="tiao_three">
-              <p><b>0 </b><span>SPIRIT-ETH LP</span></p>
-              <div>REDEEMABLE UPIN MATURITY</div>
+              <p>
+                <b>0 </b><span>{{ $store.state.txt.ystakelisttenba }}</span>
+              </p>
+              <div>{{ $store.state.txt.ystakelisttenf }}</div>
             </div>
           </div>
           <div
@@ -331,13 +423,19 @@
           >
             <div class="tiao_two"></div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_red">STAKE</div>
+              <div class="tiao_red">
+                {{ $store.state.txt.ystakelisttensix }}
+              </div>
             </div>
             <div class="tiao_two">
-              <div class="tiao_anno">CLAIM</div>
+              <div class="tiao_anno">
+                {{ $store.state.txt.ystakelisttenfive }}
+              </div>
             </div>
           </div>
         </div>
@@ -348,63 +446,68 @@
         <div class="stake_1"></div>
         <div class="stake_2">
           <div class="stake_3">
-            Why <br />
-            Stake?
+            {{ $store.state.txt.ystaketwotitley }} <br />
+            {{ $store.state.txt.ystaketwotitlet }}
           </div>
           <div class="stake_4">
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_1.svg" />ON-CHAIN
+                <img src="../assets/staking_1.svg" />{{
+                  $store.state.txt.ystaketwolistytitle
+                }}
               </div>
               <p>
-                Stake on the Ethereum Network and enjoy ERC-4626 staking, an
-                innovative tokenized vault standard.
+                {{ $store.state.txt.ystaketwolistytxt }}
               </p>
             </div>
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_2.svg" />AUTO-COMPOUNDING
+                <img src="../assets/staking_2.svg" />{{
+                  $store.state.txt.ystaketwolistttitle
+                }}
               </div>
               <p>
-                Your svXAI is automatically compounded as staking rewards are
-                paid into the vault. No action required.
+                {{ $store.state.txt.ystaketwolistttxt }}
               </p>
             </div>
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_3.svg" />DAILY REWARDS
+                <img src="../assets/staking_3.svg" />{{
+                  $store.state.txt.ystaketwolistthrtitle
+                }}
               </div>
               <p>
-                25% of revenue is sent to the staking vault every day at 00:00
-                UTC. Every time staking rewards are added, you can redeem more
-                XAI from the vault for the svXAI you hold.
+                {{ $store.state.txt.ystaketwolistthrtxt }}
               </p>
             </div>
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_4.svg" />FULL CONTROL & FLEXIBILITY
+                <img src="../assets/staking_4.svg" />{{
+                  $store.state.txt.ystaketwolistftitle
+                }}
               </div>
               <p>
-                You have full custody of your svXAI. Connect your Ethereum
-                wallet to the dashboard and accrue rewards on-chain.
+                {{ $store.state.txt.ystaketwolistftxt }}
               </p>
             </div>
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_5.svg" />WE GROW, YOU GROW
+                <img src="../assets/staking_5.svg" />{{
+                  $store.state.txt.ystaketwolistwtitle
+                }}
               </div>
               <p>
-                As SideShift.ai’s volume grows, the APY percentage paid to you
-                every day does too.
+                {{ $store.state.txt.ystaketwolistwtxt }}
               </p>
             </div>
             <div class="stake_5">
               <div class="stake_6">
-                <img src="../assets/staking_6.svg" />CUTTING EDGE DASHBOARD
+                <img src="../assets/staking_6.svg" />{{
+                  $store.state.txt.ystaketwolistsixtitle
+                }}
               </div>
               <p>
-                Hook up your wallet and manage your staking activities from our
-                easy-to-use dashboard.
+                {{ $store.state.txt.ystaketwolistsixtxt }}
               </p>
             </div>
           </div>

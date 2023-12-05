@@ -4,40 +4,44 @@
       <div class="yidoconbox flex">
         <div class="yidocbinp">
           <div class="yidocbinpy flex jus">
-            <div @click="cfmax()" class="ydipcniyleft flex">Max</div>
-            <div class="ydipcniyright">Balance : {{ idobalance }} BTC</div>
+            <div @click="cfmax()" class="ydipcniyleft flex">
+              {{ $store.state.txt.yidoy }}
+            </div>
+            <div class="ydipcniyright">
+              {{ $store.state.txt.yidot }} {{ idobalance }} BTC
+            </div>
           </div>
           <div class="yidocbinpt flex jus">
             <input
               @input="isbuy()"
               type="text"
               v-model="idoinpval"
-              placeholder="Amount"
+              :placeholder="$store.state.txt.yidothr"
             />
             <img src="../assets/btc.png" alt="" />
           </div>
         </div>
         <div class="yidocbtxt flex" v-for="item in idotxt" :key="item">
           <div class="yidocbtxtt flex jus">
-            <span>Total raised amount:</span>
+            <span>{{ $store.state.txt.yidofour }}</span>
             <span>{{ item.amount }} BTC</span>
           </div>
           <div class="yidocbtxtt flex jus">
-            <span>Presale price:</span>
+            <span>{{ $store.state.txt.yidofive }}</span>
             <span>${{ item.price }}</span>
           </div>
           <div class="yidocbtxtt flex jus">
-            <span>Minimun buy amount:</span>
+            <span>{{ $store.state.txt.yidosix }}</span>
             <span>{{ item.bamount }} BTC</span>
           </div>
           <div class="yidocbtxtt flex jus">
-            <span>Ends in:</span>
+            <span>{{ $store.state.txt.yidoqi }}</span>
             <span>{{ item.endin }}</span>
           </div>
         </div>
         <button>{{ idobuty }}</button>
         <button class="flex claimbox" style="padding: 0">
-          <span class="claim">CLAIM </span>
+          <span class="claim">{{ $store.state.txt.yidojiu }}</span>
         </button>
       </div>
     </div>
@@ -47,9 +51,11 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import bus from "../utils/bus";
+import { useStore } from "vuex";
+const store = useStore();
 let idobalance = ref("0.00");
 let idoinpval = ref("");
-let idobuty = ref("BUY");
+let idobuty = ref("");
 let idotxt = ref([
   { amount: "0", price: "1.000", bamount: "0.01", endin: "00:00:00:00" },
 ]);
@@ -64,6 +70,7 @@ onMounted(() => {
       idobalance.value = parseFloat(val).toFixed(2);
     }
   });
+  idobuty.value = store.state.txt.yidoba;
 });
 let cfmax = () => {
   idoinpval.value = -0.00001;
@@ -74,12 +81,12 @@ let isbuy = () => {
   if (isnumbert) {
     let numbuyval = parseFloat(idoinpval.value).toFixed(2);
     if (numbuyval > numbuy) {
-      idobuty.value = "INSUFFICIENT BALANCE";
+      idobuty.value = store.state.txt.yidoten;
     } else {
-      idobuty.value = "BUY";
+      idobuty.value = store.state.txt.yidoba;
     }
   } else {
-    idobuty.value = "BUY";
+    idobuty.value = store.state.txt.yidoba;
   }
 };
 let isnumber = (value) => {

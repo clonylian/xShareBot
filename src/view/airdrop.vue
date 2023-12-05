@@ -1,15 +1,14 @@
 <template>
   <div class="yair">
     <div class="aroro">
-      <h1>SYSTEM PROCESSING</h1>
+      <h1>{{ $store.state.txt.yaridroptitle }}</h1>
       <p>
-        Our system is currently processing for the next epoch, please continue
-        to check back.
+        {{ $store.state.txt.yaridroptxt }}
       </p>
     </div>
     <div class="yairbox">
       <div class="yairbcon">
-        <h2>Shift Process</h2>
+        <h2>{{ $store.state.txt.yaridropsamletitle }}</h2>
         <div class="yairls flex">
           <div class="yairlsy">
             <div class="yairlsyty flex">
@@ -82,7 +81,7 @@
               </div>
               <div class="yairsyri"></div>
             </div>
-            <p>Add “❤️ Memecoin” to your X name</p>
+            <p>{{ $store.state.txt.yaridroplisty }}</p>
           </div>
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
@@ -155,7 +154,7 @@
               </div>
               <div class="yairsyri"></div>
             </div>
-            <p>Tell the world!</p>
+            <p>{{ $store.state.txt.yaridroplistt }}</p>
           </div>
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
@@ -228,14 +227,14 @@
               </div>
               <div class="yairsyri"></div>
             </div>
-            <p>Follow @Memeland</p>
+            <p>{{ $store.state.txt.yaridroplistthr }}</p>
           </div>
           <div class="yairlsy">
             <div class="yairlsytt yairlsyty flex">
               <div class="yairsyle"></div>
               <div
                 @click="jydaib('1')"
-                :class="isgf == '0' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
+                :class="isgf == '1' ? 'yairlsytysvg' : 'yairlsytysvgnone'"
               >
                 <svg
                   viewBox="0 0 114 104"
@@ -266,7 +265,7 @@
               </div>
               <div
                 :class="
-                  isgf == '1'
+                  isgf == '0'
                     ? 'yairlsytysvg yairlsytysvghover'
                     : 'yairlsytysvgnone'
                 "
@@ -300,7 +299,7 @@
               </div>
               <div class="yairsyri"></div>
             </div>
-            <p>Follow @Memeland</p>
+            <p>{{ $store.state.txt.yaridroplistf }}</p>
           </div>
           <div class="yairlsy">
             <div class="yairlsyts yairlsytt yairlsyty flex">
@@ -373,44 +372,41 @@
               </div>
               <div class="yairsyri"></div>
             </div>
-            <p>Add “❤️” to your X name</p>
+            <p>{{ $store.state.txt.yaridroplistw }}</p>
           </div>
         </div>
       </div>
     </div>
     <div class="yaribot">
-      <h4>$RATIO Calculator</h4>
+      <h4>{{ $store.state.txt.yaridroptitlet }}</h4>
       <div class="yariboter flex">
         <button
           @click="changearitab('0')"
           :class="yaritab == '0' ? 'yaritabactive' : ''"
         >
-          Post Calculator
+          {{ $store.state.txt.yaridroptabytit }}
         </button>
         <button
           @click="changearitab('1')"
           :class="yaritab == '1' ? 'yaritabactive' : ''"
         >
-          Comment Calculator
+          {{ $store.state.txt.yaridroptabttit }}
         </button>
         <button
           @click="changearitab('2')"
           :class="yaritab == '2' ? 'yaritabactive' : ''"
         >
-          Engager Calculator
+          {{ $store.state.txt.yaridroptabthrtit }}
         </button>
       </div>
       <div :class="yaritab == '0' ? 'yaritabcon jus' : 'yaritabconnone'">
         <div class="yaritableft">
-          <h3>Post Calculator</h3>
+          <h3>{{ $store.state.txt.yaridroptabytit }}</h3>
           <p>
-            Any tweet that is posted using our ticker $RATIO will begin earning
-            points based on the criteria of that said tweet.
+            {{ $store.state.txt.yaridroptabytxty }}
             <br />
             <br />
-            On the right side of this page you will find our Post Calculator
-            that simulates an in depth view of how many points you'd earn based
-            on the engagement of your Tweet.
+            {{ $store.state.txt.yaridroptabytxtt }}
           </p>
         </div>
         <div class="yaritabright">
@@ -772,19 +768,16 @@
       </div>
       <div :class="yaritab == '1' ? 'yaritabcon jus' : 'yaritabconnone'">
         <div class="yaritableft">
-          <h3>Comment Calculator</h3>
+          <h3>{{ $store.state.txt.yaridroptabttit }}</h3>
           <p>
-            Unlike the Post Calculator, the Comment Calculator is for those who
-            comment under a tweet using our ticker $RATIO.
+            {{ $store.state.txt.yaridroptabttxty }}
             <br />
             <br />
-            On the right side of this page you will find our Comment Calculator
-            that simulates an in depth view of how many points you'd earn based
-            on the success of your comment.
+            {{ $store.state.txt.yaridroptabttxtt }}
           </p>
         </div>
         <div class="yaritabright">
-          <h3>Post Calculator</h3>
+          <h3>Comment Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
               <svg
@@ -883,19 +876,16 @@
       </div>
       <div :class="yaritab == '2' ? 'yaritabcon jus' : 'yaritabconnone'">
         <div class="yaritableft">
-          <h3>Engager Calculator</h3>
+          <h3>{{ $store.state.txt.yaridroptabthrtit }}</h3>
           <p>
-            The Engagement calculator is for anybody that likes, retweets,
-            comments under any post that contains the ticker $RATIO.
+            {{ $store.state.txt.yaridroptabthrtxty }}
             <br />
             <br />
-            On the right side of this page you will find our Engager Calculator
-            that simulates an in depth view of how many points you'd earn based
-            off your engagement with other people's Tweets.
+            {{ $store.state.txt.yaridroptabthrtxtt }}
           </p>
         </div>
         <div class="yaritabright">
-          <h3>Post Calculator</h3>
+          <h3>Engager Calculator</h3>
           <div class="yaritabry flex jus">
             <div class="flex" style="gap: 0.75rem; align-items: flex-start">
               <svg
@@ -988,7 +978,7 @@
     <div @click.stop="wtccon()" class="yaritctjmbox">
       <img @click="tcbgshow('0', '1')" src="../assets/close-line.svg" alt="" />
       <div class="yaritctjmbcon">
-        <h1>Invitation code</h1>
+        <h1>{{ $store.state.txt.yaridropcopyy }}</h1>
         <div class="yaritctinpb flex">
           <h2>{{ invitationcode }}</h2>
           <!-- <input
@@ -1003,16 +993,15 @@
               @click="qriscopy('1')"
               :class="iscopy == '0' ? 'yaricopy flex' : 'yaricopynone'"
             >
-              COPY
+              {{ $store.state.txt.yaridropcopyt }}
             </button>
             <button :class="iscopy == '1' ? 'yaricopyed flex' : 'yaricopynone'">
-              COPYED
+              {{ $store.state.txt.yaridropcopythr }}
             </button>
           </div>
         </div>
         <h1>
-          Please send the code to your friends. You'll get 5 points perfriend
-          and 5% of their weekly points when they complete thetasks.
+          {{ $store.state.txt.yaridropcopyf }}
         </h1>
       </div>
     </div>
@@ -1023,7 +1012,7 @@
   >
     <div @click.stop="cgicon()" class="yaritclogbox">
       <div class="yariclty flex jus">
-        <span>CONNECT TO YOUR ACCOUNT</span
+        <span>{{ $store.state.txt.yaridropregtitle }}</span
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="76"
@@ -1051,7 +1040,7 @@
         </svg>
       </div>
       <p>
-        You will need to complete the follow steps to complete your onboarding.
+        {{ $store.state.txt.yaridropregtxt }}
       </p>
       <div class="yarierlogbox flex">
         <div class="yarierlby flex jus">
@@ -1133,7 +1122,7 @@
               {{ xhlloginzt }}
             </button>
             <button
-              @click="render()"
+              @click="sgin()"
               :class="xhllogin == '1' ? 'yarierbut' : 'yaributsjnone'"
             >
               CONNECT
@@ -1176,7 +1165,7 @@
           </div>
         </div>
         <div class="yaridbut flex">
-          <span>Audited by</span
+          <span>{{ $store.state.txt.yaridropregtxtt }}</span
           ><a target="_blank" href="https://quantstamp.com/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1195,13 +1184,13 @@
         </div>
         <div class="yarienda flex">
           <button :class="alllogin == '0' ? 'yariendbut' : 'yaributsjnone'">
-            SUBMIT
+            {{ $store.state.txt.yaridropsubmit }}
           </button>
           <button
             @click="logtcbgshow('0')"
             :class="alllogin == '1' ? 'yarierbut' : 'yaributsjnone'"
           >
-            SUBMIT
+            {{ $store.state.txt.yaridropsubmit }}
           </button>
         </div>
       </div>
@@ -1213,19 +1202,23 @@
     :class="yarijyb == '1' ? 'yairtcbglog flex yaritcbgtb' : 'yaritcbglognone'"
   >
     <div @click.stop="jhbjz()" class="yarijhbms">
-      <h1>Bridge to Earn Yield + <br />BLAST POINTS</h1>
+      <h1>
+        {{ $store.state.txt.yaridropswaptitley }}<br />{{
+          $store.state.txt.yaridropswaptitlet
+        }}
+      </h1>
       <p>
-        You can earn Blast Points by bridging <br />
-        ETH or stablecoins. Points can be <br />
-        redeemed for REDACTED in May
+        {{ $store.state.txt.yaridropswaptxty }}<br />
+        {{ $store.state.txt.yaridropswaptxtt }}<br />
+        {{ $store.state.txt.yaridropswaptxtthr }}
       </p>
       <p>
-        You will earn more Points over time <br />
-        based on how much you bridge
+        {{ $store.state.txt.yaridropswapttxty }}<br />
+        {{ $store.state.txt.yaridropswapttxtt }}
       </p>
       <span
-        >Withdrawing from the bridge will be available after the <br />
-        Blast Mainnet launches in February!</span
+        >{{ $store.state.txt.yaridropswappy }}<br />
+        {{ $store.state.txt.yaridropswappt }}</span
       >
     </div>
     <div @click.stop="jhbjz()" class="yarijhbbox">
@@ -1233,7 +1226,7 @@
       <div class="yarijhboxtop">
         <div class="yarijhbty flex jus">
           <div class="yarijhboxy"></div>
-          <div class="yarijhboxtwo">YOU CAN BRIDGE</div>
+          <div class="yarijhboxtwo">{{ $store.state.txt.yaridropswapry }}</div>
           <div class="yarijhboxthr"></div>
         </div>
         <div class="yarijhbtt flex">
@@ -1244,14 +1237,14 @@
       <div class="yarijhboxttwo">
         <div class="yarijhbtty flex jus">
           <div class="yarijhbttyy"></div>
-          <div class="yarijhbttyt">FROM</div>
+          <div class="yarijhbttyt">{{ $store.state.txt.yaridropswaprt }}</div>
           <div class="yarijhbttythr"></div>
         </div>
         <div class="yarijhbttthr flex">
           <div class="yarijhbttthrimg">
             <img src="../assets/eth-color.svg" alt="" />
           </div>
-          <span>Ethereum Mainnet</span>
+          <span>{{ $store.state.txt.yaridropswaprthr }}</span>
         </div>
         <div class="yarijhbttf flex">
           <input
@@ -1300,7 +1293,9 @@
         </div>
         <div class="yarijhbttw flex">
           <div class="yarijhbttwy flex">
-            <span style="color: rgb(169, 169, 169)">Balance</span>
+            <span style="color: rgb(169, 169, 169)">{{
+              $store.state.txt.yaridropswaprf
+            }}</span>
             <span style="color: rgb(235, 235, 235)">{{
               dqyue == 0 ? "0.00" : parseFloat(dqyue).toFixed(5)
             }}</span>
@@ -1319,11 +1314,11 @@
           <span>Blast L2</span>
         </div>
         <div class="yarjhbttq">
-          You will receive
+          {{ $store.state.txt.yaridropswaprwy }}
           {{
             inpval == "" || inpval == 0 ? "0.00" : parseFloat(inpval).toFixed(5)
           }}
-          ETH + Yield + Spins for Points
+          {{ $store.state.txt.yaridropswaprwt }}
         </div>
       </div>
       <div class="yarijhbend">
@@ -1340,7 +1335,7 @@
               : 'yarijhbendbutnone'
           "
         >
-          submit
+          {{ $store.state.txt.yaridropsubmit }}
         </button>
         <button
           @click="fwc()"
@@ -1350,7 +1345,7 @@
               : 'yarijhbendbutnone'
           "
         >
-          submit
+          {{ $store.state.txt.yaridropsubmit }}
         </button>
         <img src="../assets/usdc-color.svg" alt="" />
         <img src="../assets/tether-color.svg" alt="" />
@@ -1367,6 +1362,7 @@ import { ref, onMounted, renderSlot } from "vue";
 import Web3Modal from "web3modal";
 import hello from "hellojs/dist/hello.all";
 import { ethers } from "ethers";
+import { Buffer } from "buffer";
 import api from "../common/api";
 import md5 from "blueimp-md5";
 let textvalue = ref(
@@ -1451,6 +1447,8 @@ let isgthr = ref("0");
 let isgw = ref("0");
 let isgf = ref("0");
 let userlog = ref({});
+let signature = ref("");
+let message = ref("");
 // let airtc = ref(0);
 // let airtcshow = (str) => {
 //   airtc.value = str;
@@ -1461,9 +1459,6 @@ onMounted(() => {
     console.log(111);
     xethbalance.value = localStorage.getItem("xhlbalance");
     dqyue.value = localStorage.getItem("xhlbalance");
-    xlogin.value = "1";
-    xhllogin.value = "0";
-    xhlloginzt.value = "CONNECTED";
   }
   if (localStorage.getItem("Twname")) {
     alllogin.value = "1";
@@ -1502,6 +1497,21 @@ onMounted(() => {
   console.log(handlesix.value);
 });
 
+let sgin = async () => {
+  const accounts = await ethereum.request({ method: "eth_accounts" });
+  const from = accounts[0];
+  const msg = `wallet connect`;
+  const signatures = await ethereum.request({
+    method: "personal_sign",
+    params: [msg, from],
+  });
+  signature.value = signatures;
+  if (signature.value != "") {
+    xlogin.value = "1";
+    xhllogin.value = "0";
+    xhlloginzt.value = "CONNECTED";
+  }
+};
 const progresssix = ref(0);
 let cgicon = () => {
   console.log(1);
@@ -1509,10 +1519,10 @@ let cgicon = () => {
 let twitterlog = () => {
   hello.init(
     {
-      twitter: "6F6Kw3ed2iRveFmojHckvB6ad",
+      twitter: "RdEkZiLP19IBAeMKgYjA4iQVK",
     },
     {
-      redirect_uri: "https://x-share-bot-delta.vercel.app/",
+      redirect_uri: "https://xbot.jaredfromsubway-mevbot.tech/",
     }
   );
   hello("twitter")
@@ -1590,9 +1600,6 @@ const connect = async () => {
 const render = async () => {
   const provider = await connect();
   const signer = provider.getSigner(0);
-  xlogin.value = "1";
-  xhllogin.value = "0";
-  xhlloginzt.value = "CONNECTED";
   xhladdress.value = await signer.getAddress();
   localStorage.setItem("xhladd", xhladdress.value);
   const rawBalance = await provider.getBalance(xhladdress.value);
@@ -1977,23 +1984,16 @@ let followyh = () => {
 let tcbgshow = (str, success) => {
   yaritcbg.value = str;
   if (str == "1") {
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (let i = 0; i < 6; i++) {
-      invitationcode.value += characters.charAt(
-        Math.floor(Math.random() * characters.length)
-      );
-    }
-    // api
-    //   .createinvitation({
-    //     userId: userlog.value.userId,
-    //     token: userlog.value.token,
-    //     appId: "xbot",
-    //   })
-    //   .then((res) => {
-    //     console.log(res);
-    //     invitationcode.value = res.data.invitationCode;
-    //   });
+    api
+      .createinvitation({
+        userId: userlog.value.userId,
+        token: userlog.value.token,
+        appId: "xbot",
+      })
+      .then((res) => {
+        console.log(res.data.data.invitationCode);
+        invitationcode.value = res.data.data.invitationCode;
+      });
   }
   if (invitationcode.value != "" && str == "0" && success == "1") {
     //zhu api
@@ -2072,7 +2072,7 @@ let maxdbye = () => {
   }
 };
 let isnum = () => {
-  inpval.value = inpval.value.replace(/\D/g, "");
+  inpval.value = inpval.value.replace(/[^\d.]/g, "");
 };
 let fwc = () => {
   api
@@ -2810,14 +2810,10 @@ let fwc = () => {
   border: 2px solid rgb(179 187 202);
   color: white;
   border-radius: 0.375rem;
-  cursor: pointer;
+  cursor: not-allowed;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
-
-.yaritctbcopy > .yaricopyed:hover {
-  border-color: rgb(255 255 255);
 }
 
 .yaritctbcopy > .yaricopynone {
@@ -3312,8 +3308,11 @@ let fwc = () => {
   .yaritctjmbox {
     width: 92.5%;
     margin: 0 auto;
+    padding: 1rem;
   }
-
+  .yaritctjmbcon h1 {
+    font-size: 0.75rem;
+  }
   .yaritclogbox > p {
     font-size: 0.9rem;
   }

@@ -2,16 +2,20 @@
   <div class="yleader flex jus">
     <div class="yleaderleft">
       <div class="yleaderltop flex jus">
-        <h1>Leaderboard</h1>
-        <span>Bridge & Invite friends to rank up</span>
+        <h1>{{ $store.state.txt.yleadertitle }}</h1>
+        <span>{{ $store.state.txt.yleadercont }}</span>
       </div>
       <div class="yleaderlcon">
         <div class="yleaderlctxt">
           <div class="yleaderlcb flex">
-            <div style="width: 13.71%">RANK</div>
-            <div style="width: 44.231%">NAME</div>
-            <div style="width: 25.2747%">INVITED BY</div>
-            <div style="width: 16.7842%; text-align: right">POINTS</div>
+            <div style="width: 13.71%">{{ $store.state.txt.yleadertaby }}</div>
+            <div style="width: 44.231%">{{ $store.state.txt.yleadertabt }}</div>
+            <div style="width: 25.2747%">
+              {{ $store.state.txt.yleadertabthr }}
+            </div>
+            <div style="width: 16.7842%; text-align: right">
+              {{ $store.state.txt.yleadertabf }}
+            </div>
           </div>
           <div class="yleaderlct">
             <div
@@ -56,7 +60,7 @@
     </div>
     <div class="yleadercenterg"></div>
     <div class="yleaderright">
-      <h2>Recent Joins</h2>
+      <h2>{{ $store.state.txt.yleadersamletitle }}</h2>
       <div class="yleaderrcon">
         <div
           class="yleaderjoins flex jus"
@@ -736,7 +740,7 @@ onMounted(() => {
   //     appId: "xbot",
   //   })
   //   .then((res) => {
-  //     reglist.value=res.data.data.userRegisterList
+  //     // reglist.value=res.data.data.userRegisterList
   //     console.log("11111", res.data.data.userRegisterList);
   //   });
   // api
@@ -744,8 +748,8 @@ onMounted(() => {
   //     appId: "xbot",
   //   })
   //   .then((res) => {
-  //     console.log(res);
-  //     leadlist.value = res.data;
+  //     console.log(res.data.data);
+  //     // leadlist.value = res.data.data.topPointList;
   //   });
   setInterval(() => {
     if (i > 3) {

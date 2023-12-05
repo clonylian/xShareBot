@@ -891,9 +891,15 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
               </svg>
               <img class="hyshow" src="./assets/white.svg" alt=""
             /></router-link>
-            <router-link to="/Stake">Stake</router-link>
-            <router-link to="/Leaderboard">Leaderboard</router-link>
-            <router-link to="/Ido">Ido</router-link>
+            <router-link to="/Stake">
+              {{ $store.state.txt.tabone }}</router-link
+            >
+            <router-link to="/Leaderboard">
+              {{ $store.state.txt.tabtwo }}</router-link
+            >
+            <router-link to="/Ido">
+              {{ $store.state.txt.tabthree }}</router-link
+            >
           </div>
           <!-- <div class="yheade flex">
             <router-link :to="{ path: '/', hash: '#xShareBot' }"
@@ -951,6 +957,14 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                   fill="currentColor"
                 ></path>
               </svg>
+            </div>
+            <div class="lengqh">
+              <img src="./assets/global-white.svg" alt="" />
+              <div class="lengbox">
+                <span></span>
+                <div @click="changelang('en')">English</div>
+                <div @click="changelang('ch')">中文</div>
+              </div>
             </div>
             <button :class="loginan == 0 ? '' : 'anxs'" @click="render()">
               Connect Wallet
@@ -1889,9 +1903,9 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
           </svg>
           <img class="hyshow" src="./assets/white.svg" alt="" />
           <p>
-            The No Sign-Up Crypto Exchange. Shift<br />
-            between BTC, ETH, BCH, XAI and 100+ other<br />
-            cryptocurrencies, no account required. 🎈
+            {{ $store.state.txt.foottxtone }}<br />
+            {{ $store.state.txt.foottxttwo }}<br />
+            {{ $store.state.txt.foottxtthree }}
           </p>
           <div class="flex yfootblas">
             <a href="" target="_blank"
@@ -2001,23 +2015,28 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
         </div>
         <div class="yfootberight flex">
           <div class="yfootberiy flex">
-            <a href="">TREASURY</a>
-            <a href="">INTEGRATIONS</a>
-            <a href="">API</a>
-            <a href="">EMBED</a>
-            <a href="">JOBS</a>
+            <a
+              href=""
+              v-for="item in $store.state.txt.footalistone"
+              :key="item"
+              >{{ item }}</a
+            >
           </div>
           <div class="yfootberiy flex">
-            <a href="">ACCOUNT</a>
-            <a href="">REFER A HUMAN</a>
-            <a href="">FAQ</a>
-            <a href="">BRAND ASSETS</a>
+            <a
+              href=""
+              v-for="item in $store.state.txt.footalisttwo"
+              :key="item"
+              >{{ item }}</a
+            >
           </div>
           <div class="yfootberiy flex">
-            <a href="">LISTED COINS</a>
-            <a href="">XAI WHITE PAPER</a>
-            <a href="">STATISTICS</a>
-            <a href="">RESEARCH</a>
+            <a
+              href=""
+              v-for="item in $store.state.txt.footalistthree"
+              :key="item"
+              >{{ item }}</a
+            >
           </div>
         </div>
       </div>
@@ -2033,11 +2052,15 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
       @click="ydonshow(0)"
     >
       <div class="ydddhl">
-        <router-link to="/">HOME</router-link>
-        <router-link to="/Stake">STAKE</router-link>
-        <router-link to="/Leaderboard">Leaderboard</router-link>
+        <router-link to="/">{{ $store.state.txt.tabzero }}</router-link>
+        <router-link to="/Stake">{{ $store.state.txt.tabone }}</router-link>
+        <router-link to="/Leaderboard">{{
+          $store.state.txt.tabtwo
+        }}</router-link>
         <!-- <router-link to="/Airdrop">AIRDROP</router-link> -->
-        <router-link to="/Ido">IDO</router-link>
+        <router-link to="/Ido">{{
+          $store.state.txt.bxtttabthreetop
+        }}</router-link>
       </div>
     </div>
   </div>
@@ -2050,8 +2073,10 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
 import hello from "hellojs/dist/hello.all";
 import { onMounted, ref, onBeforeUnmount } from "vue";
 import bus from "./utils/bus";
+import { useStore } from "vuex";
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
+const store = useStore();
 let dhisshow = ref(0);
 let googlegloin = ref(null);
 let googlesignin = ref(null);
@@ -2066,6 +2091,9 @@ let ydshow = ref(0);
 let ydonshow = (str) => {
   ydshow.value = str;
   console.log(ydshow.value == 1);
+};
+let changelang = (str) => {
+  store.commit("changeyy", str);
 };
 let hebtqh = (str) => {
   if (hybt.value == str) {
@@ -2399,7 +2427,66 @@ logTlgConnect("");
   width: 1.5rem;
   height: 1.5rem;
 }
-
+.lengqh {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+}
+.lengqh:hover > .lengbox {
+  display: block;
+}
+.lengbox {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1.65rem;
+  background: rgb(17, 11, 11);
+  color: white;
+  padding: 0.25rem 0;
+  border: 2px solid rgb(179 187 202);
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+}
+.ymainhy .lengbox {
+  border-color: #000;
+  background: transparent;
+}
+.lengbox > span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid rgb(179 187 202);
+  box-sizing: border-box;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.ymainhy .lengbox > span {
+  border-bottom-color: black;
+}
+.lengbox > div {
+  padding: 0 0.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+.lengbox > div:hover {
+  background: #b3bbca;
+}
+.ymainhy .lengbox > div {
+  color: rgb(105 111 122);
+}
+.ymainhy .lengbox > div:hover {
+  background: white;
+}
+.lengqh > img {
+  width: 100%;
+  height: 100%;
+}
+.ymainhy .lengqh > img {
+  content: url("./assets/globalblack.svg");
+}
 .ymainhy .yddhshow > svg {
   fill: rgb(17, 11, 11);
 }
@@ -2773,7 +2860,7 @@ logTlgConnect("");
 }
 
 .qihuan {
-  line-height: 1.5;
+  line-height: 1;
   cursor: pointer;
 }
 
