@@ -180,7 +180,16 @@ function clext() {
     font-family: "GT Pressura Mono";
 
 }
+.cen_tour:hover{
+    opacity: 0.7;
+}
+.cen_five:hover{
+    opacity: 0.7;
+}
+.Read:hover{
+    opacity: 0.7;
 
+}
 .cen_five {
     padding: 0.7rem 1.5rem;
     border-radius: 20px;
