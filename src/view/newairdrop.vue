@@ -187,9 +187,9 @@ const render = async () => {
 }
 
 .cen_tour {
-  padding: 0.7rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
-  border: 1px white solid;
+  border: 2px white solid;
   font-size: 12px;
   display: flex;
   text-align: center;
@@ -197,7 +197,7 @@ const render = async () => {
   /* background-color: rgb(185, 107, 252); */
   margin-right: 1rem;
   align-items: center;
-  font-family: "GT Pressura Mono";
+  font-family: "Vectrex";
 }
 
 .cen_tour:hover {
@@ -213,7 +213,7 @@ const render = async () => {
 }
 
 .cen_five {
-  padding: 0.7rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: 20px;
   font-size: 12px;
   display: flex;
@@ -221,10 +221,10 @@ const render = async () => {
   cursor: pointer;
   border-radius: 10px;
   color: white;
-  border: 1px white solid;
+  border: 2px white solid;
   margin-right: 1rem;
   align-items: center;
-  font-family: "GT Pressura Mono";
+  font-family: "Vectrex";
 }
 
 .cen_left {
@@ -355,14 +355,14 @@ const render = async () => {
 }
 
 .Read {
-  width: 6rem;
-  padding: 0.7rem;
+  width: 7rem;
+  padding: 1rem;
   /* background-color: white; */
   border: 1px white solid;
   text-align: center;
   border-radius: 10px;
-  font-family: "GT Pressura Mono";
-  border: 1px rgb(239, 241, 239) solid;
+  font-family: "Vectrex";
+  border: 2px rgb(239, 241, 239) solid;
 }
 
 .ymainhy .cen {
