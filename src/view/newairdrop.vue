@@ -14,13 +14,11 @@
               Connect to Check Eligibility
             </div>
             <div v-else class="cen_tour">Check Eligibility</div>
-            <div class="cen_five">Search for an Address</div>
+            <div @click="dakai" class="cen_five">Search for an Address</div>
           </div>
         </div>
         <div class="cen_left">
-          <img
-            src="https://www.jito.network/_next/image/?url=%2Fairdrop%2FpeopleOnTower.webp&w=1080&q=75"
-          />
+          <img src="https://www.jito.network/_next/image/?url=%2Fairdrop%2FpeopleOnTower.webp&w=1080&q=75" />
         </div>
       </div>
       <div class="claim">
@@ -58,6 +56,30 @@
       </div>
     </div>
   </div>
+  <div v-if="showMask" class="show">
+    <div class="show_one">
+      <div class="show_two">
+        <p class="show_three">
+          <svg t="1702102986426" @click="sbai" class="icon" viewBox="0 0 1024 1024" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" p-id="4251" width="16" height="16">
+            <path
+              d="M918.795922 356.854687c-21.798121-51.476314-52.909055-97.631021-92.514092-137.236058-39.605037-39.605037-85.862083-70.818309-137.236058-92.514092C635.727364 104.590046 579.236458 93.128123 520.903458 93.128123s-114.823906 11.461923-168.142315 33.976414c-51.476314 21.798121-97.631021 52.909055-137.236058 92.514092s-70.818309 85.862083-92.514092 137.236058C100.496502 410.173096 89.034579 466.664002 89.034579 524.997002s11.461923 114.823906 33.976414 168.142315c21.798121 51.476314 52.909055 97.631021 92.514092 137.236058 39.605037 39.605037 85.862083 70.818309 137.236058 92.514092 53.21607 22.514491 109.809314 33.976414 168.142315 33.976414s114.823906-11.461923 168.142315-33.976414c51.476314-21.798121 97.631021-52.909055 137.236058-92.514092 39.605037-39.605037 70.818309-85.862083 92.514092-137.236058 22.514491-53.21607 33.976414-109.809314 33.976414-168.142315S941.310414 410.173096 918.795922 356.854687zM520.903458 911.836898c-213.273636 0-386.839896-173.56626-386.839896-386.839896s173.56626-386.839896 386.839896-386.839896 386.839896 173.56626 386.839896 386.839896S734.177094 911.836898 520.903458 911.836898zM545.055367 527.555467l105.204078-105.204078c8.801119-8.801119 8.801119-23.128523 0-31.827304l0 0c-8.801119-8.801119-23.128523-8.801119-31.827304 0L513.228063 495.728163 407.512293 390.114731c-8.801119-8.801119-23.128523-8.801119-31.827304 0l0 0c-8.801119 8.801119-8.801119 23.128523 0 31.827304l105.613432 105.613432L375.173296 633.680592c-8.801119 8.801119-8.801119 23.128523 0 31.827304 8.801119 8.801119 23.128523 8.801119 31.827304 0l106.125125-106.125125 105.613432 105.613432c8.801119 8.801119 23.128523 8.801119 31.827304 0 8.801119-8.801119 8.801119-23.128523 0-31.827304L545.055367 527.555467z"
+              fill="#000000" p-id="4252"></path>
+          </svg></p>
+        <p class="show_four">Address Airdrop Eligibility</p>
+        <p class="show_five">Check any address for airdrop eligibility and JTO token amount</p>
+        <div class="show_six">
+          <input value="" placeholder="Search here...">
+          <div class="show_seve">
+            Search Address
+          </div>
+        </div>
+        <div class="show_ten">
+          <img src="https://www.jito.network/_next/image/?url=%2Fairdrop%2FjtoToken.png&w=256&q=75">
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
@@ -67,8 +89,16 @@ import bus from "../utils/bus";
 const xhladdress = ref("");
 const xxhladdress = ref("");
 const xethbalance = ref("");
+let showMask = ref(false)
 let web3Modal = {};
 let cent = ref(true);
+function sbai(){
+  showMask.value = false
+}
+function dakai(){
+  showMask.value = true
+
+}
 onMounted(() => {
   bus.$on("qbbalance", (val) => {
     if (val != "" && val != "0.00") {
@@ -137,15 +167,98 @@ const render = async () => {
 .show {
   width: 100%;
   height: 100vh;
-  /* position: ; */
-  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show_one {
+  width: 45%;
+  height: 28rem;
+  box-sizing: border-box;
+  background-color: white;
+
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.show_three {
+  display: flex;
+  justify-content: flex-end;
+}
+.show_three>svg{
+  width: 24px;
+  height: 24px;
+}
+
+.show_four {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.75rem;
+  font-family: "Vectrex";
+  line-height: 2.5rem;
+}
+
+.show_five {
+  font-family: "GT Pressura Mono";
+  margin: 2rem auto;
+  font-size: 15px;
+  text-align: center;
+}
+
+.show_six {
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgb(250, 250, 250);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.show_six>input {
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  align-items: center;
+  margin-left: 1rem;
+  background-color: rgb(250, 250, 250);
+}
+
+.show_seve {
+  width: 7rem;
+  color: white;
+  font-size: 14px;
+  font-family: "GT Pressura Mono";
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  margin-right: 0.5rem;
+  background-color: #000;
+}
+.show_ten{
+  display: flex;
+justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.show_ten>img{
+  width: 90px;
+  height: 130px;
+
 }
 
 .cen {
   width: 100%;
   /* height: 60rem; */
   padding: 4rem 0;
-
   background: rgb(17, 11, 11);
   color: rgb(255, 255, 255);
 }
@@ -171,7 +284,7 @@ const render = async () => {
   text-align: center;
 }
 
-.cen_two > p {
+.cen_two>p {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: "GT Pressura Mono";
@@ -257,7 +370,7 @@ const render = async () => {
   color: black;
 }
 
-.claim_one > p {
+.claim_one>p {
   text-align: center;
 }
 
@@ -275,7 +388,7 @@ const render = async () => {
   font-family: "GT Pressura Mono";
 }
 
-.claim_three > a {
+.claim_three>a {
   padding-bottom: 5px;
   text-decoration: underline;
 }
@@ -284,7 +397,7 @@ const render = async () => {
   margin-bottom: 1rem;
 }
 
-.claim_four > p {
+.claim_four>p {
   color: black;
   font-size: 14px;
   margin: 2rem 0 0.5rem 0;
@@ -401,26 +514,33 @@ const render = async () => {
     margin-top: 5rem;
     flex-direction: column;
   }
+
   .cen_three {
     justify-content: center;
   }
+
   .cen_five {
     padding: 0.75rem;
     margin: 0%;
   }
+
   .Token_four {
     font-size: 2rem !important;
     text-align: center;
   }
+
   .Token_five {
     text-align: center;
   }
+
   .cen_tour {
     padding: 0.75rem;
   }
+
   .cen_two h1 {
     font-size: 2.75rem;
   }
+
   .cen_two {
     width: 100%;
   }
@@ -429,7 +549,7 @@ const render = async () => {
     width: 100%;
   }
 
-  .cen_left > img {
+  .cen_left>img {
     width: 100%;
     height: auto;
   }
@@ -464,5 +584,13 @@ const render = async () => {
     width: 100%;
     box-sizing: border-box;
   }
-}
-</style>
+  .show_one{
+    width: 90%;
+  }
+  .show_four{
+    margin: 0;
+  }
+  .show_seve{
+    font-size: 11px;
+  }
+}</style>
