@@ -2082,7 +2082,20 @@ export default {
     justify-content: center;
   }
 }
-
+@media screen and (max-width: 1300px) {
+  .ytwo {
+    width: 70% !important;
+  }
+  .ybiao_one {
+    width: 80%;
+  }
+  .yfootboxer {
+    width: 72.5%;
+  }
+  .ybiao_three {
+    margin-top: 1.5rem;
+  }
+}
 @media screen and (min-width: 1801px) {
   .ytwo {
     column-gap: 2rem;

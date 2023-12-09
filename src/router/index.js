@@ -25,10 +25,14 @@ const routes = [
     name: "Leaderboard",
     component: () => import("../view/Leaderboard.vue"),
   },
-  ,
   {
-    path: "/newAirdrop",
-    name: "newAirdrop",
+    path: "/Newstake",
+    name: "Newstake",
+    component: () => import("../view/Newstake.vue"),
+  },
+  {
+    path: "/Newairdrop",
+    name: "Newairdrop",
     component: () => import("../view/newairdrop.vue"),
   },
 ];
