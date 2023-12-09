@@ -25,6 +25,12 @@ const routes = [
     name: "Leaderboard",
     component: () => import("../view/Leaderboard.vue"),
   },
+  ,
+  {
+    path: "/newAirdrop",
+    name: "newAirdrop",
+    component: () => import("../view/newairdrop.vue"),
+  },
 ];
 
 const router = VueRouter.createRouter({

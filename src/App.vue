@@ -5,27 +5,10 @@
         <div class="yheadbox flex jus">
           <div class="yheady flex">
             <router-link to="/">
-              <svg
-                class="btshow"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                width="1025px"
-                height="200px"
-                viewBox="0 0 1025 200"
-                enable-background="new 0 0 1025 200"
-                xml:space="preserve"
-              >
-                <image
-                  id="image0"
-                  width="1025"
-                  height="200"
-                  x="0"
-                  y="0"
-                  href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAEAAADICAYAAACZK/h3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+              <svg class="btshow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1025px" height="200px"
+                viewBox="0 0 1025 200" enable-background="new 0 0 1025 200" xml:space="preserve">
+                <image id="image0" width="1025" height="200" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAEAAADICAYAAACZK/h3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAC
 dHpUWHRSYXcgcHJvZmlsZSB0eXBlIHhtcAAAOI2lVVuy5CAI/XcVswQFBF1Ouo1/UzWfs/w5YD/T
 3ffWrUmqjCLCAQ4m/f39J/3ypyknPvO0ZlmLsp60mlBW0qqmXXceRPs8nU6TCPKu4pJqXGVwlmFZ
@@ -886,20 +869,17 @@ ESASiUQikUgkEolEIpELhCgCRCKRSCQSiUQikUgkcoEQRYBIJBKJRCKRSCQSiUQuEP5/VQhWc1/f
 4qkAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMTAtMjNUMDk6MzE6MTUrMDA6MDDCUPwvAAAAJXRF
 WHRkYXRlOm1vZGlmeQAyMDIzLTEwLTIzVDA5OjMxOjE2KzAwOjAwguVeDgAAACh0RVh0ZGF0ZTp0
 aW1lc3RhbXAAMjAyMy0xMC0yM1QwOTozMToxOSswMDowMCO4DzgAAAAZdEVYdFNvZnR3YXJlAEFk
-b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
-                />
+b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC" />
               </svg>
-              <img class="hyshow" src="./assets/white.svg" alt=""
-            /></router-link>
+              <img class="hyshow" src="./assets/white.svg" alt="" /></router-link>
             <router-link to="/Stake">
-              {{ $store.state.txt.tabone }}</router-link
-            >
+              {{ $store.state.txt.tabone }}</router-link>
             <router-link to="/Leaderboard">
-              {{ $store.state.txt.tabtwo }}</router-link
-            >
+              {{ $store.state.txt.tabtwo }}</router-link>
             <router-link to="/Ido">
-              {{ $store.state.txt.tabthree }}</router-link
-            >
+              {{ $store.state.txt.tabthree }}</router-link>
+              <router-link to="/newAirdrop">
+                new Airdrop</router-link>
           </div>
           <!-- <div class="yheade flex">
             <router-link :to="{ path: '/', hash: '#xShareBot' }"
@@ -928,34 +908,18 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
           </div> -->
           <div class="yheads flex">
             <div class="qihuan" @click="hebtqh(1)">
-              <svg
-                class="btshow"
-                width="16"
-                height="16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg class="btshow" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8 11.75A3.75 3.75 0 1 0 4.25 8 3.765 3.765 0 0 0 8 11.75Zm0-6.5A2.75 2.75 0 1 1 5.25 8 2.765 2.765 0 0 1 8 5.25ZM8 2.958a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-1 0v1.958a.5.5 0 0 0 .5.5ZM7.5 13.543V15.5a.5.5 0 1 0 1 0v-1.957a.5.5 0 0 0-1 0ZM3.728 4.432a.5.5 0 1 0 .707-.707L3.05 2.342a.5.5 0 1 0-.707.708l1.385 1.382ZM11.568 11.568a.503.503 0 0 0 0 .707l1.382 1.383a.5.5 0 1 0 .708-.708l-1.383-1.382a.501.501 0 0 0-.707 0ZM.5 8.5h1.958a.5.5 0 0 0 0-1H.5a.5.5 0 0 0 0 1ZM13.043 8a.5.5 0 0 0 .5.5h1.958a.5.5 0 1 0 0-1h-1.958a.5.5 0 0 0-.5.5ZM3.728 11.568 2.343 12.95a.501.501 0 0 0 .707.708l1.383-1.383a.5.5 0 1 0-.708-.707h.003Z"
-                  fill="currentColor"
-                  fill-opacity="0.87"
-                ></path>
+                  fill="currentColor" fill-opacity="0.87"></path>
                 <path
                   d="M11.92 4.58a.5.5 0 0 0 .352-.147l1.383-1.383a.5.5 0 0 0-.705-.707l-1.383 1.382a.5.5 0 0 0 .353.853v.002Z"
-                  fill="currentColor"
-                ></path>
+                  fill="currentColor"></path>
               </svg>
-              <svg
-                class="hyshow"
-                width="16"
-                height="16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg class="hyshow" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M13.875 13.621A8.132 8.132 0 0 0 16 9.91a7.061 7.061 0 0 1-9.225-.655A7.05 7.05 0 0 1 6.146 0a8.053 8.053 0 0 0-3.765 2.13 8.123 8.123 0 0 0 0 11.491 8.132 8.132 0 0 0 11.494 0Z"
-                  fill="currentColor"
-                ></path>
+                  fill="currentColor"></path>
               </svg>
             </div>
             <div class="lengqh">
@@ -981,28 +945,25 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             <div class="yddhshow" @click="ydonshow(1)">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
-                  d="M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z"
-                ></path>
+                  d="M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z">
+                </path>
               </svg>
             </div>
           </div>
         </div>
       </div>
       <div class="yht flex">
-        <a href="/Stake" class="flex"
-          >1 svxai = 1.2457 XAI
+        <a href="/Stake" class="flex">1 svxai = 1.2457 XAI
           <span class="flex jiantl">
             <img src="./assets/lsj.svg" alt="" />0.02%
           </span>
         </a>
-        <a href="/Stake" class="flex"
-          >1 XAI = 0.074077 USD
+        <a href="/Stake" class="flex">1 XAI = 0.074077 USD
           <span class="flex jiantl">
             <img src="./assets/lsj.svg" alt="" />0.25%
           </span>
         </a>
-        <a href="/Stake" class="flex"
-          >Staking APY: 8.05%
+        <a href="/Stake" class="flex">Staking APY: 8.05%
           <span class="flex jiantr">
             <img src="./assets/hxj.svg" alt="" />1.99%
           </span>
@@ -1017,27 +978,10 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
     <div class="yfoot">
       <div class="yfootboxer flex">
         <div class="yfootbeleft">
-          <svg
-            class="btshow"
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            width="1025px"
-            height="200px"
-            viewBox="0 0 1025 200"
-            enable-background="new 0 0 1025 200"
-            xml:space="preserve"
-          >
-            <image
-              id="image0"
-              width="1025"
-              height="200"
-              x="0"
-              y="0"
-              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAEAAADICAYAAACZK/h3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+          <svg class="btshow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1025px" height="200px"
+            viewBox="0 0 1025 200" enable-background="new 0 0 1025 200" xml:space="preserve">
+            <image id="image0" width="1025" height="200" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAEAAADICAYAAACZK/h3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAC
 dHpUWHRSYXcgcHJvZmlsZSB0eXBlIHhtcAAAOI2lVVuy5CAI/XcVswQFBF1Ouo1/UzWfs/w5YD/T
 3ffWrUmqjCLCAQ4m/f39J/3ypyknPvO0ZlmLsp60mlBW0qqmXXceRPs8nU6TCPKu4pJqXGVwlmFZ
@@ -1898,8 +1842,7 @@ ESASiUQikUgkEolEIpELhCgCRCKRSCQSiUQikUgkcoEQRYBIJBKJRCKRSCQSiUQuEP5/VQhWc1/f
 4qkAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMTAtMjNUMDk6MzE6MTUrMDA6MDDCUPwvAAAAJXRF
 WHRkYXRlOm1vZGlmeQAyMDIzLTEwLTIzVDA5OjMxOjE2KzAwOjAwguVeDgAAACh0RVh0ZGF0ZTp0
 aW1lc3RhbXAAMjAyMy0xMC0yM1QwOTozMToxOSswMDowMCO4DzgAAAAZdEVYdFNvZnR3YXJlAEFk
-b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
-            />
+b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC" />
           </svg>
           <img class="hyshow" src="./assets/white.svg" alt="" />
           <p>
@@ -1908,42 +1851,24 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
             {{ $store.state.txt.foottxtthree }}
           </p>
           <div class="flex yfootblas">
-            <a href="" target="_blank"
-              ><svg
-                class="btshow"
-                viewBox="0 0 24 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+            <a href="" target="_blank"><svg class="btshow" viewBox="0 0 24 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M24 2.558c-.892.392-1.843.651-2.835.778A4.893 4.893 0 0 0 23.33.615a9.833 9.833 0 0 1-3.12 1.191 4.919 4.919 0 0 0-8.511 3.365c0 .39.033.764.114 1.121-4.091-.199-7.71-2.16-10.142-5.146a4.954 4.954 0 0 0-.673 2.487c0 1.704.877 3.214 2.185 4.089A4.859 4.859 0 0 1 .96 7.117v.054a4.943 4.943 0 0 0 3.942 4.834c-.4.11-.837.162-1.29.162a4.35 4.35 0 0 1-.932-.083c.638 1.948 2.447 3.38 4.598 3.427a9.886 9.886 0 0 1-6.1 2.099c-.404 0-.791-.018-1.178-.068a13.852 13.852 0 0 0 7.548 2.208c9.054 0 14.004-7.5 14.004-14.001 0-.217-.008-.427-.018-.636A9.816 9.816 0 0 0 24 2.558Z"
-                  fill="currentColor"
-                ></path>
+                  fill="currentColor"></path>
               </svg>
-              <svg
-                viewBox="0 0 24 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="hyshow"
-              >
+              <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hyshow">
                 <path
                   d="M24 2.558c-.892.392-1.843.651-2.835.778A4.893 4.893 0 0 0 23.33.615a9.833 9.833 0 0 1-3.12 1.191 4.919 4.919 0 0 0-8.511 3.365c0 .39.033.764.114 1.121-4.091-.199-7.71-2.16-10.142-5.146a4.954 4.954 0 0 0-.673 2.487c0 1.704.877 3.214 2.185 4.089A4.859 4.859 0 0 1 .96 7.117v.054a4.943 4.943 0 0 0 3.942 4.834c-.4.11-.837.162-1.29.162a4.35 4.35 0 0 1-.932-.083c.638 1.948 2.447 3.38 4.598 3.427a9.886 9.886 0 0 1-6.1 2.099c-.404 0-.791-.018-1.178-.068a13.852 13.852 0 0 0 7.548 2.208c9.054 0 14.004-7.5 14.004-14.001 0-.217-.008-.427-.018-.636A9.816 9.816 0 0 0 24 2.558Z"
-                  fill="currentColor"
-                ></path>
+                  fill="currentColor"></path>
               </svg>
             </a>
-            <a href="" target="_blank"
-              ><svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="btshow"
-              >
+            <a href="" target="_blank"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="btshow">
                 <g clip-path="url(#telegram-icon_svg__a)">
                   <path
                     d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.11-.537l2.662-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.93L23.93 3.82h.001c.321-1.497-.54-2.082-1.527-1.715l-21.29 8.151c-1.453.564-1.43 1.374-.247 1.741l5.443 1.693 12.643-7.91c.595-.395 1.136-.177.691.217L9.417 15.181Z"
-                    fill="currentColor"
-                  ></path>
+                    fill="currentColor"></path>
                 </g>
                 <defs>
                   <clipPath id="telegram-icon_svg__a">
@@ -1951,38 +1876,27 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                   </clipPath>
                 </defs>
               </svg>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="hyshow"
-              >
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hyshow">
                 <g clip-path="url(#telegram-icon_svg__a)">
                   <path
                     d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.11-.537l2.662-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.93L23.93 3.82h.001c.321-1.497-.54-2.082-1.527-1.715l-21.29 8.151c-1.453.564-1.43 1.374-.247 1.741l5.443 1.693 12.643-7.91c.595-.395 1.136-.177.691.217L9.417 15.181Z"
-                    fill="currentColor"
-                  ></path>
+                    fill="currentColor"></path>
                 </g>
                 <defs>
                   <clipPath id="telegram-icon_svg__a">
                     <path fill="currentColor" d="M0 0h24v24H0z"></path>
                   </clipPath>
-                </defs></svg
-            ></a>
+                </defs>
+              </svg></a>
             <a href="" target="_blank">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="btshow"
-              >
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btshow">
                 <g clip-path="url(#instagram_svg__a)" fill="currentColor">
                   <path
-                    d="M23.977 7.056c-.057-1.275-.263-2.152-.558-2.912a5.857 5.857 0 0 0-1.388-2.128A5.907 5.907 0 0 0 19.907.633C19.143.338 18.27.13 16.995.075 15.711.015 15.303 0 12.046 0 8.785 0 8.377.014 7.097.07 5.823.127 4.946.333 4.187.628a5.856 5.856 0 0 0-2.129 1.388A5.909 5.909 0 0 0 .675 4.14C.38 4.904.173 5.776.117 7.05.057 8.336.042 8.744.042 12.002c0 3.259.014 3.667.07 4.947C.17 18.224.375 19.1.67 19.86a5.919 5.919 0 0 0 1.388 2.129c.6.61 1.327 1.083 2.124 1.383.764.295 1.636.501 2.912.558 1.28.056 1.687.07 4.946.07 3.258 0 3.666-.014 4.946-.07 1.275-.057 2.152-.263 2.912-.558a6.139 6.139 0 0 0 3.511-3.512c.296-.764.502-1.636.558-2.911.056-1.28.07-1.688.07-4.947 0-3.258-.004-3.666-.06-4.946Zm-2.162 9.799c-.051 1.172-.248 1.805-.412 2.227a3.981 3.981 0 0 1-2.279 2.278c-.422.165-1.06.361-2.227.413-1.266.056-1.646.07-4.848.07s-3.586-.014-4.848-.07c-1.172-.052-1.805-.248-2.227-.413a3.693 3.693 0 0 1-1.378-.895 3.73 3.73 0 0 1-.896-1.378c-.164-.422-.36-1.06-.412-2.227-.056-1.266-.07-1.646-.07-4.848 0-3.203.014-3.587.07-4.848.051-1.172.248-1.805.412-2.227.193-.52.497-.994.9-1.379a3.726 3.726 0 0 1 1.379-.895c.422-.164 1.06-.36 2.227-.413 1.266-.056 1.646-.07 4.848-.07 3.207 0 3.586.014 4.848.07 1.172.052 1.805.249 2.227.413.52.192.994.497 1.378.895.399.39.703.858.896 1.379.164.422.36 1.06.412 2.227.056 1.266.07 1.645.07 4.848 0 3.202-.014 3.577-.07 4.843Z"
-                  ></path>
+                    d="M23.977 7.056c-.057-1.275-.263-2.152-.558-2.912a5.857 5.857 0 0 0-1.388-2.128A5.907 5.907 0 0 0 19.907.633C19.143.338 18.27.13 16.995.075 15.711.015 15.303 0 12.046 0 8.785 0 8.377.014 7.097.07 5.823.127 4.946.333 4.187.628a5.856 5.856 0 0 0-2.129 1.388A5.909 5.909 0 0 0 .675 4.14C.38 4.904.173 5.776.117 7.05.057 8.336.042 8.744.042 12.002c0 3.259.014 3.667.07 4.947C.17 18.224.375 19.1.67 19.86a5.919 5.919 0 0 0 1.388 2.129c.6.61 1.327 1.083 2.124 1.383.764.295 1.636.501 2.912.558 1.28.056 1.687.07 4.946.07 3.258 0 3.666-.014 4.946-.07 1.275-.057 2.152-.263 2.912-.558a6.139 6.139 0 0 0 3.511-3.512c.296-.764.502-1.636.558-2.911.056-1.28.07-1.688.07-4.947 0-3.258-.004-3.666-.06-4.946Zm-2.162 9.799c-.051 1.172-.248 1.805-.412 2.227a3.981 3.981 0 0 1-2.279 2.278c-.422.165-1.06.361-2.227.413-1.266.056-1.646.07-4.848.07s-3.586-.014-4.848-.07c-1.172-.052-1.805-.248-2.227-.413a3.693 3.693 0 0 1-1.378-.895 3.73 3.73 0 0 1-.896-1.378c-.164-.422-.36-1.06-.412-2.227-.056-1.266-.07-1.646-.07-4.848 0-3.203.014-3.587.07-4.848.051-1.172.248-1.805.412-2.227.193-.52.497-.994.9-1.379a3.726 3.726 0 0 1 1.379-.895c.422-.164 1.06-.36 2.227-.413 1.266-.056 1.646-.07 4.848-.07 3.207 0 3.586.014 4.848.07 1.172.052 1.805.249 2.227.413.52.192.994.497 1.378.895.399.39.703.858.896 1.379.164.422.36 1.06.412 2.227.056 1.266.07 1.645.07 4.848 0 3.202-.014 3.577-.07 4.843Z">
+                  </path>
                   <path
-                    d="M12.044 5.837a6.167 6.167 0 0 0-6.165 6.165 6.167 6.167 0 0 0 6.165 6.165 6.167 6.167 0 0 0 6.166-6.165 6.167 6.167 0 0 0-6.166-6.165Zm0 10.164a4 4 0 1 1 .002-8 4 4 0 0 1-.002 8ZM19.893 5.594a1.44 1.44 0 1 1-2.879 0 1.44 1.44 0 0 1 2.88 0Z"
-                  ></path>
+                    d="M12.044 5.837a6.167 6.167 0 0 0-6.165 6.165 6.167 6.167 0 0 0 6.165 6.165 6.167 6.167 0 0 0 6.166-6.165 6.167 6.167 0 0 0-6.166-6.165Zm0 10.164a4 4 0 1 1 .002-8 4 4 0 0 1-.002 8ZM19.893 5.594a1.44 1.44 0 1 1-2.879 0 1.44 1.44 0 0 1 2.88 0Z">
+                  </path>
                 </g>
                 <defs>
                   <clipPath id="instagram_svg__a">
@@ -1990,19 +1904,14 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                   </clipPath>
                 </defs>
               </svg>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="hyshow"
-              >
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hyshow">
                 <g clip-path="url(#instagram_svg__a)" fill="currentColor">
                   <path
-                    d="M23.977 7.056c-.057-1.275-.263-2.152-.558-2.912a5.857 5.857 0 0 0-1.388-2.128A5.907 5.907 0 0 0 19.907.633C19.143.338 18.27.13 16.995.075 15.711.015 15.303 0 12.046 0 8.785 0 8.377.014 7.097.07 5.823.127 4.946.333 4.187.628a5.856 5.856 0 0 0-2.129 1.388A5.909 5.909 0 0 0 .675 4.14C.38 4.904.173 5.776.117 7.05.057 8.336.042 8.744.042 12.002c0 3.259.014 3.667.07 4.947C.17 18.224.375 19.1.67 19.86a5.919 5.919 0 0 0 1.388 2.129c.6.61 1.327 1.083 2.124 1.383.764.295 1.636.501 2.912.558 1.28.056 1.687.07 4.946.07 3.258 0 3.666-.014 4.946-.07 1.275-.057 2.152-.263 2.912-.558a6.139 6.139 0 0 0 3.511-3.512c.296-.764.502-1.636.558-2.911.056-1.28.07-1.688.07-4.947 0-3.258-.004-3.666-.06-4.946Zm-2.162 9.799c-.051 1.172-.248 1.805-.412 2.227a3.981 3.981 0 0 1-2.279 2.278c-.422.165-1.06.361-2.227.413-1.266.056-1.646.07-4.848.07s-3.586-.014-4.848-.07c-1.172-.052-1.805-.248-2.227-.413a3.693 3.693 0 0 1-1.378-.895 3.73 3.73 0 0 1-.896-1.378c-.164-.422-.36-1.06-.412-2.227-.056-1.266-.07-1.646-.07-4.848 0-3.203.014-3.587.07-4.848.051-1.172.248-1.805.412-2.227.193-.52.497-.994.9-1.379a3.726 3.726 0 0 1 1.379-.895c.422-.164 1.06-.36 2.227-.413 1.266-.056 1.646-.07 4.848-.07 3.207 0 3.586.014 4.848.07 1.172.052 1.805.249 2.227.413.52.192.994.497 1.378.895.399.39.703.858.896 1.379.164.422.36 1.06.412 2.227.056 1.266.07 1.645.07 4.848 0 3.202-.014 3.577-.07 4.843Z"
-                  ></path>
+                    d="M23.977 7.056c-.057-1.275-.263-2.152-.558-2.912a5.857 5.857 0 0 0-1.388-2.128A5.907 5.907 0 0 0 19.907.633C19.143.338 18.27.13 16.995.075 15.711.015 15.303 0 12.046 0 8.785 0 8.377.014 7.097.07 5.823.127 4.946.333 4.187.628a5.856 5.856 0 0 0-2.129 1.388A5.909 5.909 0 0 0 .675 4.14C.38 4.904.173 5.776.117 7.05.057 8.336.042 8.744.042 12.002c0 3.259.014 3.667.07 4.947C.17 18.224.375 19.1.67 19.86a5.919 5.919 0 0 0 1.388 2.129c.6.61 1.327 1.083 2.124 1.383.764.295 1.636.501 2.912.558 1.28.056 1.687.07 4.946.07 3.258 0 3.666-.014 4.946-.07 1.275-.057 2.152-.263 2.912-.558a6.139 6.139 0 0 0 3.511-3.512c.296-.764.502-1.636.558-2.911.056-1.28.07-1.688.07-4.947 0-3.258-.004-3.666-.06-4.946Zm-2.162 9.799c-.051 1.172-.248 1.805-.412 2.227a3.981 3.981 0 0 1-2.279 2.278c-.422.165-1.06.361-2.227.413-1.266.056-1.646.07-4.848.07s-3.586-.014-4.848-.07c-1.172-.052-1.805-.248-2.227-.413a3.693 3.693 0 0 1-1.378-.895 3.73 3.73 0 0 1-.896-1.378c-.164-.422-.36-1.06-.412-2.227-.056-1.266-.07-1.646-.07-4.848 0-3.203.014-3.587.07-4.848.051-1.172.248-1.805.412-2.227.193-.52.497-.994.9-1.379a3.726 3.726 0 0 1 1.379-.895c.422-.164 1.06-.36 2.227-.413 1.266-.056 1.646-.07 4.848-.07 3.207 0 3.586.014 4.848.07 1.172.052 1.805.249 2.227.413.52.192.994.497 1.378.895.399.39.703.858.896 1.379.164.422.36 1.06.412 2.227.056 1.266.07 1.645.07 4.848 0 3.202-.014 3.577-.07 4.843Z">
+                  </path>
                   <path
-                    d="M12.044 5.837a6.167 6.167 0 0 0-6.165 6.165 6.167 6.167 0 0 0 6.165 6.165 6.167 6.167 0 0 0 6.166-6.165 6.167 6.167 0 0 0-6.166-6.165Zm0 10.164a4 4 0 1 1 .002-8 4 4 0 0 1-.002 8ZM19.893 5.594a1.44 1.44 0 1 1-2.879 0 1.44 1.44 0 0 1 2.88 0Z"
-                  ></path>
+                    d="M12.044 5.837a6.167 6.167 0 0 0-6.165 6.165 6.167 6.167 0 0 0 6.165 6.165 6.167 6.167 0 0 0 6.166-6.165 6.167 6.167 0 0 0-6.166-6.165Zm0 10.164a4 4 0 1 1 .002-8 4 4 0 0 1-.002 8ZM19.893 5.594a1.44 1.44 0 1 1-2.879 0 1.44 1.44 0 0 1 2.88 0Z">
+                  </path>
                 </g>
                 <defs>
                   <clipPath id="instagram_svg__a">
@@ -2015,28 +1924,13 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
         </div>
         <div class="yfootberight flex">
           <div class="yfootberiy flex">
-            <a
-              href=""
-              v-for="item in $store.state.txt.footalistone"
-              :key="item"
-              >{{ item }}</a
-            >
+            <a href="" v-for="item in $store.state.txt.footalistone" :key="item">{{ item }}</a>
           </div>
           <div class="yfootberiy flex">
-            <a
-              href=""
-              v-for="item in $store.state.txt.footalisttwo"
-              :key="item"
-              >{{ item }}</a
-            >
+            <a href="" v-for="item in $store.state.txt.footalisttwo" :key="item">{{ item }}</a>
           </div>
           <div class="yfootberiy flex">
-            <a
-              href=""
-              v-for="item in $store.state.txt.footalistthree"
-              :key="item"
-              >{{ item }}</a
-            >
+            <a href="" v-for="item in $store.state.txt.footalistthree" :key="item">{{ item }}</a>
           </div>
         </div>
       </div>
@@ -2047,10 +1941,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
         </div>
       </div>
     </div>
-    <div
-      :class="ydshow == 0 ? 'ydddh flex' : 'ydddh flex yddhshowy'"
-      @click="ydonshow(0)"
-    >
+    <div :class="ydshow == 0 ? 'ydddh flex' : 'ydddh flex yddhshowy'" @click="ydonshow(0)">
       <div class="ydddhl">
         <router-link to="/">{{ $store.state.txt.tabzero }}</router-link>
         <router-link to="/Stake">{{ $store.state.txt.tabone }}</router-link>
@@ -2330,6 +2221,7 @@ logTlgConnect("");
 .ymainbt {
   position: relative;
 }
+
 .ymianbtbg {
   width: 100%;
   perspective: 50vmin;
@@ -2337,21 +2229,18 @@ logTlgConnect("");
   top: 40%;
   transform: scale(2);
   background-image: radial-gradient(transparent, rgba(103, 58, 183, 0.18)),
-    linear-gradient(
-      -90deg,
+    linear-gradient(-90deg,
       rgba(32, 0, 88, 0.49),
       #000,
-      rgba(156, 39, 176, 0.169)
-    ),
-    linear-gradient(
-      0deg,
+      rgba(156, 39, 176, 0.169)),
+    linear-gradient(0deg,
       rgba(255, 152, 0, 0.18),
       #000,
-      rgba(139, 195, 74, 0.369)
-    );
+      rgba(139, 195, 74, 0.369));
   background-color: #000;
   box-shadow: inset 0 0 150vmin 11vmin #000;
 }
+
 .ybg {
   position: absolute;
   left: 50%;
@@ -2395,46 +2284,56 @@ logTlgConnect("");
   animation: sf-fly-by 7s linear infinite;
   animation-delay: -3s;
 }
+
 @keyframes sf-fly-by {
   0% {
     transform: translateZ(-40vw);
     opacity: 0;
   }
+
   20% {
     opacity: 0.7;
   }
+
   80% {
     opacity: 0.7;
   }
+
   100% {
     transform: translateZ(0);
     opacity: 0;
   }
 }
+
 .yddhshowy {
   display: flex !important;
 }
+
 .istwdl {
   cursor: pointer !important;
 }
+
 .yddhshow {
   width: 1.5rem;
   height: 1.5rem;
   display: none;
 }
 
-.yddhshow > svg {
+.yddhshow>svg {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .lengqh {
   width: 1.25rem;
   height: 1.25rem;
   position: relative;
 }
-.lengqh:hover > .lengbox {
+
+.lengqh:hover>.lengbox {
   display: block;
 }
+
 .lengbox {
   display: none;
   position: absolute;
@@ -2447,11 +2346,13 @@ logTlgConnect("");
   border-radius: 0.375rem;
   margin-top: 0.5rem;
 }
+
 .ymainhy .lengbox {
   border-color: #000;
   background: transparent;
 }
-.lengbox > span {
+
+.lengbox>span {
   display: block;
   width: 0.5rem;
   height: 0.5rem;
@@ -2463,35 +2364,43 @@ logTlgConnect("");
   left: 50%;
   transform: translate(-50%);
 }
-.ymainhy .lengbox > span {
+
+.ymainhy .lengbox>span {
   border-bottom-color: black;
 }
-.lengbox > div {
+
+.lengbox>div {
   padding: 0 0.5rem;
   cursor: pointer;
   text-align: center;
 }
-.lengbox > div:hover {
+
+.lengbox>div:hover {
   background: #b3bbca;
 }
-.ymainhy .lengbox > div {
+
+.ymainhy .lengbox>div {
   color: rgb(105 111 122);
 }
-.ymainhy .lengbox > div:hover {
+
+.ymainhy .lengbox>div:hover {
   background: white;
 }
-.lengqh > img {
+
+.lengqh>img {
   width: 100%;
   height: 100%;
 }
-.ymainhy .lengqh > img {
+
+.ymainhy .lengqh>img {
   content: url("./assets/globalblack.svg");
 }
-.ymainhy .yddhshow > svg {
+
+.ymainhy .yddhshow>svg {
   fill: rgb(17, 11, 11);
 }
 
-.yddhshow > svg {
+.yddhshow>svg {
   fill: #fff;
   cursor: pointer;
 }
@@ -2513,7 +2422,7 @@ logTlgConnect("");
   display: none;
 }
 
-.ydddhl > a {
+.ydddhl>a {
   display: block;
   font-size: 2rem;
   margin: 2rem 0;
@@ -2523,7 +2432,7 @@ logTlgConnect("");
   font-family: "Vectrex";
 }
 
-.ymainhy .ydddhl > a {
+.ymainhy .ydddhl>a {
   color: #000;
 }
 
@@ -2543,7 +2452,7 @@ logTlgConnect("");
   align-items: center;
 }
 
-.dhshow > img {
+.dhshow>img {
   width: 20%;
 }
 
@@ -2578,16 +2487,14 @@ logTlgConnect("");
   top: 0;
   left: 0;
   height: 0.75rem;
-  background: linear-gradient(
-    to bottom,
-    rgb(23, 29, 35) 0%,
-    rgba(84, 184, 245, 0.5) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgb(23, 29, 35) 0%,
+      rgba(84, 184, 245, 0.5) 100%);
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
 }
 
-.ybuts > button {
+.ybuts>button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2605,23 +2512,23 @@ logTlgConnect("");
   font-size: 1rem;
 }
 
-.ybuts > h2 {
+.ybuts>h2 {
   font-size: 2rem;
   line-height: 2rem;
   color: #fff;
   text-align: center;
 }
 
-.ybuts > button:hover {
+.ybuts>button:hover {
   background: rgb(230, 230, 230);
 }
 
-.ybuts > button > svg {
+.ybuts>button>svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.ybuts > button > img {
+.ybuts>button>img {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -2644,7 +2551,7 @@ logTlgConnect("");
   font-weight: 700;
 }
 
-.dkeor > span {
+.dkeor>span {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -2678,7 +2585,7 @@ logTlgConnect("");
   border-color: #d2e3fc;
 }
 
-.ytwitter > svg {
+.ytwitter>svg {
   width: 85%;
   height: 100%;
   position: absolute;
@@ -2715,7 +2622,7 @@ logTlgConnect("");
   overflow: hidden;
 }
 
-.ycont > video {
+.ycont>video {
   width: 110%;
   position: absolute;
   z-index: 1;
@@ -2734,16 +2641,16 @@ logTlgConnect("");
   column-gap: 1.25rem;
 }
 
-.ycontbut > a {
+.ycontbut>a {
   width: 2rem;
 }
 
-.ycontbut > a > img {
+.ycontbut>a>img {
   width: 100%;
 }
 
 @media (max-width: 1250px) {
-  .ycont > video {
+  .ycont>video {
     width: 384%;
     transform: translate(-37%);
   }
@@ -2752,7 +2659,7 @@ logTlgConnect("");
     font-size: 1.25rem;
   }
 
-  .dhshow > img {
+  .dhshow>img {
     width: 60%;
   }
 }
@@ -2809,20 +2716,22 @@ logTlgConnect("");
   align-items: center;
   column-gap: 0.75rem;
 }
+
 .yheady {
   align-items: center;
 }
-.yheady > a:nth-child(1) {
+
+.yheady>a:nth-child(1) {
   width: 10rem;
   height: 1.9375rem;
 }
 
-.yheady > a > svg {
+.yheady>a>svg {
   width: 100%;
   height: 100%;
 }
 
-.yheady > a > img {
+.yheady>a>img {
   width: 100%;
   height: 100%;
 }
@@ -2832,29 +2741,31 @@ logTlgConnect("");
   column-gap: 1rem;
 }
 
-.yheady > a {
+.yheady>a {
   font-family: "Vectrex";
   font-size: 1rem;
   color: #fff;
 }
+
 /* .yheade > a:nth-child(7) {
   cursor: not-allowed !important;
 } */
-.ymainbt .yheady > a {
+.ymainbt .yheady>a {
   color: #fff;
 }
 
-.ymainbt .yheady > a:hover {
+.ymainbt .yheady>a:hover {
   color: rgb(179 187 202);
 }
 
-.ymainhy .yheady > a {
+.ymainhy .yheady>a {
   color: rgb(17 11 11);
 }
 
-.ymainhy .yheady > a:hover {
+.ymainhy .yheady>a:hover {
   color: rgb(56 59 64);
 }
+
 .ymainhy .yheady img {
   content: url("./assets/black.png") !important;
 }
@@ -2877,27 +2788,28 @@ logTlgConnect("");
   column-gap: 1rem;
 }
 
-.yheade > a {
+.yheade>a {
   font-family: "Vectrex";
   font-size: 1rem;
   color: #fff;
 }
+
 /* .yheade > a:nth-child(7) {
   cursor: not-allowed !important;
 } */
-.ymainbt .yheade > a {
+.ymainbt .yheade>a {
   color: #fff;
 }
 
-.ymainbt .yheade > a:hover {
+.ymainbt .yheade>a:hover {
   color: rgb(179 187 202);
 }
 
-.ymainhy .yheade > a {
+.ymainhy .yheade>a {
   color: rgb(17 11 11);
 }
 
-.ymainhy .yheade > a:hover {
+.ymainhy .yheade>a:hover {
   color: rgb(56 59 64);
 }
 
@@ -2905,7 +2817,7 @@ logTlgConnect("");
   position: relative;
 }
 
-.yheaddisc > button {
+.yheaddisc>button {
   cursor: not-allowed !important;
 }
 
@@ -2997,7 +2909,7 @@ logTlgConnect("");
   background: rgb(17 11 11);
 }
 
-.yht > a {
+.yht>a {
   font-family: "Vectrex";
   color: rgb(84 184 245);
   align-items: center;
@@ -3007,19 +2919,19 @@ logTlgConnect("");
   transition: all 0.3s;
 }
 
-.yht > a:hover {
+.yht>a:hover {
   opacity: 1;
 }
 
-.ymainhy .yht > a {
+.ymainhy .yht>a {
   color: rgb(255 255 255);
 }
 
-.yht > a > .jiantl {
+.yht>a>.jiantl {
   color: rgb(111 198 81);
 }
 
-.yht > a > .jiantr {
+.yht>a>.jiantr {
   color: rgb(232 90 67);
 }
 
@@ -3047,19 +2959,19 @@ logTlgConnect("");
   max-width: 24rem;
 }
 
-.yfootbeleft > svg {
+.yfootbeleft>svg {
   width: 12rem;
   height: 2.3125rem;
   margin-bottom: 1.5rem;
 }
 
-.yfootbeleft > img {
+.yfootbeleft>img {
   width: 12rem;
   height: 2.3125rem;
   margin-bottom: 1.5rem;
 }
 
-.ymainhy .yfootbeleft > img {
+.ymainhy .yfootbeleft>img {
   content: url("./assets/black.png");
 }
 
@@ -3081,19 +2993,19 @@ logTlgConnect("");
   column-gap: 2rem;
 }
 
-.yfootblas > a {
+.yfootblas>a {
   width: 1.8rem;
   height: 1.5rem;
 }
 
-.yfootblas > a > svg {
+.yfootblas>a>svg {
   width: 100%;
   height: 1.5rem;
   color: rgb(255 255 255);
   margin: 0;
 }
 
-.ymainhy .yfootblas > a > svg {
+.ymainhy .yfootblas>a>svg {
   color: rgb(17 11 11);
 }
 
@@ -3155,24 +3067,24 @@ logTlgConnect("");
   color: rgb(17 11 11);
 }
 
-.yfootbscon > span {
+.yfootbscon>span {
   margin-right: 1rem;
 }
 
-.yfootbscon > a {
+.yfootbscon>a {
   color: #696f7a;
   transition: all 0.15s;
 }
 
-.ymainhy .yfootbscon > a {
+.ymainhy .yfootbscon>a {
   color: rgb(17 11 11);
 }
 
-.yfootbscon > a:hover {
+.yfootbscon>a:hover {
   color: #b3bbca;
 }
 
-.ymainhy .yfootbscon > a:hover {
+.ymainhy .yfootbscon>a:hover {
   color: rgb(56 59 64);
 }
 
@@ -3197,15 +3109,19 @@ logTlgConnect("");
   .yheade {
     display: none;
   }
-  .yheady > a:nth-child(2) {
+
+  .yheady>a:nth-child(2) {
     display: none;
   }
-  .yheady > a:nth-child(3) {
+
+  .yheady>a:nth-child(3) {
     display: none;
   }
-  .yheady > a:nth-child(4) {
+
+  .yheady>a:nth-child(4) {
     display: none;
   }
+
   .yhead {
     padding: 1rem 0.5rem;
   }
@@ -3222,7 +3138,7 @@ logTlgConnect("");
     column-gap: 0.25rem;
   }
 
-  .yht > a {
+  .yht>a {
     font-size: 7px;
     column-gap: 0.25rem;
   }
@@ -3255,13 +3171,13 @@ logTlgConnect("");
     right: 2.5% !important;
   }
 
-  .ytworight > h2 {
+  .ytworight>h2 {
     font-size: 1.875rem !important;
     line-height: 2.25rem !important;
     text-align: center !important;
   }
 
-  .ybiao_two > h2 {
+  .ybiao_two>h2 {
     font-size: 1.875rem !important;
     line-height: 2.25rem !important;
   }
@@ -3272,15 +3188,15 @@ logTlgConnect("");
     text-align: left !important;
   }
 
-  .yhomeyright > p {
+  .yhomeyright>p {
     font-size: 1.25rem !important;
   }
 
-  .yhomeyleft > svg:nth-child(1) {
+  .yhomeyleft>svg:nth-child(1) {
     width: 100%;
   }
 
-  .yhomeyleft > svg:nth-child(2) {
+  .yhomeyleft>svg:nth-child(2) {
     width: 100%;
   }
 
@@ -3329,11 +3245,11 @@ logTlgConnect("");
     padding: 4rem 2rem;
   }
 
-  .yfootbox > h2 {
+  .yfootbox>h2 {
     font-size: 26px;
   }
 
-  .yfootbox > a {
+  .yfootbox>a {
     height: 3rem;
     line-height: 3rem;
   }
@@ -3371,7 +3287,7 @@ logTlgConnect("");
     width: 90%;
   }
 
-  .ybuts > button {
+  .ybuts>button {
     width: 66%;
   }
 }
@@ -3402,6 +3318,7 @@ logTlgConnect("");
   .yheade {
     column-gap: 1rem;
   }
+
   .yheadbox {
     width: 80%;
   }
