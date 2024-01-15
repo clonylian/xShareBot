@@ -1672,7 +1672,7 @@ export default {
   padding-top: 5rem;
   position: relative;
   opacity: 0.05;
-  transition: opacity 0.8s linear;
+  transition: opacity 0.5s linear;
 }
 .yhomeyshow {
   opacity: 1;
