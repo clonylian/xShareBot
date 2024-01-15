@@ -2515,11 +2515,11 @@ let fwc = () => {
 .yair {
   width: 100%;
   padding: 10rem 0 5rem;
-  background: rgb(17, 11, 11);
+  background: url("../assets/homebg.png");
 }
 
 .ymainhy .yair {
-  background-color: rgb(235, 235, 235);
+  background: url("../assets/homebgw.png");
 }
 
 .yairtc {

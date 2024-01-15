@@ -774,7 +774,7 @@ onMounted(() => {
   width: 100%;
   padding: 8.5rem 7.5rem 3.5rem 7.5rem;
   box-sizing: border-box;
-  background: rgb(17, 11, 11);
+  background: url("../assets/homebg.png");
   align-items: center;
 }
 .yleaderlcttiao {
@@ -840,7 +840,7 @@ onMounted(() => {
   color: rgb(179 187 202);
 }
 .ymainhy .yleader {
-  background: rgb(235, 235, 235);
+  background: url("../assets/homebgw.png");
 }
 .yleaderleft {
   width: 78.4047%;
