@@ -2566,6 +2566,7 @@ let fwc = () => {
   box-sizing: border-box;
   background: rgb(36 35 37);
   position: relative;
+  border-radius: 1.25rem;
 }
 .yaritclogbox > img {
   width: 1.5rem;
@@ -2577,6 +2578,7 @@ let fwc = () => {
 .yaritctjmbox {
   width: 42.75rem;
   padding: 2rem;
+  border-radius: 1.25rem;
   box-sizing: border-box;
   background: rgb(36 35 37);
   position: relative;
@@ -3644,10 +3646,13 @@ let fwc = () => {
 }
 .ynewstabox {
   max-width: 82rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   box-sizing: border-box;
   margin: 0 auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
   align-items: center;
+  background: #242325;
 }
 .ynewstableft {
   width: 53.75%;
@@ -3735,6 +3740,8 @@ let fwc = () => {
   width: 41.40625%;
   padding: 1.75rem;
   background: #242325;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 2px 0px inset,
+    rgba(0, 0, 0, 0.72) 0px 8px 12px 0px;
   box-sizing: border-box;
   color: white;
   position: relative;
