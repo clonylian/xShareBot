@@ -1022,6 +1022,7 @@
     :class="yarilog == '1' ? 'yairtcbglog flex' : 'yaritcbglognone'"
   >
     <div @click.stop="cgicon()" class="yaritclogbox">
+      <img @click="logtcbgshow('0')" src="../assets/close-line.svg" alt="" />
       <div class="yariclty flex jus">
         <span>{{ $store.state.txt.yaridropregtitle }}</span
         ><svg
@@ -1237,6 +1238,7 @@
         </div>
       </div>
       <div class="ynewstabright">
+        <img @click="jydaib('0')" src="../assets/close-line.svg" alt="" />
         <div class="ynewstabrbox flex flexcol">
           <h1>Stake Solana</h1>
           <p>Choose how much you want to stake and earn rewards</p>
@@ -2563,8 +2565,15 @@ let fwc = () => {
   padding: 2rem;
   box-sizing: border-box;
   background: rgb(36 35 37);
+  position: relative;
 }
-
+.yaritclogbox > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
 .yaritctjmbox {
   width: 42.75rem;
   padding: 2rem;
@@ -2622,14 +2631,14 @@ let fwc = () => {
   width: 100%;
 }
 .yaritctjmbcon > p {
-  font-family: "Vectrex";
-  font-size: 0.75rem;
-  line-height: 1.25;
-  color: #fff;
+  font-family: "GT Pressura Mono";
+  color: #b3bbca;
+  font-size: 1rem;
+  line-height: 1.5rem;
   text-align: left;
 }
 .yaritctjmbcon > p > span {
-  font-family: "Vectrex";
+  font-family: "GT Pressura Mono";
   font-size: 1.25rem;
   line-height: 1.5;
 }
@@ -3725,13 +3734,17 @@ let fwc = () => {
 .ynewstabright {
   width: 41.40625%;
   padding: 1.75rem;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
   background: #242325;
-  border: 1px solid #b3bbca;
-  border-radius: 1.5rem;
   box-sizing: border-box;
   color: white;
+  position: relative;
+}
+.ynewstabright > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
 }
 .ynewstabrbox {
   gap: 1rem;
@@ -3920,8 +3933,8 @@ let fwc = () => {
   font-size: 1rem;
   line-height: 1.5rem;
   background: transparent;
-  border: 1px solid rgb(229, 231, 235) !important;
-  border-radius: 999px;
+  border: 2px solid rgb(179 187 202);
+  border-radius: 0.5rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .ynewstayboxfoury > span:nth-child(1) {
@@ -4130,8 +4143,8 @@ let fwc = () => {
   font-size: 1rem;
   line-height: 1.5rem;
   background: transparent;
-  border: 1px solid rgb(229, 231, 235);
-  border-radius: 999px;
+  border: 2px solid rgb(179 187 202);
+  border-radius: 0.5rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 1250px) {
