@@ -891,17 +891,18 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
               </svg>
               <img class="hyshow" src="./assets/white.svg" alt=""
             /></router-link>
-            <router-link to="/Stake">
+            <!-- <router-link to="/Stake">
               {{ $store.state.txt.tabone }}</router-link
-            >
+            > -->
             <router-link to="/Leaderboard">
               {{ $store.state.txt.tabtwo }}</router-link
             >
-            <router-link to="/Ido">
+            <!-- <router-link to="/Ido">
               {{ $store.state.txt.tabthree }}</router-link
-            >
-            <router-link to="/Newstake"> NEW Stake</router-link>
+            > -->
+            <!-- <router-link to="/Newstake"> NEW Stake</router-link>
             <router-link to="/Newairdrop"> NEW Aridrop</router-link>
+            <a href="https://myx-seven.vercel.app/#/" target="_blank">app</a> -->
           </div>
           <!-- <div class="yheade flex">
             <router-link :to="{ path: '/', hash: '#xShareBot' }"
@@ -968,7 +969,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                 <div @click="changelang('ch')">中文</div>
               </div>
             </div>
-            <button :class="loginan == 0 ? '' : 'anxs'" @click="render()">
+            <!-- <button :class="loginan == 0 ? '' : 'anxs'" @click="render()">
               Connect Wallet
             </button>
             <div class="yheaddisc">
@@ -979,7 +980,7 @@ b2JlIEltYWdlUmVhZHlxyWU8AAAAAElFTkSuQmCC"
                 <span></span>
                 <button @click="qxdl()">DISCONNECT</button>
               </div>
-            </div>
+            </div> -->
             <div class="yddhshow" @click="ydonshow(1)">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -3041,19 +3042,20 @@ logTlgConnect("");
 .yfoot {
   padding-top: 3rem;
   width: 100%;
-  background: rgb(17, 11, 11);
+  background: url("./assets/homebg.png");
   color: rgb(255, 255, 255);
 }
 
 .ymainhy .yfoot {
   background: rgb(235, 235, 235);
+  background: url("./assets/homebgw.png");
   color: rgb(0, 0, 0) !important;
 }
 
 .yfootboxer {
   width: 63.5%;
   margin: 0 auto;
-  border-top: 1px solid rgb(56 59 64);
+  /* border-top: 1px solid rgb(56 59 64); */
   padding: 4rem 0 6rem;
   column-gap: 2rem;
 }
@@ -3229,6 +3231,9 @@ logTlgConnect("");
     display: none;
   }
   .yheady > a:nth-child(6) {
+    display: none;
+  }
+  .yheady > a:nth-child(7) {
     display: none;
   }
   .yhead {

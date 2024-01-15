@@ -53,6 +53,7 @@
               ref="input4"
               @input="xiqian(4, yzminpf)"
               @keydown="yzminp($event, 4, yzminpt)"
+              routz
             />
           </div>
           <div class="yhomeyinpy">
@@ -809,36 +810,37 @@ export default {
       let length = values.length;
       let sign = md5(this.xhladd + "88888888");
       let walletadd = this.xhladd;
-      if (length == 5 && localStorage.getItem("xhladd")) {
-        api
-          .login({
-            appId: "xbot",
-            sign: sign,
-            walletAddress: walletadd,
-          })
-          .then((res) => {
-            console.log(res);
-            localStorage.setItem("user", JSON.stringify(res.data.data));
-            api
-              .verifyinvitation({
-                invitationCode: "ZVKMN",
-                appId: "xbot",
-                userId: res.data.data.userId,
-                token: res.data.data.token,
-              })
-              .then((res) => {
-                console.log("verifyinvitation", res.data.status);
-                if (res.data.status == "success") {
-                  this.$router.push("/Airdrop");
-                }
-              });
-          });
-        // this.$router.push("/Airdrop");
-      } else if (localStorage.getItem("xhladd") && length != 5) {
-        alert("Please enter the correct invitation code!!!");
-      } else {
-        alert("Please link the wallet first!!!");
-      }
+      // if (length == 5 && localStorage.getItem("xhladd")) {
+      //   api
+      //     .login({
+      //       appId: "xbot",
+      //       sign: sign,
+      //       walletAddress: walletadd,
+      //     })
+      //     .then((res) => {
+      //       console.log(res);
+      //       localStorage.setItem("user", JSON.stringify(res.data.data));
+      //       api
+      //         .verifyinvitation({
+      //           invitationCode: "ZVKMN",
+      //           appId: "xbot",
+      //           userId: res.data.data.userId,
+      //           token: res.data.data.token,
+      //         })
+      //         .then((res) => {
+      //           console.log("verifyinvitation", res.data.status);
+      //           if (res.data.status == "success") {
+      //             this.$router.push("/Airdrop");
+      //           }
+      //         });
+      //     });
+      // } else if (localStorage.getItem("xhladd") && length != 5) {
+      //   alert("Please enter the correct invitation code!!!");
+      // } else {
+      //   alert("Please link the wallet first!!!");
+      // }
+      this.$router.push("/Airdrop");
+      localStorage.setItem("istrue", "1");
     },
     handleMouseWheel(event) {
       const delta = event.deltaY || event.detail || event.wheelDelta;
@@ -954,6 +956,9 @@ export default {
   font-family: "two";
   src: url("../assets/GT-Pressura-Mono-Regular.woff2") format("woff");
 }
+.ymianbt {
+  background-color: rgb(17, 11, 11);
+}
 .yhomey_but {
   justify-content: center;
 }
@@ -1057,13 +1062,16 @@ export default {
   margin-left: 30rem;
   transition: transform 0.5s;
 }
-
+.ymainhy .carousel-card {
+  background: transparent;
+}
 .carousel-card {
   width: 450px;
   height: 300px;
   margin: 0 2rem;
   border-radius: 15px;
   border: 1px solid #323338;
+  background: #000;
   /* background-color: #f0f0f0; */
   /* display: flex;
   align-items: center;
@@ -1645,6 +1653,7 @@ export default {
 
 .ymainhy .yhome {
   background: rgb(235 235 235);
+  background: url("../assets/homebgw.png");
   overflow: auto;
 }
 
@@ -1653,6 +1662,7 @@ export default {
   overflow: auto;
   padding-top: 6rem;
   background: rgb(17, 11, 11);
+  background-image: url("../assets/homebg.png");
 }
 
 .yhomey {
@@ -2082,7 +2092,7 @@ export default {
     justify-content: center;
   }
 }
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .ytwo {
     width: 70% !important;
   }
@@ -2095,7 +2105,7 @@ export default {
   .ybiao_three {
     margin-top: 1.5rem;
   }
-}
+} */
 @media screen and (min-width: 1801px) {
   .ytwo {
     column-gap: 2rem;

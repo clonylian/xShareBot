@@ -52,4 +52,13 @@ const router = VueRouter.createRouter({
   },
 });
 
+router.beforeEach((to, from, next) => {
+  const isTrue = localStorage.getItem("istrue") == "1";
+
+  if (to.path == "/Airdrop" && !isTrue) {
+    next("/");
+  } else {
+    next();
+  }
+});
 export default router;

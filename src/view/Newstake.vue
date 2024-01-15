@@ -132,7 +132,7 @@
                 <div class="ynewstayboxctr">
                   <input
                     @input="inpshu()"
-                    v-model="inpval"
+                    v-model="inpvalsta"
                     type="text"
                     placeholder="0.0"
                   />
@@ -255,6 +255,161 @@
         </div>
       </div>
     </div>
+    <div @click.stop="jhbjz()" class="yarijhbms">
+      <h1>
+        {{ $store.state.txt.yaridropswaptitley }}<br />{{
+          $store.state.txt.yaridropswaptitlet
+        }}
+      </h1>
+      <p>
+        {{ $store.state.txt.yaridropswaptxty }}<br />
+        {{ $store.state.txt.yaridropswaptxtt }}<br />
+        {{ $store.state.txt.yaridropswaptxtthr }}
+      </p>
+      <p>
+        {{ $store.state.txt.yaridropswapttxty }}<br />
+        {{ $store.state.txt.yaridropswapttxtt }}
+      </p>
+      <span
+        >{{ $store.state.txt.yaridropswappy }}<br />
+        {{ $store.state.txt.yaridropswappt }}</span
+      >
+    </div>
+    <div @click.stop="jhbjz()" class="yarijhbbox">
+      <img @click="jydaib('0')" src="../assets/close-line.svg" alt="" />
+      <div class="yarijhboxtop">
+        <div class="yarijhbty flex jus">
+          <div class="yarijhboxy"></div>
+          <div class="yarijhboxtwo">{{ $store.state.txt.yaridropswapry }}</div>
+          <div class="yarijhboxthr"></div>
+        </div>
+        <div class="yarijhbtt flex">
+          <span>{{ dqyue == 0 ? "0.00" : parseFloat(dqyue).toFixed(5) }}</span>
+          <div><img src="../assets/eth-color.svg" alt="" /></div>
+        </div>
+      </div>
+      <div class="yarijhboxttwo">
+        <div class="yarijhbtty flex jus">
+          <div class="yarijhbttyy"></div>
+          <div class="yarijhbttyt">{{ $store.state.txt.yaridropswaprt }}</div>
+          <div class="yarijhbttythr"></div>
+        </div>
+        <div class="yarijhbttthr flex">
+          <div class="yarijhbttthrimg">
+            <img src="../assets/eth-color.svg" alt="" />
+          </div>
+          <span>{{ $store.state.txt.yaridropswaprthr }}</span>
+        </div>
+        <div class="yarijhbttf flex">
+          <input
+            type="text"
+            v-model="inpvalsta"
+            @input="isnum()"
+            placeholder="0.0"
+          />
+          <div class="yarijhbttft flex">
+            <div @click="dblistbox('1')" class="yarijhbttftbox flex">
+              <div><img :src="showbimg" alt="" /></div>
+              <span>{{ showb }}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
+                  fill="rgba(255,255,3,1)"
+                ></path>
+              </svg>
+            </div>
+            <div
+              :class="
+                dblistshow == '1' ? 'yarijhbttflist' : 'yarijhbttflistnone'
+              "
+            >
+              <div
+                v-for="(item, index) in showbslist"
+                :key="index"
+                class="yarijhbttfliy flex jus"
+                @click="choosedb(item)"
+              >
+                <div class="yarijhbttfliyleft flex">
+                  <div class="yarijhbttfliylefty">
+                    <img :src="item.img" alt="" />
+                  </div>
+                  <span>{{ item.daibname }}</span>
+                </div>
+                <span>{{ item.price }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="yarijhbttw flex">
+          <div class="yarijhbttwy flex">
+            <span style="color: rgb(169, 169, 169)">{{
+              $store.state.txt.yaridropswaprf
+            }}</span>
+            <span style="color: rgb(235, 235, 235)">{{
+              dqyue == 0 ? "0.00" : parseFloat(dqyue).toFixed(5)
+            }}</span>
+          </div>
+          <div class="yarijhbttwt" @click="maxdbye()">MAX</div>
+        </div>
+        <div class="yarijhbtts flex jus">
+          <div style="width: 45%" class="yarijhbttyy"></div>
+          <div class="yarijhbttyt">TO</div>
+          <div style="width: 45%" class="yarijhbttythr"></div>
+        </div>
+        <div class="yarijhbttthr flex">
+          <div class="yarijhbttthrimg">
+            <img src="../assets/blast-color.svg" alt="" />
+          </div>
+          <span>Blast L2</span>
+        </div>
+        <div class="yarjhbttq">
+          {{ $store.state.txt.yaridropswaprwy }}
+          {{
+            inpvalsta == "" || inpvalsta == 0
+              ? "0.00"
+              : parseFloat(inpvalsta).toFixed(5)
+          }}
+          {{ $store.state.txt.yaridropswaprwt }}
+        </div>
+      </div>
+      <div class="yarijhbend">
+        <button
+          @click="render()"
+          :class="xethbalance == '' ? 'yarijhbendbut' : 'yarijhbendbutnone'"
+        >
+          Connecct Wallet
+        </button>
+        <button
+          :class="
+            inpvalsta == '' && xethbalance != ''
+              ? 'yarijhbendbutjz'
+              : 'yarijhbendbutnone'
+          "
+        >
+          {{ $store.state.txt.yaridropsubmit }}
+        </button>
+        <button
+          @click="fwc()"
+          :class="
+            inpvalsta != '' && xethbalance != ''
+              ? 'yarijhbendbut'
+              : 'yarijhbendbutnone'
+          "
+        >
+          {{ $store.state.txt.yaridropsubmit }}
+        </button>
+        <img src="../assets/usdc-color.svg" alt="" />
+        <img src="../assets/tether-color.svg" alt="" />
+        <img src="../assets/steth-color.svg" alt="" />
+        <img src="../assets/dai-color.svg" alt="" />
+        <img src="../assets/weth-color.svg" alt="" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -271,7 +426,7 @@ const xhladdress = ref("");
 const xxhladdress = ref("");
 const xethbalance = ref("");
 let balance = ref("");
-let inpval = ref("");
+let inpvalsta = ref("");
 let inpvval = ref("");
 let solbalance = ref("0.0");
 let solbalancet = ref("0.0");
@@ -349,13 +504,13 @@ let changetab = (str) => {
   staktab.value = str;
 };
 let inpshu = () => {
-  inpval.value = inpval.value.replace(/[^\d.]/g, "");
-  if (inpval.value == "") {
+  inpvalsta.value = inpvalsta.value.replace(/[^\d.]/g, "");
+  if (inpvalsta.value == "") {
     balance.value = ``;
     inpbalance.value = "0";
   } else {
-    balance.value = `US$${parseFloat(inpval.value) * 73.47}`;
-    inpbalance.value = `${parseFloat(inpval.value) * 0.9301}`;
+    balance.value = `US$${parseFloat(inpvalsta.value) * 73.47}`;
+    inpbalance.value = `${parseFloat(inpvalsta.value) * 0.9301}`;
   }
 };
 let inpsshu = () => {
@@ -371,6 +526,107 @@ let inpsshu = () => {
 </script>
 
 <style scoped>
+.yarijhbms {
+  width: 40%;
+}
+.yarijhbms > h1 {
+  font-size: 3.5rem;
+  line-height: 3rem;
+  font-family: "Vectrex";
+  font-weight: 600;
+  color: white;
+  line-height: 1.25;
+}
+.yarijhbms > p {
+  font-size: 24px;
+  color: rgb(235, 235, 235);
+  text-align: left;
+  margin: 2rem 0 0;
+  font-family: "GT Pressura Mono";
+}
+.yarijhbms > span {
+  display: block;
+  font-size: 0.875rem;
+  color: rgb(169, 169, 169);
+  text-align: left;
+  margin: 8rem 0 0;
+  font-family: "GT Pressura Mono";
+}
+.yarijhbbox {
+  width: 30%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: rgb(36 35 37);
+  position: relative;
+}
+.yarijhbbox > img {
+  width: 1.5rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  cursor: pointer;
+}
+.yarijhboxtop {
+  margin: 1rem 0 0.75rem;
+}
+
+.yarijhboxtwo {
+  font-family: "GT Pressura Bold";
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: white;
+}
+
+.yarijhboxy {
+  width: 35%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+
+.yarijhboxthr {
+  width: 35%;
+  height: 1px;
+  background: rgb(169, 169, 169);
+}
+.yarijhbend {
+  width: 100%;
+  margin-top: 1rem;
+}
+.yarijhbend > img {
+  display: none;
+}
+.yarijhbend .yarijhbendbut {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: "Vectrex";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(179 187 202);
+  color: white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.yarijhbend .yarijhbendbutjz {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: "Vectrex";
+  text-align: center;
+  background: transparent;
+  border: 2px solid rgb(169, 169, 169);
+  color: rgb(169, 169, 169);
+  border-radius: 0.375rem;
+  cursor: not-allowed;
+}
+.yarijhbend .yarijhbendbut:hover {
+  border-color: white;
+}
+.yarijhbend .yarijhbendbutnone {
+  display: none;
+}
 .ynewstake {
   padding: 10rem 0 4rem;
   width: 100%;
