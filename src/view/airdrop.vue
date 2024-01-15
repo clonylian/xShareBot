@@ -2566,7 +2566,7 @@ let fwc = () => {
 }
 
 .yaritctjmbox {
-  width: 37.75rem;
+  width: 42.75rem;
   padding: 2rem;
   box-sizing: border-box;
   background: rgb(36 35 37);
@@ -3727,7 +3727,7 @@ let fwc = () => {
   padding: 1.75rem;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  background: black;
+  background: #242325;
   border: 1px solid #b3bbca;
   border-radius: 1.5rem;
   box-sizing: border-box;
